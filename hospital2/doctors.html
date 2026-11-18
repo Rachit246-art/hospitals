@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specialist Doctors & Surgeons | ORYNTH MEDICAL</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23141F1C'/%3E%3Cpath d='M50 18 C54 34 66 46 82 50 C66 54 54 66 50 82 C46 66 34 54 18 50 C34 46 46 34 50 18 Z' fill='%23C5A059'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%23FFFFFF'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-orynth">
+
+  <!-- Custom Luxury Cursor -->
+  <div class="custom-cursor" id="customCursor">
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"><span class="cursor-text" id="cursorText"></span></div>
+  </div>
+
+  <!-- Luxury Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-overlay preloader-left"></div>
+    <div class="preloader-overlay preloader-right"></div>
+    <div class="preloader-content">
+      <div class="preloader-emblem-wrap">
+        <svg viewBox="0 0 100 100" class="preloader-gold-emblem">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+          <ellipse cx="50" cy="22" rx="8" ry="18" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+          <ellipse cx="50" cy="78" rx="8" ry="18" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+          <ellipse cx="22" cy="50" rx="18" ry="8" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+          <ellipse cx="78" cy="50" rx="18" ry="8" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="preloader-brand">
+        <span class="preloader-badge">DISTINGUISHED SURGEONS &amp; CHAIRS</span>
+        <h2 class="preloader-title">ORYNTH FACULTY</h2>
+      </div>
+      <div class="preloader-counter-box">
+        <div class="preloader-bar-bg"><div class="preloader-bar-fill" id="preloaderFill"></div></div>
+        <div class="preloader-percent" id="preloaderPercent">0%</div>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="ambientCanvas" class="ambient-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" data-cursor="HOME">
+        <span class="logo-emblem">
+          <svg viewBox="0 0 100 100">
+            <g fill="currentColor">
+              <ellipse cx="50" cy="22" rx="8" ry="18"/><ellipse cx="50" cy="78" rx="8" ry="18"/>
+              <ellipse cx="22" cy="50" rx="18" ry="8"/><ellipse cx="78" cy="50" rx="18" ry="8"/>
+              <circle cx="50" cy="50" r="5" fill="#C5A059"/>
+            </g>
+          </svg>
+        </span>
+        <div class="logo-text-group">
+          <span class="logo-text">ORYNTH</span>
+          <span class="logo-subtext">MEDICAL FACULTY</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-cursor="HOME">HOME</a></li>
+          <li><a href="about.html" class="nav-link" data-cursor="ABOUT">ABOUT</a></li>
+          <li class="has-dropdown">
+            <a href="doctors.html" class="nav-link active" data-cursor="DOCTORS">DOCTORS <i data-lucide="chevron-down" class="nav-icon"></i></a>
+            <div class="nav-dropdown">
+              <a href="doctors.html?doc=vance">Dr. Julian Vance (Cardiology)</a>
+              <a href="doctors.html?doc=rostova">Dr. Elena Rostova (Neurosurgery)</a>
+              <a href="doctors.html?doc=sterling">Dr. Marcus Sterling (Orthopedics)</a>
+              <a href="doctors.html?doc=pendelton">Dr. Arthur Pendelton (Oncology)</a>
+              <a href="doctors.html">Browse All Faculty (40+ Chairs)</a>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="clinics.html" class="nav-link" data-cursor="SUITES">CLINICS <i data-lucide="chevron-down" class="nav-icon"></i></a>
+            <div class="nav-dropdown">
+              <a href="clinics.html#suites">Private Doctor Consultation Suites</a>
+              <a href="clinics.html#theatres">Robotic Surgical Theatres</a>
+              <a href="clinics.html#diagnostics">Executive Diagnostic Labs</a>
+              <a href="clinics.html#campuses">International Medical Campuses</a>
+            </div>
+          </li>
+          <li><a href="research.html" class="nav-link" data-cursor="RESEARCH">RESEARCH</a></li>
+          <li><a href="contact.html" class="nav-link" data-cursor="CONTACT">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button (Matching "GET STARTED ->") -->
+      <div class="header-action">
+        <button class="btn btn-outline-dark btn-pill btn-sm magnetic-btn header-book-btn" onclick="openDoctorBookingModal()" data-cursor="BOOK">
+          <span>BOOK DOCTOR</span>
+          <i data-lucide="arrow-right" class="btn-arrow"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Luxury Fullscreen Mobile Overlay Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        
+        <!-- Mobile Drawer Top Bar -->
+        <div class="mobile-menu-header">
+          <a href="index.html" class="mobile-drawer-logo" onclick="closeMobileMenu()">
+            <span class="logo-mark">
+              <svg viewBox="0 0 100 100" class="logo-svg" width="30" height="30" aria-hidden="true">
+                <g fill="none" stroke="#C5A059" stroke-width="2.2">
+                  <ellipse cx="50" cy="22" rx="8" ry="18"/>
+                  <ellipse cx="50" cy="78" rx="8" ry="18"/>
+                  <ellipse cx="22" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="78" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="30" cy="30" rx="8" ry="16" transform="rotate(-45 30 30)"/>
+                  <ellipse cx="70" cy="70" rx="8" ry="16" transform="rotate(-45 70 70)"/>
+                  <ellipse cx="70" cy="30" rx="8" ry="16" transform="rotate(45 70 30)"/>
+                  <ellipse cx="30" cy="70" rx="8" ry="16" transform="rotate(45 30 70)"/>
+                  <circle cx="50" cy="50" r="5" fill="#C5A059"/>
+                </g>
+              </svg>
+            </span>
+            <div class="logo-text-group">
+              <span class="light-logo">ORYNTH</span>
+              <span class="gold-subtext">MEDICAL FACULTY</span>
+            </div>
+          </a>
+
+          <button class="mobile-close-btn" onclick="closeMobileMenu()" aria-label="Close navigation menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Meta Tagline -->
+        <div class="mobile-menu-meta">
+          <span class="meta-star">✦</span>
+          <span>ZURICH • LONDON • GENEVA — PRIVATE MEDICAL SANCTUARY</span>
+        </div>
+
+        <!-- Numbered Editorial Navigation Links -->
+        <nav class="mobile-nav-body">
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a href="index.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">01</span>
+                <span class="m-label">HOME SANCTUARY</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="about.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">02</span>
+                <span class="m-label">ABOUT OUR HERITAGE</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="doctors.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">03</span>
+                <span class="m-label">SPECIALIST SURGEONS</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="clinics.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">04</span>
+                <span class="m-label">SURGICAL SUITES</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="research.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">05</span>
+                <span class="m-label">CLINICAL RESEARCH</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="contact.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">06</span>
+                <span class="m-label">CONTACT &amp; CAMPUSES</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Concierge Hotline & Primary CTA -->
+        <div class="mobile-menu-bottom">
+          <div class="mobile-concierge-row">
+            <div class="live-pulse-group">
+              <span class="pulse-animation"></span>
+              <span class="concierge-status">24/7 VIP SURGICAL DESK</span>
+            </div>
+            <a href="tel:+41228190000" class="mobile-tel-link">+41 (22) 819 0000</a>
+          </div>
+
+          <button class="btn btn-rust btn-pill mobile-cta-btn" onclick="openDoctorBookingModal(); closeMobileMenu();">
+            <span>SCHEDULE PRIVATE CONSULTATION</span>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=2200&q=85" alt="Robotic Operating Theatre" class="page-hero-img">
+      <div class="page-hero-overlay"></div>
+    </div>
+    <div class="container page-hero-content">
+      <div class="page-breadcrumb">
+        <a href="index.html">HOME</a>
+        <i data-lucide="chevron-right" style="width: 12px; height: 12px;"></i>
+        <span>MEDICAL FACULTY &amp; SURGEONS</span>
+      </div>
+      <h1 class="page-title">MEET OUR ATTENDING SURGICAL CHAIRS</h1>
+      <p class="page-subtitle">
+        Every surgical procedure is performed exclusively by internationally certified department heads with a minimum of fifteen years of clinical mastery.
+      </p>
+    </div>
+  </section>
+
+  <!-- Live Status Bar -->
+  <div class="live-status-bar">
+    <div class="container status-bar-container">
+      <div class="status-pulse-group">
+        <div class="pulse-dot"></div>
+        <span class="status-text">CLINICAL OPERATING DESK ACTIVE</span>
+      </div>
+      <div class="status-stat-item"><strong>42</strong> Department Chairs</div>
+      <div class="status-stat-item"><strong>8</strong> Surgeries Underway</div>
+      <div class="status-stat-item"><strong>25 Mins</strong> Next Available Tele-Consult</div>
+      <div class="status-stat-item"><strong>100%</strong> JCI &amp; Royal College Certified</div>
+    </div>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar-section">
+    <div class="container">
+      <div class="filter-pills-row">
+        <button class="filter-pill active" data-filter="all" onclick="filterDoctors('all')">All Faculty (42)</button>
+        <button class="filter-pill" data-filter="cardio" onclick="filterDoctors('cardio')">Cardiovascular &amp; Thoracic</button>
+        <button class="filter-pill" data-filter="neuro" onclick="filterDoctors('neuro')">Neurosurgery &amp; Spine</button>
+        <button class="filter-pill" data-filter="ortho" onclick="filterDoctors('ortho')">Robotic Orthopedics</button>
+        <button class="filter-pill" data-filter="onco" onclick="filterDoctors('onco')">Precision Oncology</button>
+        <button class="filter-pill" data-filter="longevity" onclick="filterDoctors('longevity')">Longevity &amp; Cellular Medicine</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Doctors Directory (3x2 Grid) -->
+  <section class="doctors-directory-section">
+    <div class="container">
+      <div class="doctors-dir-grid" id="doctorsGrid">
+        
+        <!-- Doctor 1: Dr. Vance -->
+        <article class="doc-dir-card tilt-card" data-category="cardio" data-cursor="DR. VANCE">
+          <div class="doc-dir-img-wrap">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" alt="Dr. Julian Vance" class="doc-dir-img">
+            <div class="clinic-badge-top-left"><i data-lucide="award" class="badge-icon"></i> HARVARD FELLOW</div>
+            <div class="clinic-badge-top-right">CHIEF CARDIAC SURGEON</div>
+          </div>
+          <div class="doc-dir-body">
+            <span class="doc-dir-badge">CARDIOVASCULAR &amp; THORACIC</span>
+            <h3 class="doc-dir-name">DR. JULIAN VANCE, MD, FACS</h3>
+            <p class="doc-dir-role">Pioneer in Sutureless Aortic Valve Reconstruction &amp; Robotic Coronary Bypass.</p>
+            <div class="doc-dir-specs">
+              <span class="spec-tag">TAVR Valve Repair</span>
+              <span class="spec-tag">Minimally Invasive</span>
+              <span class="spec-tag">24 Yrs Experience</span>
+            </div>
+            <div class="doc-dir-footer">
+              <div class="doc-dir-fee">$220.00 <small>/ 60 Min Consult</small></div>
+              <button class="btn btn-rust btn-sm btn-pill" onclick="openDoctorModal('vance')">VIEW PROFILE</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Doctor 2: Dr. Rostova -->
+        <article class="doc-dir-card tilt-card" data-category="neuro" data-cursor="DR. ROSTOVA">
+          <div class="doc-dir-img-wrap">
+            <img src="https://images.unsplash.com/photo-1594824813583-4a187d7b3ea0?auto=format&fit=crop&w=800&q=80" alt="Dr. Elena Rostova" class="doc-dir-img">
+            <div class="clinic-badge-top-left"><i data-lucide="award" class="badge-icon"></i> KAROLINSKA FELLOW</div>
+            <div class="clinic-badge-top-right">DIRECTOR NEUROSURGERY</div>
+          </div>
+          <div class="doc-dir-body">
+            <span class="doc-dir-badge">NEUROSURGERY &amp; STEREOTAXIS</span>
+            <h3 class="doc-dir-name">DR. ELENA ROSTOVA, MD, PHD</h3>
+            <p class="doc-dir-role">Intraoperative 3T MRI Cranial Mapping &amp; Robotic Spinal Decompression.</p>
+            <div class="doc-dir-specs">
+              <span class="spec-tag">Awake Craniotomy</span>
+              <span class="spec-tag">Spinal Stereotaxis</span>
+              <span class="spec-tag">19 Yrs Experience</span>
+            </div>
+            <div class="doc-dir-footer">
+              <div class="doc-dir-fee">$250.00 <small>/ 60 Min Consult</small></div>
+              <button class="btn btn-rust btn-sm btn-pill" onclick="openDoctorModal('rostova')">VIEW PROFILE</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Doctor 3: Dr. Sterling -->
+        <article class="doc-dir-card tilt-card" data-category="ortho" data-cursor="DR. STERLING">
+          <div class="doc-dir-img-wrap">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Dr. Marcus Sterling" class="doc-dir-img">
+            <div class="clinic-badge-top-left"><i data-lucide="award" class="badge-icon"></i> OXFORD FELLOW</div>
+            <div class="clinic-badge-top-right">CHAIR ROBOTIC ORTHO</div>
+          </div>
+          <div class="doc-dir-body">
+            <span class="doc-dir-badge">ROBOTIC ARTHROPLASTY</span>
+            <h3 class="doc-dir-name">DR. MARCUS STERLING, FRCS</h3>
+            <p class="doc-dir-role">CT-Guided Mako Joint Preservation &amp; Autologous Cartilage Stem Regeneration.</p>
+            <div class="doc-dir-specs">
+              <span class="spec-tag">Joint Reconstruction</span>
+              <span class="spec-tag">Zero-Opioid Protocol</span>
+              <span class="spec-tag">26 Yrs Experience</span>
+            </div>
+            <div class="doc-dir-footer">
+              <div class="doc-dir-fee">$200.00 <small>/ 60 Min Consult</small></div>
+              <button class="btn btn-rust btn-sm btn-pill" onclick="openDoctorModal('sterling')">VIEW PROFILE</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Doctor 4: Dr. Pendelton -->
+        <article class="doc-dir-card tilt-card" data-category="onco" data-cursor="DR. PENDELTON">
+          <div class="doc-dir-img-wrap">
+            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80" alt="Dr. Arthur Pendelton" class="doc-dir-img">
+            <div class="clinic-badge-top-left"><i data-lucide="award" class="badge-icon"></i> JOHNS HOPKINS</div>
+            <div class="clinic-badge-top-right">CHAIR PRECISION ONCOLOGY</div>
+          </div>
+          <div class="doc-dir-body">
+            <span class="doc-dir-badge">PRECISION ONCOLOGY</span>
+            <h3 class="doc-dir-name">DR. ARTHUR PENDELTON, MD</h3>
+            <p class="doc-dir-role">Individualized Tumor Whole-Genome Sequencing &amp; Targeted CAR-T Cellular Regimens.</p>
+            <div class="doc-dir-specs">
+              <span class="spec-tag">Liquid Biopsy</span>
+              <span class="spec-tag">Immunotherapy</span>
+              <span class="spec-tag">22 Yrs Experience</span>
+            </div>
+            <div class="doc-dir-footer">
+              <div class="doc-dir-fee">$280.00 <small>/ 60 Min Consult</small></div>
+              <button class="btn btn-rust btn-sm btn-pill" onclick="openDoctorModal('pendelton')">VIEW PROFILE</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Doctor 5: Dr. Sarah Al-Mansoor -->
+        <article class="doc-dir-card tilt-card" data-category="longevity" data-cursor="DR. SARAH">
+          <div class="doc-dir-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Dr. Sarah Al-Mansoor" class="doc-dir-img">
+            <div class="clinic-badge-top-left"><i data-lucide="award" class="badge-icon"></i> CAMBRIDGE FELLOW</div>
+            <div class="clinic-badge-top-right">DIRECTOR LONGEVITY</div>
+          </div>
+          <div class="doc-dir-body">
+            <span class="doc-dir-badge">LONGEVITY &amp; CELLULAR REPAIR</span>
+            <h3 class="doc-dir-name">DR. SARAH AL-MANSOOR, MD</h3>
+            <p class="doc-dir-role">Cellular Senescence Mitigation, Telomere Analytics &amp; Regenerative Medicine.</p>
+            <div class="doc-dir-specs">
+              <span class="spec-tag">Metabolic Longevity</span>
+              <span class="spec-tag">Biomarker Reversal</span>
+              <span class="spec-tag">18 Yrs Experience</span>
+            </div>
+            <div class="doc-dir-footer">
+              <div class="doc-dir-fee">$240.00 <small>/ 60 Min Consult</small></div>
+              <button class="btn btn-rust btn-sm btn-pill" onclick="openDoctorBookingModal('Sarah Al-Mansoor')">BOOK CONSULT</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Doctor 6: Dr. Henrik Lindgren -->
+        <article class="doc-dir-card tilt-card" data-category="cardio" data-cursor="DR. HENRIK">
+          <div class="doc-dir-img-wrap">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Dr. Henrik Lindgren" class="doc-dir-img">
+            <div class="clinic-badge-top-left"><i data-lucide="award" class="badge-icon"></i> ZURICH FELLOW</div>
+            <div class="clinic-badge-top-right">ENDOVASCULAR SURGERY</div>
+          </div>
+          <div class="doc-dir-body">
+            <span class="doc-dir-badge">VASCULAR INTERVENTIONS</span>
+            <h3 class="doc-dir-name">DR. HENRIK LINDGREN, MD</h3>
+            <p class="doc-dir-role">Complex Endovascular Aortic Repair (EVAR) &amp; Peripheral Arterial Reconstruction.</p>
+            <div class="doc-dir-specs">
+              <span class="spec-tag">Aortic Stents</span>
+              <span class="spec-tag">Hybrid Cath Lab</span>
+              <span class="spec-tag">21 Yrs Experience</span>
+            </div>
+            <div class="doc-dir-footer">
+              <div class="doc-dir-fee">$210.00 <small>/ 60 Min Consult</small></div>
+              <button class="btn btn-rust btn-sm btn-pill" onclick="openDoctorBookingModal('Henrik Lindgren')">BOOK CONSULT</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col footer-col-brand">
+        <h3 class="footer-tagline">Exceptional care.<br>Led by master physicians.</h3>
+        <p class="footer-jci-badge"><i data-lucide="shield-check" class="badge-icon"></i> JCI Accredited • Harvard &amp; Royal College Fellows</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">NAVIGATION</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="about.html">About Heritage</a></li>
+          <li><a href="doctors.html">Doctor Directory</a></li>
+          <li><a href="clinics.html">Surgical Suites</a></li>
+          <li><a href="research.html">Research Papers</a></li>
+          <li><a href="contact.html">Contact &amp; Campuses</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">TELEPHONE</h4>
+        <div class="footer-contact-info">
+          <a href="tel:+123456789012" class="contact-link">+1 (234) 567 890 12</a>
+          <a href="mailto:doctors@orynthhealth.org" class="contact-link">doctors@orynthhealth.org</a>
+        </div>
+      </div>
+      <div class="footer-col footer-col-form">
+        <div class="newsletter-card tilt-card">
+          <h4 class="newsletter-card-title">PHYSICIAN BULLETIN</h4>
+          <p class="newsletter-card-subtitle">Direct insights from senior surgical chairs.</p>
+          <form onsubmit="handleNewsletter(event)">
+            <input type="email" class="form-input mb-2" placeholder="Email Address *" required>
+            <button type="submit" class="btn btn-rust btn-block btn-square"><span>SUBSCRIBE</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-footer">
+      <div class="container sub-footer-content">
+        <div class="sub-footer-left">
+          <p class="sub-footer-credit"><span class="credit-brand">Orynth Medical Faculty</span> | Made with <span class="heart-red">❤️</span> by <a href="https://regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a></p>
+          <p class="sub-footer-copyright">&copy; 2026 ORYNTH MEDICAL FACULTY &amp; RESEARCH SANCTUARY. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="sub-footer-links"><a href="#">PRIVACY POLICY</a><a href="#">CLINICAL ETHICS</a><a href="#">ACCESSIBILITY</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal-backdrop" id="doctorBookingModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeDoctorBookingModal()"><i data-lucide="x"></i></button>
+      <div class="modal-header">
+        <h3 class="modal-title">SCHEDULE DOCTOR CONSULTATION</h3>
+        <p class="modal-subtitle">Direct, unhurried appointment with our chief surgeons.</p>
+      </div>
+      <form class="modal-form" onsubmit="handleDoctorBooking(event)">
+        <div class="form-group"><input type="text" class="form-input" placeholder="Full Name *" required></div>
+        <div class="form-group"><input type="email" class="form-input" placeholder="Email Address *" required></div>
+        <div class="form-group"><input type="tel" class="form-input" placeholder="Phone Number *" required></div>
+        <button type="submit" class="btn btn-rust btn-block btn-pill mt-4"><span>CONFIRM APPOINTMENT</span></button>
+        <div class="form-status" id="bookingStatus"></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="doctorProfileModal">
+    <div class="modal-box modal-box-large">
+      <button class="modal-close" onclick="closeDoctorModal()"><i data-lucide="x"></i></button>
+      <div class="modal-specialty-content" id="doctorProfileContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

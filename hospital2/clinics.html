@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinical Suites & Care Wings | ORYNTH MEDICAL</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23141F1C'/%3E%3Cpath d='M50 18 C54 34 66 46 82 50 C66 54 54 66 50 82 C46 66 34 54 18 50 C34 46 46 34 50 18 Z' fill='%23C5A059'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%23FFFFFF'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-orynth">
+
+  <!-- Custom Luxury Cursor -->
+  <div class="custom-cursor" id="customCursor">
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"><span class="cursor-text" id="cursorText"></span></div>
+  </div>
+
+  <!-- Luxury Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-overlay preloader-left"></div>
+    <div class="preloader-overlay preloader-right"></div>
+    <div class="preloader-content">
+      <div class="preloader-emblem-wrap">
+        <svg viewBox="0 0 100 100" class="preloader-gold-emblem">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+          <ellipse cx="50" cy="22" rx="8" ry="18" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+          <ellipse cx="50" cy="78" rx="8" ry="18" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="preloader-brand">
+        <span class="preloader-badge">SURGICAL THEATRES &amp; SUITES</span>
+        <h2 class="preloader-title">CLINICAL WINGS</h2>
+      </div>
+      <div class="preloader-counter-box">
+        <div class="preloader-bar-bg"><div class="preloader-bar-fill" id="preloaderFill"></div></div>
+        <div class="preloader-percent" id="preloaderPercent">0%</div>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="ambientCanvas" class="ambient-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" data-cursor="HOME">
+        <span class="logo-emblem">
+          <svg viewBox="0 0 100 100">
+            <g fill="currentColor">
+              <ellipse cx="50" cy="22" rx="8" ry="18"/><ellipse cx="50" cy="78" rx="8" ry="18"/>
+              <circle cx="50" cy="50" r="5" fill="#C5A059"/>
+            </g>
+          </svg>
+        </span>
+        <div class="logo-text-group">
+          <span class="logo-text">ORYNTH</span>
+          <span class="logo-subtext">CLINICAL WINGS</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-cursor="HOME">HOME</a></li>
+          <li><a href="about.html" class="nav-link" data-cursor="ABOUT">ABOUT</a></li>
+          <li class="has-dropdown">
+            <a href="doctors.html" class="nav-link" data-cursor="DOCTORS">DOCTORS <i data-lucide="chevron-down" class="nav-icon"></i></a>
+            <div class="nav-dropdown">
+              <a href="doctors.html?doc=vance">Dr. Julian Vance (Cardiology)</a>
+              <a href="doctors.html?doc=rostova">Dr. Elena Rostova (Neurosurgery)</a>
+              <a href="doctors.html?doc=sterling">Dr. Marcus Sterling (Orthopedics)</a>
+              <a href="doctors.html?doc=pendelton">Dr. Arthur Pendelton (Oncology)</a>
+              <a href="doctors.html">Browse All Faculty</a>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="clinics.html" class="nav-link active" data-cursor="SUITES">CLINICS <i data-lucide="chevron-down" class="nav-icon"></i></a>
+            <div class="nav-dropdown">
+              <a href="#suites">Private Doctor Consultation Suites</a>
+              <a href="#theatres">Robotic Surgical Theatres</a>
+              <a href="#diagnostics">Executive Diagnostic Labs</a>
+              <a href="#amenities">Sanctuary Amenities</a>
+            </div>
+          </li>
+          <li><a href="research.html" class="nav-link" data-cursor="RESEARCH">RESEARCH</a></li>
+          <li><a href="contact.html" class="nav-link" data-cursor="CONTACT">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button (Matching "GET STARTED ->") -->
+      <div class="header-action">
+        <button class="btn btn-outline-dark btn-pill btn-sm magnetic-btn header-book-btn" onclick="openDoctorBookingModal()" data-cursor="BOOK">
+          <span>BOOK SUITE</span>
+          <i data-lucide="arrow-right" class="btn-arrow"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Luxury Fullscreen Mobile Overlay Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        
+        <!-- Mobile Drawer Top Bar -->
+        <div class="mobile-menu-header">
+          <a href="index.html" class="mobile-drawer-logo" onclick="closeMobileMenu()">
+            <span class="logo-mark">
+              <svg viewBox="0 0 100 100" class="logo-svg" width="30" height="30" aria-hidden="true">
+                <g fill="none" stroke="#C5A059" stroke-width="2.2">
+                  <ellipse cx="50" cy="22" rx="8" ry="18"/>
+                  <ellipse cx="50" cy="78" rx="8" ry="18"/>
+                  <ellipse cx="22" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="78" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="30" cy="30" rx="8" ry="16" transform="rotate(-45 30 30)"/>
+                  <ellipse cx="70" cy="70" rx="8" ry="16" transform="rotate(-45 70 70)"/>
+                  <ellipse cx="70" cy="30" rx="8" ry="16" transform="rotate(45 70 30)"/>
+                  <ellipse cx="30" cy="70" rx="8" ry="16" transform="rotate(45 30 70)"/>
+                  <circle cx="50" cy="50" r="5" fill="#C5A059"/>
+                </g>
+              </svg>
+            </span>
+            <div class="logo-text-group">
+              <span class="light-logo">ORYNTH</span>
+              <span class="gold-subtext">MEDICAL FACULTY</span>
+            </div>
+          </a>
+
+          <button class="mobile-close-btn" onclick="closeMobileMenu()" aria-label="Close navigation menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Meta Tagline -->
+        <div class="mobile-menu-meta">
+          <span class="meta-star">✦</span>
+          <span>ZURICH • LONDON • GENEVA — PRIVATE MEDICAL SANCTUARY</span>
+        </div>
+
+        <!-- Numbered Editorial Navigation Links -->
+        <nav class="mobile-nav-body">
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a href="index.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">01</span>
+                <span class="m-label">HOME SANCTUARY</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="about.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">02</span>
+                <span class="m-label">ABOUT OUR HERITAGE</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="doctors.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">03</span>
+                <span class="m-label">SPECIALIST SURGEONS</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="clinics.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">04</span>
+                <span class="m-label">SURGICAL SUITES</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="research.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">05</span>
+                <span class="m-label">CLINICAL RESEARCH</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="contact.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">06</span>
+                <span class="m-label">CONTACT &amp; CAMPUSES</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Concierge Hotline & Primary CTA -->
+        <div class="mobile-menu-bottom">
+          <div class="mobile-concierge-row">
+            <div class="live-pulse-group">
+              <span class="pulse-animation"></span>
+              <span class="concierge-status">24/7 VIP SURGICAL DESK</span>
+            </div>
+            <a href="tel:+41228190000" class="mobile-tel-link">+41 (22) 819 0000</a>
+          </div>
+
+          <button class="btn btn-rust btn-pill mobile-cta-btn" onclick="openDoctorBookingModal(); closeMobileMenu();">
+            <span>SCHEDULE PRIVATE CONSULTATION</span>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&w=2200&q=85" alt="Luxury Inpatient Hospital Suite" class="page-hero-img">
+      <div class="page-hero-overlay"></div>
+    </div>
+    <div class="container page-hero-content">
+      <div class="page-breadcrumb">
+        <a href="index.html">HOME</a>
+        <i data-lucide="chevron-right" style="width: 12px; height: 12px;"></i>
+        <span>CLINICAL WINGS &amp; SUITES</span>
+      </div>
+      <h1 class="page-title">WHERE SURGICAL MASTERY MEETS RESTORATIVE SERENITY</h1>
+      <p class="page-subtitle">
+        Engineered with acoustic isolation (STC 65), medical HEPA air purification, and natural circadian sunlighting designed to lower cortisol and accelerate wound healing.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Wing Blueprint Section -->
+  <section class="wing-blueprint-section" id="suites">
+    <div class="container">
+      <div class="section-tag-light">SANCTUARY BLUEPRINTS &amp; ARCHITECTURE</div>
+      <h2 class="collection-title">EXPLORE OUR SPECIALIZED WINGS</h2>
+      
+      <!-- Blueprint Tab Switcher -->
+      <div class="wing-tabs-nav">
+        <button class="wing-tab-btn active" data-target="pane-inpatient" onclick="switchWingTab('pane-inpatient')">01. Private Inpatient Suites</button>
+        <button class="wing-tab-btn" data-target="pane-theatres" onclick="switchWingTab('pane-theatres')">02. Robotic Surgical Theatres</button>
+        <button class="wing-tab-btn" data-target="pane-diagnostic" onclick="switchWingTab('pane-diagnostic')">03. Executive Diagnostic Labs</button>
+        <button class="wing-tab-btn" data-target="pane-hydro" onclick="switchWingTab('pane-hydro')">04. Convalescence Hydrotherapy</button>
+      </div>
+
+      <!-- Tab Panes -->
+      <div class="wing-tabs-content">
+        
+        <!-- Pane 1: Inpatient Suites -->
+        <div class="wing-tab-pane active" id="pane-inpatient">
+          <div class="wing-pane-media tilt-card">
+            <img src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&w=1000&q=80" alt="Private Luxury Inpatient Room" style="width:100%; height:460px; object-fit:cover; border-radius:2px;">
+          </div>
+          <div class="wing-pane-info">
+            <span class="doc-dir-badge">LEVEL 4 • ALPINE &amp; GARDEN VIEWS</span>
+            <h3 style="font-family: var(--font-serif); font-size: 2.2rem; color: #FFFFFF; margin-bottom: 1rem;">ROYAL INPATIENT RECOVERY SUITES</h3>
+            <p style="font-size: 0.92rem; color: var(--text-light-muted); line-height: 1.75; margin-bottom: 1.5rem;">
+              Crafted as residential sanctuaries rather than clinical rooms. Each 1,200 sq ft suite features private physician conference rooms, companion master suites, floor-to-ceiling soundproof glass, and continuous bedside biometric monitoring.
+            </p>
+            <div class="wing-spec-table">
+              <div class="wing-spec-row"><span class="wing-spec-lbl">ACOUSTIC RATING</span><span class="wing-spec-val">STC 65 (Zero Hallway Disturbance)</span></div>
+              <div class="wing-spec-row"><span class="wing-spec-lbl">AIR FILTRATION</span><span class="wing-spec-val">Class 100 Medical HEPA (18 Air Exchanges/Hr)</span></div>
+              <div class="wing-spec-row"><span class="wing-spec-lbl">NURSE-TO-PATIENT RATIO</span><span class="wing-spec-val">1:1 Dedicated Attending Specialist</span></div>
+              <div class="wing-spec-row"><span class="wing-spec-lbl">COMPANION ACCOMMODATION</span><span class="wing-spec-val">Private Ensuite Bedroom &amp; Dining Room</span></div>
+            </div>
+            <div class="mt-6">
+              <button class="btn btn-white btn-pill" onclick="openDoctorBookingModal('Inpatient Suite')">SCHEDULE SUITE TOUR</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane 2: Robotic Theatres -->
+        <div class="wing-tab-pane" id="pane-theatres">
+          <div class="wing-pane-media tilt-card">
+            <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1000&q=80" alt="Robotic Surgery Operating Theatre" style="width:100%; height:460px; object-fit:cover; border-radius:2px;">
+          </div>
+          <div class="wing-pane-info">
+            <span class="doc-dir-badge">SURGICAL TOWER • BASEMENT LEVEL 1</span>
+            <h3 style="font-family: var(--font-serif); font-size: 2.2rem; color: #FFFFFF; margin-bottom: 1rem;">ROBOTIC HYBRID OPERATING THEATRES</h3>
+            <p style="font-size: 0.92rem; color: var(--text-light-muted); line-height: 1.75; margin-bottom: 1.5rem;">
+              Merging next-gen da Vinci Xi surgical robotics, CT-guided Mako stereotactic arms, and Siemens Biplane angiography into one sterile operating environment, providing sub-millimeter precision.
+            </p>
+            <div class="wing-spec-table">
+              <div class="wing-spec-row"><span class="wing-spec-lbl">SURGICAL ACCURACY</span><span class="wing-spec-val">Sub-Millimeter Stereotaxis (0.2mm tolerance)</span></div>
+              <div class="wing-spec-row"><span class="wing-spec-lbl">INTRAOPERATIVE IMAGING</span><span class="wing-spec-val">3T High-Field Silent MRI &amp; Real-time 3D Fluoro</span></div>
+              <div class="wing-spec-row"><span class="wing-spec-lbl">AIR STERILITY</span><span class="wing-spec-val">Laminar Flow Cleanroom Class 10 (ISO 4)</span></div>
+              <div class="wing-spec-row"><span class="wing-spec-lbl">CHIEF SURGEON CONSOLE</span><span class="wing-spec-val">Dual 4K 3D Eyepieces with Haptic Force Feedback</span></div>
+            </div>
+            <div class="mt-6">
+              <button class="btn btn-white btn-pill" onclick="openDoctorBookingModal('Robotic Surgery')">CONSULT SURGEON BOARD</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane 3: Diagnostic Labs -->
+        <div class="wing-tab-pane" id="pane-diagnostic">
+          <div class="wing-pane-media tilt-card">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80" alt="High Field Diagnostic Suite" style="width:100%; height:460px; object-fit:cover; border-radius:2px;">
+          </div>
+          <div class="wing-pane-info">
+            <span class="doc-dir-badge">GENOMIC PAVILION • LEVEL 2</span>
+            <h3 style="font-family: var(--font-serif); font-size: 2.2rem; color: #FFFFFF; margin-bottom: 1rem;">EXECUTIVE DIAGNOSTIC PARLOURS</h3>
+            <p style="font-size: 0.92rem; color: var(--text-light-muted); line-height: 1.75; margin-bottom: 1.5rem;">
+              Full-body preventative screenings and immediate diagnostics. Equipped with zero-radiation ultrasound elastography, dual-source spectral CT, and in-house genomic sequencing laboratories.
+            </p>
+            <div class="wing-spec-table">
+              <div class="wing-spec-row"><span class="wing-spec-lbl">SCAN TIME</span><span class="wing-spec-val">Ultra-Fast 12-Minute Full Body Scans</span></div>
+              <div class="wing-spec-row"><span class="wing-spec-lbl">PHYSICIAN CONSULT</span><span class="wing-spec-val">Same-Day Results with Department Chair</span></div>
+              <div class="wing-spec-row"><span class="wing-spec-lbl">GENOMIC PANEL</span><span class="wing-spec-val">500+ Cancer &amp; Cardiovascular Gene Markers</span></div>
+            </div>
+            <div class="mt-6">
+              <button class="btn btn-white btn-pill" onclick="openDoctorBookingModal('Executive Diagnostics')">BOOK EXECUTIVE CHECKUP</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane 4: Hydrotherapy -->
+        <div class="wing-tab-pane" id="pane-hydro">
+          <div class="wing-pane-media tilt-card">
+            <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1000&q=80" alt="Convalescence Hydrotherapy Pool" style="width:100%; height:460px; object-fit:cover; border-radius:2px;">
+          </div>
+          <div class="wing-pane-info">
+            <span class="doc-dir-badge">REHABILITATION RESORT • GROUND LEVEL</span>
+            <h3 style="font-family: var(--font-serif); font-size: 2.2rem; color: #FFFFFF; margin-bottom: 1rem;">HYDROTHERAPY &amp; REGEN LODGES</h3>
+            <p style="font-size: 0.92rem; color: var(--text-light-muted); line-height: 1.75; margin-bottom: 1.5rem;">
+              Thermal saltwater hydrotherapy pools equipped with underwater cameras and anti-gravity ambulation systems to restore joint and neural pathways with zero pain.
+            </p>
+            <div class="wing-spec-table">
+              <div class="wing-spec-row"><span class="wing-spec-lbl">WATER MINERALIZATION</span><span class="wing-spec-val">Thermal Magnesium &amp; Alpine Saltwater (34°C)</span></div>
+              <div class="wing-spec-row"><span class="wing-spec-lbl">THERAPY TEAM</span><span class="wing-spec-val">Physiotherapists &amp; Orthopedic Physiatrists</span></div>
+            </div>
+            <div class="mt-6">
+              <button class="btn btn-white btn-pill" onclick="openDoctorBookingModal('Rehabilitation')">ENQUIRE ABOUT CONVALESCENCE</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sanctuary Amenities Section -->
+  <section class="amenities-section" id="amenities">
+    <div class="container">
+      <div class="section-tag-center">UNCOMPROMISING HOSPITALITY</div>
+      <h2 class="editorial-headline">SANCTUARY SERVICES &amp; AMENITIES</h2>
+
+      <div class="amenities-grid">
+        <div class="amenity-card tilt-card">
+          <div class="amenity-icon-wrap"><i data-lucide="utensils" style="width:24px; height:24px;"></i></div>
+          <h3 class="amenity-title">MICHELIN CLINICAL NUTRITION</h3>
+          <p class="amenity-desc">Custom organic culinary plans crafted by Michelin-experienced chefs and clinical nutritionists to decrease systemic inflammation and accelerate cell rebuilding.</p>
+        </div>
+
+        <div class="amenity-card tilt-card">
+          <div class="amenity-icon-wrap"><i data-lucide="sun" style="width:24px; height:24px;"></i></div>
+          <h3 class="amenity-title">CIRCADIAN HEALING LIGHT</h3>
+          <p class="amenity-desc">Dynamic spectral lighting synchronized with the natural solar cycle, scientifically proven to boost melatonin at night and promote natural morning cortisol rhythms.</p>
+        </div>
+
+        <div class="amenity-card tilt-card">
+          <div class="amenity-icon-wrap"><i data-lucide="shield-check" style="width:24px; height:24px;"></i></div>
+          <h3 class="amenity-title">1:1 ATTENDING NURSE CARE</h3>
+          <p class="amenity-desc">Your recovery suite is staffed by a dedicated ICU-trained nurse dedicated exclusively to your care 24 hours a day with zero shift interruptions.</p>
+        </div>
+
+        <div class="amenity-card tilt-card">
+          <div class="amenity-icon-wrap"><i data-lucide="plane" style="width:24px; height:24px;"></i></div>
+          <h3 class="amenity-title">PRIVATE HELIPAD ACCESS</h3>
+          <p class="amenity-desc">Rooftop and ground helicopter landing facilities at Zurich and Amalfi campuses with direct private elevator transit straight to operating suites.</p>
+        </div>
+
+        <div class="amenity-card tilt-card">
+          <div class="amenity-icon-wrap"><i data-lucide="user-check" style="width:24px; height:24px;"></i></div>
+          <h3 class="amenity-title">PERSONAL CASE CONCIERGE</h3>
+          <p class="amenity-desc">From private jet chartering and international medical visa expediting to family luxury villa accommodation, your concierge manages every single detail.</p>
+        </div>
+
+        <div class="amenity-card tilt-card">
+          <div class="amenity-icon-wrap"><i data-lucide="flower-2" style="width:24px; height:24px;"></i></div>
+          <h3 class="amenity-title">BOTANICAL HEALING GARDENS</h3>
+          <p class="amenity-desc">Private Japanese courtyards, aromatic medicinal flora, and sound-dampened walking paths engineered to lower patient heart rate and autonomic blood pressure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col footer-col-brand">
+        <h3 class="footer-tagline">Exceptional care.<br>Led by master physicians.</h3>
+        <p class="footer-jci-badge"><i data-lucide="shield-check" class="badge-icon"></i> JCI Accredited • Harvard &amp; Royal College Fellows</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">NAVIGATION</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="about.html">About Heritage</a></li>
+          <li><a href="doctors.html">Doctor Directory</a></li>
+          <li><a href="clinics.html">Surgical Suites</a></li>
+          <li><a href="research.html">Research Papers</a></li>
+          <li><a href="contact.html">Contact &amp; Campuses</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">TELEPHONE</h4>
+        <div class="footer-contact-info">
+          <a href="tel:+123456789012" class="contact-link">+1 (234) 567 890 12</a>
+          <a href="mailto:suites@orynthhealth.org" class="contact-link">suites@orynthhealth.org</a>
+        </div>
+      </div>
+      <div class="footer-col footer-col-form">
+        <div class="newsletter-card tilt-card">
+          <h4 class="newsletter-card-title">SANCTUARY DISPATCH</h4>
+          <p class="newsletter-card-subtitle">Quarterly clinical architectural reports.</p>
+          <form onsubmit="handleNewsletter(event)">
+            <input type="email" class="form-input mb-2" placeholder="Email Address *" required>
+            <button type="submit" class="btn btn-rust btn-block btn-square"><span>SUBSCRIBE</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-footer">
+      <div class="container sub-footer-content">
+        <div class="sub-footer-left">
+          <p class="sub-footer-credit"><span class="credit-brand">Orynth Medical Faculty</span> | Made with <span class="heart-red">❤️</span> by <a href="https://regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a></p>
+          <p class="sub-footer-copyright">&copy; 2026 ORYNTH MEDICAL FACULTY &amp; RESEARCH SANCTUARY. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="sub-footer-links"><a href="#">PRIVACY POLICY</a><a href="#">CLINICAL ETHICS</a><a href="#">ACCESSIBILITY</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="doctorBookingModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeDoctorBookingModal()"><i data-lucide="x"></i></button>
+      <div class="modal-header">
+        <h3 class="modal-title">SCHEDULE A PRIVATE SUITE TOUR</h3>
+        <p class="modal-subtitle">Connect with our patient relations director.</p>
+      </div>
+      <form class="modal-form" onsubmit="handleDoctorBooking(event)">
+        <div class="form-group"><input type="text" class="form-input" placeholder="Full Name *" required></div>
+        <div class="form-group"><input type="email" class="form-input" placeholder="Email Address *" required></div>
+        <div class="form-group"><input type="tel" class="form-input" placeholder="Phone Number *" required></div>
+        <button type="submit" class="btn btn-rust btn-block btn-pill mt-4"><span>REQUEST SUITE RESERVATION</span></button>
+        <div class="form-status" id="bookingStatus"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

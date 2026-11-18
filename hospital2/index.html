@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORYNTH MEDICAL | Premier Doctor & Specialist Surgical Sanctuary</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23141F1C'/%3E%3Cpath d='M50 18 C54 34 66 46 82 50 C66 54 54 66 50 82 C46 66 34 54 18 50 C34 46 46 34 50 18 Z' fill='%23C5A059'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%23FFFFFF'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif), Plus Jakarta Sans (Clean Modern Sans), Italian Style Accents -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-orynth">
+
+  <!-- ============================================================== -->
+  <!-- CUSTOM LUXURY CURSOR                                           -->
+  <!-- ============================================================== -->
+  <div class="custom-cursor" id="customCursor">
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing">
+      <span class="cursor-text" id="cursorText"></span>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- LUXURY EDITORIAL SLOW PRELOADER                                 -->
+  <!-- ============================================================== -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-overlay preloader-left"></div>
+    <div class="preloader-overlay preloader-right"></div>
+    
+    <div class="preloader-content">
+      <div class="preloader-emblem-wrap">
+        <svg viewBox="0 0 100 100" class="preloader-gold-emblem">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <ellipse cx="50" cy="22" rx="8" ry="18" class="petal petal-1"/>
+            <ellipse cx="50" cy="78" rx="8" ry="18" class="petal petal-2"/>
+            <ellipse cx="22" cy="50" rx="18" ry="8" class="petal petal-3"/>
+            <ellipse cx="78" cy="50" rx="18" ry="8" class="petal petal-4"/>
+            <ellipse cx="30" cy="30" rx="8" ry="16" transform="rotate(-45 30 30)" class="petal petal-5"/>
+            <ellipse cx="70" cy="70" rx="8" ry="16" transform="rotate(-45 70 70)" class="petal petal-6"/>
+            <ellipse cx="70" cy="30" rx="8" ry="16" transform="rotate(45 70 30)" class="petal petal-7"/>
+            <ellipse cx="30" cy="70" rx="8" ry="16" transform="rotate(45 30 70)" class="petal petal-8"/>
+          </g>
+          <circle cx="50" cy="50" r="4" fill="#C5A059"/>
+        </svg>
+      </div>
+
+      <div class="preloader-brand">
+        <span class="preloader-badge">PHYSICIAN-LED CLINICAL SANCTUARY</span>
+        <h2 class="preloader-title">DR. VANCE &amp; CLINICAL FACULTY</h2>
+      </div>
+
+      <div class="preloader-counter-box">
+        <div class="preloader-bar-bg">
+          <div class="preloader-bar-fill" id="preloaderFill"></div>
+        </div>
+        <div class="preloader-percent" id="preloaderPercent">0%</div>
+      </div>
+
+      <p class="preloader-subtext">Preparing clinical environment &amp; physician records...</p>
+    </div>
+  </div>
+
+  <!-- Ambient Light Bokeh / Particle Canvas -->
+  <canvas id="ambientCanvas" class="ambient-canvas"></canvas>
+
+  <!-- ============================================================== -->
+  <!-- NAVIGATION BAR (Exact Match to Header in Image 1)               -->
+  <!-- ============================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <!-- Brand Logo: Emblem + Doctor Clinic Title -->
+      <a href="#hero" class="brand-logo" data-cursor="HOME">
+        <span class="logo-emblem">
+          <svg viewBox="0 0 100 100">
+            <g fill="currentColor">
+              <ellipse cx="50" cy="22" rx="8" ry="18"/>
+              <ellipse cx="50" cy="78" rx="8" ry="18"/>
+              <ellipse cx="22" cy="50" rx="18" ry="8"/>
+              <ellipse cx="78" cy="50" rx="18" ry="8"/>
+              <ellipse cx="30" cy="30" rx="8" ry="16" transform="rotate(-45 30 30)"/>
+              <ellipse cx="70" cy="70" rx="8" ry="16" transform="rotate(-45 70 70)"/>
+              <ellipse cx="70" cy="30" rx="8" ry="16" transform="rotate(45 70 30)"/>
+              <ellipse cx="30" cy="70" rx="8" ry="16" transform="rotate(45 30 70)"/>
+              <circle cx="50" cy="50" r="5" fill="#C5A059"/>
+            </g>
+          </svg>
+        </span>
+        <div class="logo-text-group">
+          <span class="logo-text">ORYNTH</span>
+          <span class="logo-subtext">MEDICAL FACULTY</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active" data-cursor="HOME">HOME</a></li>
+          <li><a href="about.html" class="nav-link" data-cursor="ABOUT">ABOUT</a></li>
+          <li class="has-dropdown">
+            <a href="doctors.html" class="nav-link" data-cursor="DOCTORS">
+              DOCTORS <i data-lucide="chevron-down" class="nav-icon"></i>
+            </a>
+            <div class="nav-dropdown">
+              <a href="doctors.html?doc=vance">Dr. Julian Vance (Cardiovascular)</a>
+              <a href="doctors.html?doc=rostova">Dr. Elena Rostova (Neurosurgery)</a>
+              <a href="doctors.html?doc=sterling">Dr. Marcus Sterling (Orthopedics)</a>
+              <a href="doctors.html?doc=pendelton">Dr. Arthur Pendelton (Oncology)</a>
+              <a href="doctors.html">Browse All Faculty (40+ Chairs)</a>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="clinics.html" class="nav-link" data-cursor="SUITES">
+              CLINICS <i data-lucide="chevron-down" class="nav-icon"></i>
+            </a>
+            <div class="nav-dropdown">
+              <a href="clinics.html#suites">Private Doctor Consultation Suites</a>
+              <a href="clinics.html#theatres">Robotic Surgical Theatres</a>
+              <a href="clinics.html#diagnostics">Executive Diagnostic Labs</a>
+              <a href="clinics.html#campuses">International Medical Campuses</a>
+            </div>
+          </li>
+          <li><a href="research.html" class="nav-link" data-cursor="RESEARCH">RESEARCH</a></li>
+          <li><a href="contact.html" class="nav-link" data-cursor="CONTACT">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button (Matching "GET STARTED ->") -->
+      <!-- Action Button (Matching "GET STARTED ->") -->
+      <div class="header-action">
+        <button class="btn btn-outline-dark btn-pill btn-sm magnetic-btn header-book-btn" onclick="openDoctorBookingModal()" data-cursor="BOOK">
+          <span>BOOK DOCTOR</span>
+          <i data-lucide="arrow-right" class="btn-arrow"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Luxury Fullscreen Mobile Overlay Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        
+        <!-- Mobile Drawer Top Bar -->
+        <div class="mobile-menu-header">
+          <a href="index.html" class="mobile-drawer-logo" onclick="closeMobileMenu()">
+            <span class="logo-mark">
+              <svg viewBox="0 0 100 100" class="logo-svg" width="30" height="30" aria-hidden="true">
+                <g fill="none" stroke="#C5A059" stroke-width="2.2">
+                  <ellipse cx="50" cy="22" rx="8" ry="18"/>
+                  <ellipse cx="50" cy="78" rx="8" ry="18"/>
+                  <ellipse cx="22" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="78" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="30" cy="30" rx="8" ry="16" transform="rotate(-45 30 30)"/>
+                  <ellipse cx="70" cy="70" rx="8" ry="16" transform="rotate(-45 70 70)"/>
+                  <ellipse cx="70" cy="30" rx="8" ry="16" transform="rotate(45 70 30)"/>
+                  <ellipse cx="30" cy="70" rx="8" ry="16" transform="rotate(45 30 70)"/>
+                  <circle cx="50" cy="50" r="5" fill="#C5A059"/>
+                </g>
+              </svg>
+            </span>
+            <div class="logo-text-group">
+              <span class="light-logo">ORYNTH</span>
+              <span class="gold-subtext">MEDICAL FACULTY</span>
+            </div>
+          </a>
+
+          <button class="mobile-close-btn" onclick="closeMobileMenu()" aria-label="Close navigation menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Meta Tagline -->
+        <div class="mobile-menu-meta">
+          <span class="meta-star">✦</span>
+          <span>ZURICH • LONDON • GENEVA — PRIVATE MEDICAL SANCTUARY</span>
+        </div>
+
+        <!-- Numbered Editorial Navigation Links -->
+        <nav class="mobile-nav-body">
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a href="index.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">01</span>
+                <span class="m-label">HOME SANCTUARY</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="about.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">02</span>
+                <span class="m-label">ABOUT OUR HERITAGE</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="doctors.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">03</span>
+                <span class="m-label">SPECIALIST SURGEONS</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="clinics.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">04</span>
+                <span class="m-label">SURGICAL SUITES</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="research.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">05</span>
+                <span class="m-label">CLINICAL RESEARCH</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="contact.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">06</span>
+                <span class="m-label">CONTACT &amp; CAMPUSES</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Concierge Hotline & Primary CTA -->
+        <div class="mobile-menu-bottom">
+          <div class="mobile-concierge-row">
+            <div class="live-pulse-group">
+              <span class="pulse-animation"></span>
+              <span class="concierge-status">24/7 VIP SURGICAL DESK</span>
+            </div>
+            <a href="tel:+41228190000" class="mobile-tel-link">+41 (22) 819 0000</a>
+          </div>
+
+          <button class="btn btn-rust btn-pill mobile-cta-btn" onclick="openDoctorBookingModal(); closeMobileMenu();">
+            <span>SCHEDULE PRIVATE CONSULTATION</span>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ============================================================== -->
+  <!-- SECTION 1: HERO (Image 1 Layout with Cinematic Video BG)       -->
+  <!-- ============================================================== -->
+  <section class="hero-section" id="hero">
+    <!-- Cinematic High-End Video Background with Fallback Poster -->
+    <div class="hero-bg-wrapper">
+      <video 
+        id="heroVideo" 
+        class="hero-bg-video" 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        preload="auto"
+        poster="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=2400&q=85"
+      >
+        <!-- High-definition surgery and hospital clinical footage -->
+        <source src="assets/hero-hospital.mp4" type="video/mp4">
+        <source src="https://cdn.coverr.co/videos/coverr-doctor-in-a-surgery-3600/1080p.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Hero Center Content -->
+    <div class="hero-content">
+      <div class="hero-badge reveal-item">
+        <span class="gold-sparkle">✦</span>
+        <span class="tracking-wide">WORLD-CLASS DOCTORS / SURGICAL MASTERY</span>
+        <span class="gold-sparkle">✦</span>
+      </div>
+
+      <h1 class="hero-title reveal-item">
+        MORE THAN MEDICINE,<br>
+        <span class="hero-title-italic">IT'S HEALING REDEFINED</span>
+      </h1>
+
+      <p class="hero-subheading reveal-item">
+        Consult one-on-one with internationally acclaimed department chairs, Ivy-League surgical fellows, and research pioneers committed to your complete recovery.
+      </p>
+
+      <!-- Twin Buttons (Matches Image 1) -->
+      <div class="hero-actions reveal-item">
+        <a href="#specialists" class="btn btn-white btn-pill magnetic-btn" data-cursor="DOCTORS">
+          <span>MEET OUR DOCTORS</span>
+          <i data-lucide="arrow-right" class="btn-arrow"></i>
+        </a>
+        <button class="btn btn-outline-white btn-pill magnetic-btn" onclick="openDoctorBookingModal()" data-cursor="CONSULT">
+          <span>SCHEDULE CONSULTATION</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Hero Bottom Bar (Matches Image 1: Text on left, Scroll & Video Controls on right) -->
+    <div class="hero-bottom-bar">
+      <div class="hero-bottom-left">
+        <p>Chief surgeons and medical directors in London, Zurich, and New York. Offering robotic precision and deeply personal doctor care.</p>
+      </div>
+      <div class="hero-bottom-right">
+        <!-- Interactive Video Play/Pause Control -->
+        <button class="video-ctrl-btn" id="videoToggleBtn" aria-label="Pause or play background video" data-cursor="VIDEO">
+          <i data-lucide="pause" id="videoToggleIcon" class="ctrl-icon"></i>
+          <span id="videoToggleText">CINEMATIC VIEW</span>
+        </button>
+        
+        <a href="#philosophy" class="scroll-explore" data-cursor="SCROLL">
+          <span>SCROLL TO EXPLORE</span>
+          <i data-lucide="chevron-down" class="scroll-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SECTION 2: PHILOSOPHY & STATS (Exact Match to Image 2)         -->
+  <!-- ============================================================== -->
+  <section class="philosophy-section" id="philosophy">
+    <div class="container">
+      
+      <!-- Small Label -->
+      <div class="section-tag-center">
+        <span>A PHILOSOPHY OF PHYSICIAN-LED EXCELLENCE</span>
+      </div>
+
+      <!-- Large Editorial Headline (Matches "SOME PLACES STAY WITH YOU...") -->
+      <h2 class="editorial-headline text-reveal">
+        SOME CARE STAYS WITH YOU FOREVER.<br>
+        WE BELIEVE TRUE HEALING BEGINS WHERE MEDICAL GENIUS MEETS PROFOUND HUMAN EMPATHY.
+      </h2>
+
+      <!-- Subtitle Paragraph -->
+      <div class="editorial-subtext">
+        <p>
+          We believe the most memorable healing journey begins with the right doctor. A compassionate physician who takes the time to listen, an unhurried consultation in a serene private parlour, and a surgical department chair with decades of proven mastery. Orynth Health brings together internationally renowned medical heads for patients who accept nothing less than extraordinary clinical care.
+        </p>
+      </div>
+
+      <!-- Social Proof / Doctor Credential Avatars (Matches Image 2) -->
+      <div class="social-proof-row">
+        <div class="avatar-stack">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=140&q=80" alt="Chief Surgeon Dr. Julian Vance" class="avatar-img" title="Dr. Julian Vance, MD, FACS">
+          <img src="https://images.unsplash.com/photo-1594824813583-4a187d7b3ea0?auto=format&fit=crop&w=140&q=80" alt="Director Dr. Elena Rostova" class="avatar-img" title="Dr. Elena Rostova, MD, PhD">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=140&q=80" alt="Chair Dr. Marcus Sterling" class="avatar-img" title="Dr. Marcus Sterling, MD, FRCS">
+        </div>
+        <div class="social-proof-text">
+          <span class="proof-bold">ACCREDITED BY JCI &amp; HARVARD MEDICAL ALUMNI</span>
+          <span class="proof-light">TRUSTED BY 18,400+ PATIENTS WORLDWIDE • 100% PHYSICIAN-OWNED</span>
+        </div>
+      </div>
+
+      <!-- Rust Pill Button (Matches Image 2) -->
+      <div class="text-center mt-6">
+        <button class="btn btn-rust btn-pill magnetic-btn" onclick="openDoctorModal('vance')" data-cursor="LETTER">
+          <span>READ CHIEF SURGEON'S MESSAGE</span>
+          <i data-lucide="arrow-right" class="btn-arrow"></i>
+        </button>
+      </div>
+
+      <!-- 4-Column Stats Box (Exact 1:1 match of bordered container in Image 2) -->
+      <div class="stats-box-grid tilt-card" id="statsGrid">
+        
+        <div class="stat-col">
+          <div class="stat-header">
+            <h4 class="stat-title">YEARS OF PRACTICE</h4>
+            <p class="stat-desc">Three decades of groundbreaking surgical advances, patents &amp; compassionate care.</p>
+          </div>
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-target="30">0</span><span class="stat-plus">+</span>
+          </div>
+        </div>
+
+        <div class="stat-col">
+          <div class="stat-header">
+            <h4 class="stat-title">RESTORED PATIENTS</h4>
+            <p class="stat-desc">From complex heart valve reconstructions to personalized oncology remissions.</p>
+          </div>
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-target="48">0</span><span class="stat-unit">K+</span>
+          </div>
+        </div>
+
+        <div class="stat-col">
+          <div class="stat-header">
+            <h4 class="stat-title">CHIEF SPECIALISTS</h4>
+            <p class="stat-desc">Senior department chairs, professors, and international medical journal editors.</p>
+          </div>
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-target="140">0</span><span class="stat-plus">+</span>
+          </div>
+        </div>
+
+        <div class="stat-col">
+          <div class="stat-header">
+            <h4 class="stat-title">SURGICAL SUCCESS</h4>
+            <p class="stat-desc">Documented surgical outcomes in the 99th percentile across all major hospital registries.</p>
+          </div>
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-target="99.8" data-decimals="1">0</span><span class="stat-unit">%</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SECTION 3: DARK SPECIALIST DOCTORS (Exact Match to Image 3)    -->
+  <!-- ============================================================== -->
+  <section class="dark-collection-section" id="specialists">
+    <div class="container">
+      
+      <!-- Top Row Header -->
+      <div class="collection-header">
+        <div class="collection-header-left">
+          <div class="section-tag-light">DISTINGUISHED CLINICAL DIRECTORS</div>
+          <h2 class="collection-title">FIND YOUR MASTER SPECIALIST</h2>
+          <p class="collection-subtitle">
+            Every clinical outcome starts with the right specialist doctor. Meet our internationally recognized department chairs, each dedicated to unhurried, personalized care and robotic precision.
+          </p>
+        </div>
+        <div class="collection-header-right">
+          <button class="btn btn-outline-light btn-pill magnetic-btn" onclick="openDoctorBookingModal()" data-cursor="SCHEDULE">
+            <span>CONSULT ANY SPECIALIST</span>
+            <i data-lucide="arrow-right" class="btn-arrow"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- 2x2 Grid of Doctor Specialty Cards (Matches Image 3) -->
+      <div class="clinic-cards-grid">
+        
+        <!-- Doctor Card 1 -->
+        <article class="clinic-card tilt-card" onclick="openDoctorModal('vance')" data-cursor="DR. VANCE">
+          <div class="clinic-image-box">
+            <img 
+              src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1000&q=80" 
+              alt="Dr. Julian Vance, MD, FACS, Chief Cardiac Surgeon"
+              class="clinic-card-img"
+            >
+            <div class="clinic-badge-top-left">
+              <i data-lucide="award" class="badge-icon"></i>
+              <span>TOWER A • HARVARD FELLOW</span>
+            </div>
+            <div class="clinic-badge-top-right">
+              <span>CHIEF CARDIAC SURGEON</span>
+            </div>
+          </div>
+          <div class="clinic-card-body">
+            <h3 class="clinic-card-title">DR. JULIAN VANCE, MD, FACS</h3>
+            <p class="doctor-subrole">Chair, Department of Cardiovascular &amp; Thoracic Surgery</p>
+            <div class="clinic-meta-row">
+              <div class="meta-price">
+                <span class="meta-sub">INITIAL CONSULT</span>
+                <span class="meta-val">$220.00 <small>/ 60 MIN</small></span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-num">24 YRS</span>
+                <span class="meta-lbl">CLINICAL EXP</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-num">3,400+</span>
+                <span class="meta-lbl">HEART SURGERIES</span>
+              </div>
+            </div>
+            <div class="clinic-card-footer">
+              <span class="card-link-text">CONSULT DR. VANCE <i data-lucide="arrow-right"></i></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Doctor Card 2 -->
+        <article class="clinic-card tilt-card" onclick="openDoctorModal('rostova')" data-cursor="DR. ROSTOVA">
+          <div class="clinic-image-box">
+            <img 
+              src="https://images.unsplash.com/photo-1594824813583-4a187d7b3ea0?auto=format&fit=crop&w=1000&q=80" 
+              alt="Dr. Elena Rostova, MD, PhD, Chief Neurosurgeon"
+              class="clinic-card-img"
+            >
+            <div class="clinic-badge-top-left">
+              <i data-lucide="award" class="badge-icon"></i>
+              <span>SWISS PAVILION • KAROLINSKA</span>
+            </div>
+            <div class="clinic-badge-top-right">
+              <span>DIRECTOR NEUROSURGERY</span>
+            </div>
+          </div>
+          <div class="clinic-card-body">
+            <h3 class="clinic-card-title">DR. ELENA ROSTOVA, MD, PHD</h3>
+            <p class="doctor-subrole">Director of Stereotactic Neurosurgery &amp; Spine Reconstruction</p>
+            <div class="clinic-meta-row">
+              <div class="meta-price">
+                <span class="meta-sub">INITIAL CONSULT</span>
+                <span class="meta-val">$250.00 <small>/ 60 MIN</small></span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-num">19 YRS</span>
+                <span class="meta-lbl">CLINICAL EXP</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-num">1,900+</span>
+                <span class="meta-lbl">CRANIOTOMIES</span>
+              </div>
+            </div>
+            <div class="clinic-card-footer">
+              <span class="card-link-text">CONSULT DR. ROSTOVA <i data-lucide="arrow-right"></i></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Doctor Card 3 -->
+        <article class="clinic-card tilt-card" onclick="openDoctorModal('pendelton')" data-cursor="DR. ARTHUR">
+          <div class="clinic-image-box">
+            <img 
+              src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=1000&q=80" 
+              alt="Dr. Arthur Pendelton, MD, PhD, Chief Oncologist"
+              class="clinic-card-img"
+            >
+            <div class="clinic-badge-top-left">
+              <i data-lucide="award" class="badge-icon"></i>
+              <span>GENOMIC CENTER • HOPKINS</span>
+            </div>
+            <div class="clinic-badge-top-right">
+              <span>CHAIR ONCOLOGY &amp; GENOMICS</span>
+            </div>
+          </div>
+          <div class="clinic-card-body">
+            <h3 class="clinic-card-title">DR. ARTHUR PENDELTON, MD</h3>
+            <p class="doctor-subrole">Chair of Precision Oncology &amp; Targeted Immunotherapy</p>
+            <div class="clinic-meta-row">
+              <div class="meta-price">
+                <span class="meta-sub">INITIAL CONSULT</span>
+                <span class="meta-val">$280.00 <small>/ 60 MIN</small></span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-num">22 YRS</span>
+                <span class="meta-lbl">CLINICAL EXP</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-num">420+</span>
+                <span class="meta-lbl">CLINICAL TRIALS</span>
+              </div>
+            </div>
+            <div class="clinic-card-footer">
+              <span class="card-link-text">CONSULT DR. PENDELTON <i data-lucide="arrow-right"></i></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Doctor Card 4 -->
+        <article class="clinic-card tilt-card" onclick="openDoctorModal('sterling')" data-cursor="DR. MARCUS">
+          <div class="clinic-image-box">
+            <img 
+              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1000&q=80" 
+              alt="Dr. Marcus Sterling, MD, FRCS, Chief Orthopedic Surgeon"
+              class="clinic-card-img"
+            >
+            <div class="clinic-badge-top-left">
+              <i data-lucide="award" class="badge-icon"></i>
+              <span>REHAB PAVILION • OXFORD</span>
+            </div>
+            <div class="clinic-badge-top-right">
+              <span>CHIEF ROBOTIC ORTHOPEDICS</span>
+            </div>
+          </div>
+          <div class="clinic-card-body">
+            <h3 class="clinic-card-title">DR. MARCUS STERLING, FRCS</h3>
+            <p class="doctor-subrole">Director of Robotic Joint Reconstruction &amp; Cartilage Stem Cell</p>
+            <div class="clinic-meta-row">
+              <div class="meta-price">
+                <span class="meta-sub">INITIAL CONSULT</span>
+                <span class="meta-val">$200.00 <small>/ 60 MIN</small></span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-num">26 YRS</span>
+                <span class="meta-lbl">CLINICAL EXP</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-num">4,200+</span>
+                <span class="meta-lbl">JOINT PROCEDURES</span>
+              </div>
+            </div>
+            <div class="clinic-card-footer">
+              <span class="card-link-text">CONSULT DR. STERLING <i data-lucide="arrow-right"></i></span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SECTION 4: 4 DOCTOR PILLARS & BOTANICAL EMBLEM (Image 4)       -->
+  <!-- ============================================================== -->
+  <section class="pillars-section" id="pillars">
+    <div class="container">
+      
+      <div class="section-tag-center">
+        <span>THE PHYSICIAN’S PLEDGE</span>
+      </div>
+
+      <h2 class="editorial-headline mb-12 text-reveal">
+        DESIGNED FOR THE WAY MEDICINE SHOULD BE DELIVERED
+      </h2>
+
+      <!-- 4 Pillars (2x2 Grid, Matches Image 4) -->
+      <div class="pillars-grid">
+        
+        <div class="pillar-item">
+          <div class="pillar-header">
+            <span class="pillar-num">01.</span>
+            <h3 class="pillar-title">PHYSICIAN-LED INTEGRITY</h3>
+          </div>
+          <p class="pillar-text">
+            Every clinical protocol is established by board-certified physicians, not hospital accountants. Your treatment plan is solely governed by medical efficacy and your personal wellness goals.
+          </p>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-header">
+            <span class="pillar-num">02.</span>
+            <h3 class="pillar-title">UNHURRIED CONSULTATIONS</h3>
+          </div>
+          <p class="pillar-text">
+            Standard consultations are allocated 60 minutes. Your doctor listens deeply, evaluates your medical imaging together on high-resolution displays, and answers every question.
+          </p>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-header">
+            <span class="pillar-num">03.</span>
+            <h3 class="pillar-title">SURGICAL SUB-SPECIALIZATION</h3>
+          </div>
+          <p class="pillar-text">
+            Your surgeon only performs procedures they have executed thousands of times. Sub-millimeter robotic stereotaxis ensures the highest success rates and rapid ambulation.
+          </p>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-header">
+            <span class="pillar-num">04.</span>
+            <h3 class="pillar-title">CONTINUOUS DOCTOR ROUNDS</h3>
+          </div>
+          <p class="pillar-text">
+            Your lead surgeon personally visits your inpatient suite every morning and evening, partnering with your dedicated 1:1 clinical nurse specialist throughout recovery.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Panoramic Botanical Banner with White Floral Emblem (Matches Image 4) -->
+      <div class="botanical-banner-box tilt-card">
+        <div class="botanical-banner-img" style="background-image: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=2000&q=85');">
+          <div class="botanical-overlay">
+            <div class="botanical-emblem-badge">
+              <svg viewBox="0 0 100 100" class="botanical-flower">
+                <g fill="#FFFFFF">
+                  <ellipse cx="50" cy="22" rx="8" ry="18"/>
+                  <ellipse cx="50" cy="78" rx="8" ry="18"/>
+                  <ellipse cx="22" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="78" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="30" cy="30" rx="8" ry="16" transform="rotate(-45 30 30)"/>
+                  <ellipse cx="70" cy="70" rx="8" ry="16" transform="rotate(-45 70 70)"/>
+                  <ellipse cx="70" cy="30" rx="8" ry="16" transform="rotate(45 70 30)"/>
+                  <ellipse cx="30" cy="70" rx="8" ry="16" transform="rotate(45 30 70)"/>
+                  <circle cx="50" cy="50" r="6"/>
+                </g>
+              </svg>
+            </div>
+            <div class="botanical-caption">
+              <span>HOSPITAL SANCTUARY GARDENS • DESIGNED FOR PSYCHOLOGICAL RESTORATION</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SECTION 5: CARE WINGS & DOCTOR SUITES (Exact Match to Image 5) -->
+  <!-- ============================================================== -->
+  <section class="possibilities-section" id="care-wings">
+    <div class="container">
+      
+      <!-- Top Row Header -->
+      <div class="possibilities-header">
+        <div class="possibilities-left">
+          <div class="section-tag-left">CLINICAL SANCTUARY SPACES</div>
+          <h2 class="editorial-title-left text-reveal">
+            DIFFERENT CARE NEEDS.<br>
+            UNRIVALED DOCTOR ATTENTION
+          </h2>
+          <p class="possibilities-desc">
+            From secluded private doctor consultation parlours to next-generation robotic surgical theatres, explore spaces engineered for clinical mastery and serene recovery.
+          </p>
+        </div>
+        <div class="possibilities-right">
+          <button class="btn btn-rust btn-pill magnetic-btn" onclick="openDoctorBookingModal()" data-cursor="SUITES">
+            <span>DISCOVER CARE SUITES</span>
+            <i data-lucide="arrow-right" class="btn-arrow"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- 4 Showcase Image Cards (2x2 Grid, Matches Image 5) -->
+      <div class="showcase-grid">
+        
+        <div class="showcase-card tilt-card">
+          <div class="showcase-img-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&w=900&q=80" 
+              alt="Private Luxury Inpatient Recovery Suite"
+              class="showcase-img"
+            >
+          </div>
+          <div class="showcase-info">
+            <h3 class="showcase-title">PRIVATE DOCTOR RECOVERY SUITES</h3>
+            <p class="showcase-text">Acoustic insulation, circadian natural lighting, companion accommodation, and direct bedside doctor monitoring.</p>
+          </div>
+        </div>
+
+        <div class="showcase-card tilt-card">
+          <div class="showcase-img-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=900&q=80" 
+              alt="Next-Gen Robotic Operating Theatre"
+              class="showcase-img"
+            >
+          </div>
+          <div class="showcase-info">
+            <h3 class="showcase-title">ROBOTIC SURGICAL THEATRES</h3>
+            <p class="showcase-text">da Vinci 5 and Mako robotic consoles paired with intraoperative 3D imaging for sub-millimeter surgical accuracy.</p>
+          </div>
+        </div>
+
+        <div class="showcase-card tilt-card">
+          <div class="showcase-img-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80" 
+              alt="Executive Diagnostic Parlours"
+              class="showcase-img"
+            >
+          </div>
+          <div class="showcase-info">
+            <h3 class="showcase-title">EXECUTIVE DIAGNOSTIC PARLOURS</h3>
+            <p class="showcase-text">Ultra-high-field 3T MRI, whole-body dual-source CT, and immediate doctor-led results interpretation.</p>
+          </div>
+        </div>
+
+        <div class="showcase-card tilt-card">
+          <div class="showcase-img-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=80" 
+              alt="Restorative Healing Sanctuary"
+              class="showcase-img"
+            >
+          </div>
+          <div class="showcase-info">
+            <h3 class="showcase-title">BOTANICAL CONVALESCENCE</h3>
+            <p class="showcase-text">Tranquil healing residences surrounded by nature reserves for extended rehabilitation and physical therapy.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SECTION 6: GLOBAL CAMPUSES & DETAILS (Exact Match to Image 6)  -->
+  <!-- ============================================================== -->
+  <section class="campuses-section" id="campuses">
+    <div class="container">
+      
+      <!-- Top Centered Rust Button (Matches Image 6) -->
+      <div class="text-center mb-10">
+        <button class="btn btn-rust btn-pill magnetic-btn" onclick="openDoctorBookingModal()" data-cursor="CAMPUSES">
+          <span>EXPLORE GLOBAL MEDICAL CAMPUSES</span>
+          <i data-lucide="arrow-right" class="btn-arrow"></i>
+        </button>
+      </div>
+
+      <!-- 3-Column Portrait Cards with Framing (Matches Image 6) -->
+      <div class="destinations-grid">
+        
+        <div class="dest-card tilt-card">
+          <div class="dest-img-frame">
+            <img 
+              src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80" 
+              alt="Zurich Precision Medical Campus"
+              class="dest-img"
+            >
+          </div>
+          <div class="dest-meta">
+            <h4 class="dest-name">ZURICH MEDICAL SANCTUARY</h4>
+            <span class="dest-tag">Swiss Surgical Excellence &amp; Longevity</span>
+          </div>
+        </div>
+
+        <div class="dest-card tilt-card">
+          <div class="dest-img-frame">
+            <img 
+              src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" 
+              alt="Amalfi Coast Hydrotherapy and Orthopedic Center"
+              class="dest-img"
+            >
+          </div>
+          <div class="dest-meta">
+            <h4 class="dest-name">AMALFI COAST REHABILITATION</h4>
+            <span class="dest-tag">Orthopedic Convalescence &amp; Hydrotherapy</span>
+          </div>
+        </div>
+
+        <div class="dest-card tilt-card">
+          <div class="dest-img-frame">
+            <img 
+              src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" 
+              alt="Maldives Cellular Restorative Island"
+              class="dest-img"
+            >
+          </div>
+          <div class="dest-meta">
+            <h4 class="dest-name">MALDIVES HEALING ISLAND</h4>
+            <span class="dest-tag">Cellular Rejuvenation &amp; Post-Op Sanctuary</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Lower Sub-Section: "THE DETAILS MAKE THE DIFFERENCE" (Matches Image 6) -->
+      <div class="considered-section">
+        
+        <div class="considered-header">
+          <div class="considered-title-box">
+            <span class="section-tag-left">THE DETAILS MAKE THE DIFFERENCE</span>
+            <h2 class="editorial-title-left text-reveal">A MORE CONSIDERED WAY TO HEAL</h2>
+          </div>
+          <div class="considered-desc-box">
+            <p>
+              Entrusting your health to a doctor is one of life’s most vulnerable decisions. Orynth Medical removes anxiety by pairing you directly with world-class department chairs, transparent clinical metrics, and private restorative environments that accelerate your recovery.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 Alternating Feature Rows (Matches Image 6) -->
+        <div class="considered-rows">
+          
+          <!-- Row 1: Image Left, Title Center, Text Right -->
+          <div class="considered-row">
+            <div class="considered-thumb tilt-card">
+              <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80" alt="World-Class Doctor Consultation">
+            </div>
+            <div class="considered-col-title">
+              <div class="icon-title">
+                <i data-lucide="check-circle-2" class="icon-accent"></i>
+                <h3>A VETTED DOCTOR BOARD</h3>
+              </div>
+            </div>
+            <div class="considered-col-desc">
+              <p>Every attending physician is a board-certified specialist with a minimum of fifteen years of operating experience and peer-reviewed surgical publications.</p>
+            </div>
+          </div>
+
+          <!-- Row 2: Title Left, Text Center, Image Right (Reverse) -->
+          <div class="considered-row considered-row-reverse">
+            <div class="considered-col-title">
+              <div class="icon-title">
+                <i data-lucide="shield-check" class="icon-accent"></i>
+                <h3>DIRECT DOCTOR ACCESS</h3>
+              </div>
+            </div>
+            <div class="considered-col-desc">
+              <p>Patients receive dedicated contact credentials to reach their surgeon’s clinical team 24 hours a day, ensuring immediate medical guidance whenever needed.</p>
+            </div>
+            <div class="considered-thumb tilt-card">
+              <img src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&w=600&q=80" alt="Private Healing Architecture">
+            </div>
+          </div>
+
+          <!-- Row 3: Image Left, Title Center, Text Right -->
+          <div class="considered-row">
+            <div class="considered-thumb tilt-card">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Dedicated Clinical Concierge">
+            </div>
+            <div class="considered-col-title">
+              <div class="icon-title">
+                <i data-lucide="heart-handshake" class="icon-accent"></i>
+                <h3>PERSONAL CASE CONCIERGE</h3>
+              </div>
+            </div>
+            <div class="considered-col-desc">
+              <p>Your medical coordinator manages records transfer, imaging reviews, travel arrangements, private suite accommodations, and post-operative follow-up appointments.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SECTION 7: FULL-SCREEN ATMOSPHERIC TESTIMONIAL (Image 7)       -->
+  <!-- ============================================================== -->
+  <section class="testimonial-section" id="testimonials">
+    <div class="testimonial-bg-wrap">
+      <img 
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2200&q=85" 
+        alt="Peaceful Serene Mountain Valley Sanctuary" 
+        class="testimonial-bg-img"
+      >
+      <div class="testimonial-dark-overlay"></div>
+    </div>
+
+    <div class="container testimonial-container">
+      
+      <!-- Big Stylized Quotation Mark (Matches Image 7) -->
+      <div class="quote-mark">“</div>
+
+      <!-- Testimonial Carousel -->
+      <div class="testimonial-slider" id="testimonialSlider">
+        
+        <!-- Slide 1 -->
+        <div class="testimonial-slide active">
+          <blockquote class="testimonial-quote">
+            “Dr. Julian Vance saved my life with his robotic heart valve reconstruction. His calm demeanor, extraordinary surgical clarity, and personal visits during recovery gave my family total peace of mind. He is truly a master of his craft.”
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="author-name">LADY ELEANOR VANCE</span>
+            <span class="author-role">Cardiovascular Surgery Patient • London, UK</span>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="testimonial-slide">
+          <blockquote class="testimonial-quote">
+            “When facing a complex cranial tumor diagnosis, Dr. Elena Rostova provided unmatched neurosurgical confidence. Her stereotactic precision preserved all my motor functions. I was walking through the hospital gardens within 48 hours.”
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="author-name">DR. ALEXANDER LINDQVIST</span>
+            <span class="author-role">Professor of Biophysics &amp; Neurosurgical Patient • Stockholm</span>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="testimonial-slide">
+          <blockquote class="testimonial-quote">
+            “Dr. Marcus Sterling performed bilateral robotic knee preservation. His dedicated physical therapy protocols and bedside encouragement had me hiking in Switzerland just three months later. Outstanding physician care.”
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="author-name">MARIA CHEN-HENDERSON</span>
+            <span class="author-role">Orthopedic Reconstruction Patient • Singapore</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation Arrows and Pagination Dots (Matches Image 7) -->
+      <div class="testimonial-controls">
+        <button class="slider-arrow prev" onclick="slidePrev()" aria-label="Previous testimonial" data-cursor="PREV">
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <div class="slider-dots" id="sliderDots">
+          <span class="dot active" onclick="goToSlide(0)"></span>
+          <span class="dot" onclick="goToSlide(1)"></span>
+          <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+        <button class="slider-arrow next" onclick="slideNext()" aria-label="Next testimonial" data-cursor="NEXT">
+          <i data-lucide="chevron-right"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SECTION 8: DOCTOR'S JOURNAL & BIG CTA BANNER (Image 8)         -->
+  <!-- ============================================================== -->
+  <section class="journal-section" id="journal">
+    <div class="container">
+      
+      <!-- 3-Column Doctor Journal Cards (Matches Image 8) -->
+      <div class="journal-grid">
+        
+        <!-- Journal Card 1 -->
+        <article class="journal-card tilt-card" data-cursor="READ">
+          <div class="journal-img-box">
+            <img 
+              src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80" 
+              alt="Medical Consultation and Robotic Precision"
+              class="journal-img"
+            >
+          </div>
+          <div class="journal-content">
+            <div class="journal-meta">BY DR. JULIAN VANCE | CARDIOLOGY DISPATCH</div>
+            <h3 class="journal-title">MINIMALLY INVASIVE VALVE RECONSTRUCTION: THE DECADE AHEAD</h3>
+            <p class="journal-excerpt">
+              How sub-millimeter catheter delivery systems and 3D echocardiography are transforming cardiac patient longevity with zero sternotomy trauma.
+            </p>
+          </div>
+        </article>
+
+        <!-- Journal Card 2 -->
+        <article class="journal-card tilt-card" data-cursor="READ">
+          <div class="journal-img-box">
+            <img 
+              src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" 
+              alt="Dr. Elena Rostova on Brain Mapping"
+              class="journal-img"
+            >
+          </div>
+          <div class="journal-content">
+            <div class="journal-meta">BY DR. ELENA ROSTOVA | NEUROSURGERY JOURNAL</div>
+            <h3 class="journal-title">INTRAOPERATIVE MRI &amp; ELOQUENT CORTEX PRESERVATION</h3>
+            <p class="journal-excerpt">
+              Clinical outcomes from 400 consecutive awake craniotomies demonstrating zero linguistic deficit through real-time cortical stimulation mapping.
+            </p>
+          </div>
+        </article>
+
+        <!-- Journal Card 3 -->
+        <article class="journal-card tilt-card" data-cursor="READ">
+          <div class="journal-img-box">
+            <img 
+              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" 
+              alt="Dr. Arthur Pendelton on Targeted Cancer Care"
+              class="journal-img"
+            >
+          </div>
+          <div class="journal-content">
+            <div class="journal-meta">BY DR. ARTHUR PENDELTON | ONCOLOGY INSIGHTS</div>
+            <h3 class="journal-title">TARGETED MOLECULAR THERAPIES: BEYOND CONVENTIONAL PROTOCOLS</h3>
+            <p class="journal-excerpt">
+              Harnessing individualized next-generation tumor genomic sequencing to craft precise monoclonal antibody regimens for durable remission.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- CTA BANNER: Botanical Green with Center Emblem (Matches Image 8) -->
+      <div class="cta-banner-wrapper tilt-card">
+        <div class="cta-banner-bg" style="background-image: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=2000&q=85');">
+          <div class="cta-banner-overlay">
+            
+            <div class="cta-emblem-watermark">
+              <svg viewBox="0 0 100 100">
+                <g fill="rgba(255,255,255,0.25)">
+                  <ellipse cx="50" cy="22" rx="8" ry="18"/>
+                  <ellipse cx="50" cy="78" rx="8" ry="18"/>
+                  <ellipse cx="22" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="78" cy="50" rx="18" ry="8"/>
+                  <circle cx="50" cy="50" r="6"/>
+                </g>
+              </svg>
+            </div>
+
+            <span class="cta-subtitle">DIRECT CONSULTATION WITH DEPARTMENT CHAIRS</span>
+            <h2 class="cta-title">YOUR HEALTH DESERVES MASTER PHYSICIANS</h2>
+            <p class="cta-desc">
+              Whether you are seeking a definitive second opinion, complex surgical planning, or executive health screening, our chief doctors are available for confidential consultation.
+            </p>
+            
+            <div class="cta-buttons">
+              <button class="btn btn-white btn-pill magnetic-btn" onclick="openDoctorBookingModal()" data-cursor="CONSULT">
+                <span>SCHEDULE DOCTOR CONSULTATION</span>
+                <i data-lucide="arrow-right" class="btn-arrow"></i>
+              </button>
+              <button class="btn btn-outline-white btn-pill magnetic-btn" onclick="openDoctorBookingModal('second')" data-cursor="OPINION">
+                <span>REQUEST SECOND OPINION</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SECTION 9: FOOTER (Exact Match to Image 8)                     -->
+  <!-- ============================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container footer-container">
+      
+      <!-- Brand & Mission Column -->
+      <div class="footer-col footer-col-brand">
+        <div class="footer-emblem-box">
+          <svg viewBox="0 0 100 100" class="footer-logo-svg">
+            <g fill="currentColor">
+              <ellipse cx="50" cy="22" rx="8" ry="18"/>
+              <ellipse cx="50" cy="78" rx="8" ry="18"/>
+              <ellipse cx="22" cy="50" rx="18" ry="8"/>
+              <ellipse cx="78" cy="50" rx="18" ry="8"/>
+              <ellipse cx="30" cy="30" rx="8" ry="16" transform="rotate(-45 30 30)"/>
+              <ellipse cx="70" cy="70" rx="8" ry="16" transform="rotate(-45 70 70)"/>
+              <ellipse cx="70" cy="30" rx="8" ry="16" transform="rotate(45 70 30)"/>
+              <ellipse cx="30" cy="70" rx="8" ry="16" transform="rotate(45 30 70)"/>
+              <circle cx="50" cy="50" r="5" fill="#C5A059"/>
+            </g>
+          </svg>
+        </div>
+        <h3 class="footer-tagline">
+          Exceptional care.<br>
+          Led by master physicians.
+        </h3>
+        <p class="footer-jci-badge">
+          <i data-lucide="shield-check" class="badge-icon"></i> JCI Accredited • Harvard &amp; Royal College Fellows
+        </p>
+      </div>
+
+      <!-- Links Column 1: EXPLORE -->
+      <div class="footer-col">
+        <h4 class="footer-heading">DOCTORS &amp; CLINICS</h4>
+        <ul class="footer-links">
+          <li><a href="doctors.html?doc=vance">Dr. Julian Vance (Cardiology)</a></li>
+          <li><a href="doctors.html?doc=rostova">Dr. Elena Rostova (Neurosurgery)</a></li>
+          <li><a href="doctors.html?doc=sterling">Dr. Marcus Sterling (Orthopedics)</a></li>
+          <li><a href="doctors.html?doc=pendelton">Dr. Arthur Pendelton (Oncology)</a></li>
+          <li><a href="clinics.html#theatres">Robotic Operating Theatres</a></li>
+          <li><a href="clinics.html#suites">Private Inpatient Suites</a></li>
+          <li><a href="contact.html">Global Campuses &amp; Booking</a></li>
+        </ul>
+      </div>
+
+      <!-- Links Column 2: SOCIALS & CREDENTIALS -->
+      <div class="footer-col">
+        <h4 class="footer-heading">ACADEMIC &amp; PEER</h4>
+        <ul class="footer-links">
+          <li><a href="https://linkedin.com" target="_blank" rel="noreferrer">Chief Physicians on LinkedIn</a></li>
+          <li><a href="#">PubMed Research Citations</a></li>
+          <li><a href="#">The Lancet Publications</a></li>
+          <li><a href="#">New England Journal of Medicine</a></li>
+          <li><a href="#">American College of Surgeons</a></li>
+        </ul>
+      </div>
+
+      <!-- Links Column 3: ADDRESS & CONTACT -->
+      <div class="footer-col">
+        <h4 class="footer-heading">CHIEF MEDICAL DESK</h4>
+        <address class="footer-address">
+          Orynth Medical Pavilion,<br>
+          789 Health Sanctuary Way,<br>
+          Zurich &amp; New York, 52178
+        </address>
+
+        <h4 class="footer-heading mt-6">DIRECT APPOINTMENTS</h4>
+        <div class="footer-contact-info">
+          <a href="tel:+123456789012" class="contact-link">+1 (234) 567 890 12</a>
+          <a href="mailto:doctors@orynthhealth.org" class="contact-link">doctors@orynthhealth.org</a>
+        </div>
+      </div>
+
+      <!-- Form Column: JOIN OUR NEWSLETTER / DOCTOR DISPATCH (Matches Image 8 Card) -->
+      <div class="footer-col footer-col-form">
+        <div class="newsletter-card tilt-card">
+          <h4 class="newsletter-card-title">DOCTOR'S CLINICAL DISPATCH</h4>
+          <p class="newsletter-card-subtitle">Receive quarterly breakthroughs in surgery, oncology &amp; longevity directly from department chairs.</p>
+          
+          <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletter(event)">
+            <div class="form-group">
+              <label for="nlName" class="form-label">YOUR FULL NAME *</label>
+              <input type="text" id="nlName" class="form-input" placeholder="e.g. Eleanor Vance" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="nlEmail" class="form-label">EMAIL ADDRESS *</label>
+              <input type="email" id="nlEmail" class="form-input" placeholder="e.g. eleanor@vance.com" required>
+            </div>
+
+            <button type="submit" class="btn btn-rust btn-block btn-square magnetic-btn" data-cursor="SUBSCRIBE">
+              <span>SUBSCRIBE TO DISPATCH</span>
+            </button>
+            <div class="form-status" id="newsletterStatus"></div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright Sub-Footer Bar -->
+    <div class="sub-footer">
+      <div class="container sub-footer-content">
+        <div class="sub-footer-left">
+          <p class="sub-footer-credit"><span class="credit-brand">Orynth Medical Faculty</span> | Made with <span class="heart-red">❤️</span> by <a href="https://regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a></p>
+          <p class="sub-footer-copyright">&copy; 2026 ORYNTH MEDICAL FACULTY &amp; RESEARCH SANCTUARY. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="sub-footer-links">
+          <a href="#">PRIVACY &amp; HIPAA POLICY</a>
+          <a href="#">CLINICAL GOVERNANCE</a>
+          <a href="#">PATIENT DIGNITY CODE</a>
+          <a href="#">ACCESSIBILITY</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================== -->
+  <!-- MODAL: SCHEDULE PRIVATE DOCTOR CONSULTATION                    -->
+  <!-- ============================================================== -->
+  <div class="modal-backdrop" id="doctorBookingModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeDoctorBookingModal()" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-emblem">
+          <svg viewBox="0 0 100 100" class="w-8 h-8">
+            <g fill="#C5A059">
+              <ellipse cx="50" cy="22" rx="8" ry="18"/>
+              <ellipse cx="50" cy="78" rx="8" ry="18"/>
+              <ellipse cx="22" cy="50" rx="18" ry="8"/>
+              <ellipse cx="78" cy="50" rx="18" ry="8"/>
+              <circle cx="50" cy="50" r="5" fill="#141F1C"/>
+            </g>
+          </svg>
+        </div>
+        <h3 class="modal-title">SCHEDULE A PRIVATE DOCTOR CONSULTATION</h3>
+        <p class="modal-subtitle">Direct, unhurried appointment with our chief surgeons and specialists.</p>
+      </div>
+
+      <form class="modal-form" id="bookingForm" onsubmit="handleDoctorBooking(event)">
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label">FULL NAME *</label>
+            <input type="text" class="form-input" placeholder="e.g. Eleanor Vance" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">EMAIL ADDRESS *</label>
+            <input type="email" class="form-input" placeholder="e.g. eleanor@vance.com" required>
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label">PHONE NUMBER *</label>
+            <input type="tel" class="form-input" placeholder="+1 (555) 000-0000" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">ATTENDING DOCTOR *</label>
+            <select class="form-input" required id="bookingDoctorSelect">
+              <option value="">Choose Specialist Doctor...</option>
+              <option value="vance">Dr. Julian Vance, MD (Chief Cardiovascular)</option>
+              <option value="rostova">Dr. Elena Rostova, MD, PhD (Chief Neurosurgery)</option>
+              <option value="sterling">Dr. Marcus Sterling, FRCS (Robotic Orthopedics)</option>
+              <option value="pendelton">Dr. Arthur Pendelton, MD (Precision Oncology)</option>
+              <option value="second">Multidisciplinary Second Opinion Board</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label">CONSULTATION FORMAT</label>
+            <select class="form-input">
+              <option value="inperson">In-Person at Private Medical Sanctuary</option>
+              <option value="telehealth">Secure High-Definition Tele-Consultation</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">PREFERRED DATE</label>
+            <input type="date" class="form-input" id="doctorBookingDate">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">CLINICAL SUMMARY / DIAGNOSTIC HISTORY</label>
+          <textarea class="form-input" rows="3" placeholder="Briefly describe your medical concerns, recent imaging, or surgery goals..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-rust btn-block btn-pill mt-4 magnetic-btn" data-cursor="CONFIRM">
+          <span>CONFIRM DOCTOR CONSULTATION</span>
+          <i data-lucide="arrow-right" class="btn-arrow"></i>
+        </button>
+
+        <div class="form-status" id="bookingStatus"></div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ============================================================== -->
+  <!-- MODAL: DOCTOR PROFILE & ACADEMIC CREDENTIALS                   -->
+  <!-- ============================================================== -->
+  <div class="modal-backdrop" id="doctorProfileModal">
+    <div class="modal-box modal-box-large">
+      <button class="modal-close" onclick="closeDoctorModal()" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal-specialty-content" id="doctorProfileContent">
+        <!-- Injected via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

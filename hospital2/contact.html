@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Global Campuses | ORYNTH MEDICAL</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23141F1C'/%3E%3Cpath d='M50 18 C54 34 66 46 82 50 C66 54 54 66 50 82 C46 66 34 54 18 50 C34 46 46 34 50 18 Z' fill='%23C5A059'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%23FFFFFF'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-orynth">
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="customCursor">
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"><span class="cursor-text" id="cursorText"></span></div>
+  </div>
+
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-overlay preloader-left"></div>
+    <div class="preloader-overlay preloader-right"></div>
+    <div class="preloader-content">
+      <div class="preloader-emblem-wrap">
+        <svg viewBox="0 0 100 100" class="preloader-gold-emblem">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+          <ellipse cx="50" cy="22" rx="8" ry="18" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+          <ellipse cx="50" cy="78" rx="8" ry="18" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="preloader-brand">
+        <span class="preloader-badge">CONCIERGE &amp; CAMPUSES</span>
+        <h2 class="preloader-title">ORYNTH MEDICAL</h2>
+      </div>
+      <div class="preloader-counter-box">
+        <div class="preloader-bar-bg"><div class="preloader-bar-fill" id="preloaderFill"></div></div>
+        <div class="preloader-percent" id="preloaderPercent">0%</div>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="ambientCanvas" class="ambient-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" data-cursor="HOME">
+        <span class="logo-emblem">
+          <svg viewBox="0 0 100 100">
+            <g fill="currentColor">
+              <ellipse cx="50" cy="22" rx="8" ry="18"/><ellipse cx="50" cy="78" rx="8" ry="18"/>
+              <circle cx="50" cy="50" r="5" fill="#C5A059"/>
+            </g>
+          </svg>
+        </span>
+        <div class="logo-text-group">
+          <span class="logo-text">ORYNTH</span>
+          <span class="logo-subtext">CONCIERGE DESK</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-cursor="HOME">HOME</a></li>
+          <li><a href="about.html" class="nav-link" data-cursor="ABOUT">ABOUT</a></li>
+          <li class="has-dropdown">
+            <a href="doctors.html" class="nav-link" data-cursor="DOCTORS">DOCTORS <i data-lucide="chevron-down" class="nav-icon"></i></a>
+            <div class="nav-dropdown">
+              <a href="doctors.html?doc=vance">Dr. Julian Vance (Cardiology)</a>
+              <a href="doctors.html?doc=rostova">Dr. Elena Rostova (Neurosurgery)</a>
+              <a href="doctors.html?doc=sterling">Dr. Marcus Sterling (Orthopedics)</a>
+              <a href="doctors.html?doc=pendelton">Dr. Arthur Pendelton (Oncology)</a>
+              <a href="doctors.html">Browse All Faculty</a>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="clinics.html" class="nav-link" data-cursor="SUITES">CLINICS <i data-lucide="chevron-down" class="nav-icon"></i></a>
+            <div class="nav-dropdown">
+              <a href="clinics.html#suites">Private Doctor Consultation Suites</a>
+              <a href="clinics.html#theatres">Robotic Surgical Theatres</a>
+              <a href="clinics.html#diagnostics">Executive Diagnostic Labs</a>
+              <a href="clinics.html#campuses">International Medical Campuses</a>
+            </div>
+          </li>
+          <li><a href="research.html" class="nav-link" data-cursor="RESEARCH">RESEARCH</a></li>
+          <li><a href="contact.html" class="nav-link active" data-cursor="CONTACT">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button (Matching "GET STARTED ->") -->
+      <div class="header-action">
+        <button class="btn btn-outline-dark btn-pill btn-sm magnetic-btn header-book-btn" onclick="openDoctorBookingModal()" data-cursor="BOOK">
+          <span>CONTACT DESK</span>
+          <i data-lucide="arrow-right" class="btn-arrow"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Luxury Fullscreen Mobile Overlay Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        
+        <!-- Mobile Drawer Top Bar -->
+        <div class="mobile-menu-header">
+          <a href="index.html" class="mobile-drawer-logo" onclick="closeMobileMenu()">
+            <span class="logo-mark">
+              <svg viewBox="0 0 100 100" class="logo-svg" width="30" height="30" aria-hidden="true">
+                <g fill="none" stroke="#C5A059" stroke-width="2.2">
+                  <ellipse cx="50" cy="22" rx="8" ry="18"/>
+                  <ellipse cx="50" cy="78" rx="8" ry="18"/>
+                  <ellipse cx="22" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="78" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="30" cy="30" rx="8" ry="16" transform="rotate(-45 30 30)"/>
+                  <ellipse cx="70" cy="70" rx="8" ry="16" transform="rotate(-45 70 70)"/>
+                  <ellipse cx="70" cy="30" rx="8" ry="16" transform="rotate(45 70 30)"/>
+                  <ellipse cx="30" cy="70" rx="8" ry="16" transform="rotate(45 30 70)"/>
+                  <circle cx="50" cy="50" r="5" fill="#C5A059"/>
+                </g>
+              </svg>
+            </span>
+            <div class="logo-text-group">
+              <span class="light-logo">ORYNTH</span>
+              <span class="gold-subtext">MEDICAL FACULTY</span>
+            </div>
+          </a>
+
+          <button class="mobile-close-btn" onclick="closeMobileMenu()" aria-label="Close navigation menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Meta Tagline -->
+        <div class="mobile-menu-meta">
+          <span class="meta-star">✦</span>
+          <span>ZURICH • LONDON • GENEVA — PRIVATE MEDICAL SANCTUARY</span>
+        </div>
+
+        <!-- Numbered Editorial Navigation Links -->
+        <nav class="mobile-nav-body">
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a href="index.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">01</span>
+                <span class="m-label">HOME SANCTUARY</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="about.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">02</span>
+                <span class="m-label">ABOUT OUR HERITAGE</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="doctors.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">03</span>
+                <span class="m-label">SPECIALIST SURGEONS</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="clinics.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">04</span>
+                <span class="m-label">SURGICAL SUITES</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="research.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">05</span>
+                <span class="m-label">CLINICAL RESEARCH</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="contact.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">06</span>
+                <span class="m-label">CONTACT &amp; CAMPUSES</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Concierge Hotline & Primary CTA -->
+        <div class="mobile-menu-bottom">
+          <div class="mobile-concierge-row">
+            <div class="live-pulse-group">
+              <span class="pulse-animation"></span>
+              <span class="concierge-status">24/7 VIP SURGICAL DESK</span>
+            </div>
+            <a href="tel:+41228190000" class="mobile-tel-link">+41 (22) 819 0000</a>
+          </div>
+
+          <button class="btn btn-rust btn-pill mobile-cta-btn" onclick="openDoctorBookingModal(); closeMobileMenu();">
+            <span>SCHEDULE PRIVATE CONSULTATION</span>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=2200&q=85" alt="Zurich Medical Campus Scenic View" class="page-hero-img">
+      <div class="page-hero-overlay"></div>
+    </div>
+    <div class="container page-hero-content">
+      <div class="page-breadcrumb">
+        <a href="index.html">HOME</a>
+        <i data-lucide="chevron-right" style="width: 12px; height: 12px;"></i>
+        <span>GLOBAL SANCTUARIES &amp; CONCIERGE</span>
+      </div>
+      <h1 class="page-title">CONNECT WITH OUR CHIEF MEDICAL DESK</h1>
+      <p class="page-subtitle">
+        Direct confidential coordination for second opinion reviews, private surgical admissions, records transfer, and VIP medical travel logistics.
+      </p>
+    </div>
+  </section>
+
+  <!-- Global Campuses 3-Card Grid -->
+  <section class="campuses-cards-section" id="campuses">
+    <div class="container">
+      <div class="section-tag-center">WORLDWIDE SANCTUARIES</div>
+      <h2 class="editorial-headline">OUR GLOBAL MEDICAL CAMPUSES</h2>
+
+      <div class="campus-detail-grid mt-6">
+        <!-- Campus 1: Zurich -->
+        <article class="campus-detail-card tilt-card">
+          <div class="campus-detail-img-box">
+            <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80" alt="Zurich Sanctuary" class="campus-detail-img">
+          </div>
+          <div class="campus-detail-body">
+            <h3 class="campus-detail-title">ZURICH MEDICAL SANCTUARY</h3>
+            <span class="campus-detail-subtitle">SWISS PRECISION &amp; SURGICAL HEADQUARTERS</span>
+            <div class="campus-contact-list">
+              <div class="campus-contact-item">
+                <i data-lucide="map-pin"></i>
+                <span>789 Health Sanctuary Way, 8044 Zurich, Switzerland</span>
+              </div>
+              <div class="campus-contact-item">
+                <i data-lucide="phone"></i>
+                <span>+41 (22) 819 0000</span>
+              </div>
+              <div class="campus-contact-item">
+                <i data-lucide="plane"></i>
+                <span>Helipad ICAO: LSZH-MED (Direct Roof Elevator)</span>
+              </div>
+            </div>
+            <div class="mt-4">
+              <button class="btn btn-rust btn-sm btn-pill w-full" onclick="openDoctorBookingModal('Zurich Campus')">ENQUIRE ZURICH</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Campus 2: London -->
+        <article class="campus-detail-card tilt-card">
+          <div class="campus-detail-img-box">
+            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" alt="London Harley Pavilion" class="campus-detail-img">
+          </div>
+          <div class="campus-detail-body">
+            <h3 class="campus-detail-title">LONDON HARLEY PAVILION</h3>
+            <span class="campus-detail-subtitle">CENTRAL LONDON SPECIALIST CLINICS</span>
+            <div class="campus-contact-list">
+              <div class="campus-contact-item">
+                <i data-lucide="map-pin"></i>
+                <span>14 Queen Anne Street, Marylebone, London W1G 9LH, UK</span>
+              </div>
+              <div class="campus-contact-item">
+                <i data-lucide="phone"></i>
+                <span>+44 (20) 7946 0990</span>
+              </div>
+              <div class="campus-contact-item">
+                <i data-lucide="clock"></i>
+                <span>Consultations Mon-Sat 08:00 - 19:00 GMT</span>
+              </div>
+            </div>
+            <div class="mt-4">
+              <button class="btn btn-rust btn-sm btn-pill w-full" onclick="openDoctorBookingModal('London Campus')">ENQUIRE LONDON</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Campus 3: Amalfi -->
+        <article class="campus-detail-card tilt-card">
+          <div class="campus-detail-img-box">
+            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" alt="Amalfi Coastal Rehabilitation" class="campus-detail-img">
+          </div>
+          <div class="campus-detail-body">
+            <h3 class="campus-detail-title">AMALFI CONVALESCENCE</h3>
+            <span class="campus-detail-subtitle">MEDITERRANEAN HYDROTHERAPY RESORT</span>
+            <div class="campus-contact-list">
+              <div class="campus-contact-item">
+                <i data-lucide="map-pin"></i>
+                <span>Via Panoramica 48, Positano, 84017 Amalfi Coast, Italy</span>
+              </div>
+              <div class="campus-contact-item">
+                <i data-lucide="phone"></i>
+                <span>+39 (089) 875 1100</span>
+              </div>
+              <div class="campus-contact-item">
+                <i data-lucide="anchor"></i>
+                <span>Private Marine Dock &amp; Heli-Transfer from Naples</span>
+              </div>
+            </div>
+            <div class="mt-4">
+              <button class="btn btn-rust btn-sm btn-pill w-full" onclick="openDoctorBookingModal('Amalfi Campus')">ENQUIRE AMALFI</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-Step Concierge Booking Form -->
+  <section class="booking-form-section">
+    <div class="container">
+      <div class="booking-form-wrapper tilt-card">
+        
+        <div class="stepper-header">
+          <div class="step-indicator active" id="stepInd1">
+            <div class="step-circle">1</div>
+            <span class="step-title">PATIENT &amp; SPECIALIST</span>
+          </div>
+          <div class="step-indicator" id="stepInd2">
+            <div class="step-circle">2</div>
+            <span class="step-title">DATES &amp; LOGISTICS</span>
+          </div>
+        </div>
+
+        <form id="contactMultiForm" onsubmit="handleDoctorBooking(event)">
+          
+          <!-- Step 1 -->
+          <div id="formStep1">
+            <h3 style="font-family: var(--font-serif); font-size: 1.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">Step 1: Consultation Details</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem;">Please provide your basic contact information and your preferred attending doctor.</p>
+            
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">PATIENT FULL NAME *</label>
+                <input type="text" class="form-input" placeholder="e.g. Lady Eleanor Vance" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">EMAIL ADDRESS *</label>
+                <input type="email" class="form-input" placeholder="e.g. eleanor@vance.com" required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">PHONE WITH COUNTRY CODE *</label>
+                <input type="tel" class="form-input" placeholder="+44 20 7946 0000" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">ATTENDING CHAIR / SPECIALIST *</label>
+                <select class="form-input" required>
+                  <option value="Dr. Julian Vance (Cardiology)">Dr. Julian Vance (Cardiology &amp; Thoracic)</option>
+                  <option value="Dr. Elena Rostova (Neurosurgery)">Dr. Elena Rostova (Neurosurgery &amp; Spine)</option>
+                  <option value="Dr. Marcus Sterling (Orthopedics)">Dr. Marcus Sterling (Robotic Joint Arthroplasty)</option>
+                  <option value="Dr. Arthur Pendelton (Oncology)">Dr. Arthur Pendelton (Precision Oncology)</option>
+                  <option value="Multidisciplinary Board">Multidisciplinary Second Opinion Board</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mt-4" style="text-align: right;">
+              <button type="button" class="btn btn-rust btn-pill" onclick="nextFormStep(1)">
+                <span>PROCEED TO LOGISTICS</span>
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div id="formStep2" style="display: none;">
+            <h3 style="font-family: var(--font-serif); font-size: 1.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">Step 2: Campus &amp; Concierge Requests</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem;">Specify scheduling preferences and any medical travel requirements.</p>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">PREFERRED MEDICAL SANCTUARY</label>
+                <select class="form-input">
+                  <option value="Zurich">Zurich Alpine Medical Sanctuary</option>
+                  <option value="London">London Harley Surgical Pavilion</option>
+                  <option value="Amalfi">Amalfi Coastal Convalescence</option>
+                  <option value="Telehealth">High-Definition Tele-Consultation</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">TARGET CONSULTATION DATE</label>
+                <input type="date" class="form-input" id="conciergeDate">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">VIP LOGISTICS &amp; SPECIAL REQUIREMENTS</label>
+              <textarea class="form-input" rows="3" placeholder="Specify if helicopter transfer, companion suite, translator, or urgent imaging review is required..."></textarea>
+            </div>
+
+            <div class="mt-4" style="display: flex; justify-content: space-between;">
+              <button type="button" class="btn btn-outline-dark btn-pill" onclick="prevFormStep(2)">
+                <i data-lucide="arrow-left"></i>
+                <span>BACK</span>
+              </button>
+              <button type="submit" class="btn btn-rust btn-pill">
+                <span>SUBMIT CONCIERGE REQUEST</span>
+                <i data-lucide="check"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-status" id="bookingStatus"></div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col footer-col-brand">
+        <h3 class="footer-tagline">Exceptional care.<br>Led by master physicians.</h3>
+        <p class="footer-jci-badge"><i data-lucide="shield-check" class="badge-icon"></i> JCI Accredited • Harvard &amp; Royal College Fellows</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">NAVIGATION</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="about.html">About Heritage</a></li>
+          <li><a href="doctors.html">Doctor Directory</a></li>
+          <li><a href="clinics.html">Surgical Suites</a></li>
+          <li><a href="research.html">Research Papers</a></li>
+          <li><a href="contact.html">Contact &amp; Campuses</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">DIRECT TELEPHONE</h4>
+        <div class="footer-contact-info">
+          <a href="tel:+123456789012" class="contact-link">+1 (234) 567 890 12</a>
+          <a href="mailto:concierge@orynthhealth.org" class="contact-link">concierge@orynthhealth.org</a>
+        </div>
+      </div>
+      <div class="footer-col footer-col-form">
+        <div class="newsletter-card tilt-card">
+          <h4 class="newsletter-card-title">CHIEF DESK DISPATCH</h4>
+          <p class="newsletter-card-subtitle">Quarterly health advisories.</p>
+          <form onsubmit="handleNewsletter(event)">
+            <input type="email" class="form-input mb-2" placeholder="Email Address *" required>
+            <button type="submit" class="btn btn-rust btn-block btn-square"><span>SUBSCRIBE</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-footer">
+      <div class="container sub-footer-content">
+        <div class="sub-footer-left">
+          <p class="sub-footer-credit"><span class="credit-brand">Orynth Medical Faculty</span> | Made with <span class="heart-red">❤️</span> by <a href="https://regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a></p>
+          <p class="sub-footer-copyright">&copy; 2026 ORYNTH MEDICAL FACULTY &amp; RESEARCH SANCTUARY. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="sub-footer-links"><a href="#">PRIVACY POLICY</a><a href="#">CLINICAL ETHICS</a><a href="#">ACCESSIBILITY</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="doctorBookingModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeDoctorBookingModal()"><i data-lucide="x"></i></button>
+      <div class="modal-header">
+        <h3 class="modal-title">SCHEDULE A PRIVATE CONSULTATION</h3>
+        <p class="modal-subtitle">Direct, unhurried appointment with our chief surgeons.</p>
+      </div>
+      <form class="modal-form" onsubmit="handleDoctorBooking(event)">
+        <div class="form-group"><input type="text" class="form-input" placeholder="Full Name *" required></div>
+        <div class="form-group"><input type="email" class="form-input" placeholder="Email Address *" required></div>
+        <div class="form-group"><input type="tel" class="form-input" placeholder="Phone Number *" required></div>
+        <button type="submit" class="btn btn-rust btn-block btn-pill mt-4"><span>CONFIRM REQUEST</span></button>
+        <div class="form-status" id="bookingStatus"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

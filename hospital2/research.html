@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinical Research & Trials | ORYNTH MEDICAL</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23141F1C'/%3E%3Cpath d='M50 18 C54 34 66 46 82 50 C66 54 54 66 50 82 C46 66 34 54 18 50 C34 46 46 34 50 18 Z' fill='%23C5A059'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%23FFFFFF'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-orynth">
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="customCursor">
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"><span class="cursor-text" id="cursorText"></span></div>
+  </div>
+
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-overlay preloader-left"></div>
+    <div class="preloader-overlay preloader-right"></div>
+    <div class="preloader-content">
+      <div class="preloader-emblem-wrap">
+        <svg viewBox="0 0 100 100" class="preloader-gold-emblem">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+          <ellipse cx="50" cy="22" rx="8" ry="18" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+          <ellipse cx="50" cy="78" rx="8" ry="18" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="preloader-brand">
+        <span class="preloader-badge">RESEARCH SANCTUARY</span>
+        <h2 class="preloader-title">CLINICAL TRIALS</h2>
+      </div>
+      <div class="preloader-counter-box">
+        <div class="preloader-bar-bg"><div class="preloader-bar-fill" id="preloaderFill"></div></div>
+        <div class="preloader-percent" id="preloaderPercent">0%</div>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="ambientCanvas" class="ambient-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" data-cursor="HOME">
+        <span class="logo-emblem">
+          <svg viewBox="0 0 100 100">
+            <g fill="currentColor">
+              <ellipse cx="50" cy="22" rx="8" ry="18"/><ellipse cx="50" cy="78" rx="8" ry="18"/>
+              <circle cx="50" cy="50" r="5" fill="#C5A059"/>
+            </g>
+          </svg>
+        </span>
+        <div class="logo-text-group">
+          <span class="logo-text">ORYNTH</span>
+          <span class="logo-subtext">RESEARCH LABS</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-cursor="HOME">HOME</a></li>
+          <li><a href="about.html" class="nav-link" data-cursor="ABOUT">ABOUT</a></li>
+          <li class="has-dropdown">
+            <a href="doctors.html" class="nav-link" data-cursor="DOCTORS">DOCTORS <i data-lucide="chevron-down" class="nav-icon"></i></a>
+            <div class="nav-dropdown">
+              <a href="doctors.html?doc=vance">Dr. Julian Vance (Cardiology)</a>
+              <a href="doctors.html?doc=rostova">Dr. Elena Rostova (Neurosurgery)</a>
+              <a href="doctors.html?doc=sterling">Dr. Marcus Sterling (Orthopedics)</a>
+              <a href="doctors.html?doc=pendelton">Dr. Arthur Pendelton (Oncology)</a>
+              <a href="doctors.html">Browse All Faculty</a>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="clinics.html" class="nav-link" data-cursor="SUITES">CLINICS <i data-lucide="chevron-down" class="nav-icon"></i></a>
+            <div class="nav-dropdown">
+              <a href="clinics.html#suites">Private Doctor Consultation Suites</a>
+              <a href="clinics.html#theatres">Robotic Surgical Theatres</a>
+              <a href="clinics.html#diagnostics">Executive Diagnostic Labs</a>
+              <a href="clinics.html#campuses">International Medical Campuses</a>
+            </div>
+          </li>
+          <li><a href="research.html" class="nav-link active" data-cursor="RESEARCH">RESEARCH</a></li>
+          <li><a href="contact.html" class="nav-link" data-cursor="CONTACT">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button (Matching "GET STARTED ->") -->
+      <div class="header-action">
+        <button class="btn btn-outline-dark btn-pill btn-sm magnetic-btn header-book-btn" onclick="openDoctorBookingModal()" data-cursor="BOOK">
+          <span>ENROL IN TRIAL</span>
+          <i data-lucide="arrow-right" class="btn-arrow"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Luxury Fullscreen Mobile Overlay Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        
+        <!-- Mobile Drawer Top Bar -->
+        <div class="mobile-menu-header">
+          <a href="index.html" class="mobile-drawer-logo" onclick="closeMobileMenu()">
+            <span class="logo-mark">
+              <svg viewBox="0 0 100 100" class="logo-svg" width="30" height="30" aria-hidden="true">
+                <g fill="none" stroke="#C5A059" stroke-width="2.2">
+                  <ellipse cx="50" cy="22" rx="8" ry="18"/>
+                  <ellipse cx="50" cy="78" rx="8" ry="18"/>
+                  <ellipse cx="22" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="78" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="30" cy="30" rx="8" ry="16" transform="rotate(-45 30 30)"/>
+                  <ellipse cx="70" cy="70" rx="8" ry="16" transform="rotate(-45 70 70)"/>
+                  <ellipse cx="70" cy="30" rx="8" ry="16" transform="rotate(45 70 30)"/>
+                  <ellipse cx="30" cy="70" rx="8" ry="16" transform="rotate(45 30 70)"/>
+                  <circle cx="50" cy="50" r="5" fill="#C5A059"/>
+                </g>
+              </svg>
+            </span>
+            <div class="logo-text-group">
+              <span class="light-logo">ORYNTH</span>
+              <span class="gold-subtext">MEDICAL FACULTY</span>
+            </div>
+          </a>
+
+          <button class="mobile-close-btn" onclick="closeMobileMenu()" aria-label="Close navigation menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Meta Tagline -->
+        <div class="mobile-menu-meta">
+          <span class="meta-star">✦</span>
+          <span>ZURICH • LONDON • GENEVA — PRIVATE MEDICAL SANCTUARY</span>
+        </div>
+
+        <!-- Numbered Editorial Navigation Links -->
+        <nav class="mobile-nav-body">
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a href="index.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">01</span>
+                <span class="m-label">HOME SANCTUARY</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="about.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">02</span>
+                <span class="m-label">ABOUT OUR HERITAGE</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="doctors.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">03</span>
+                <span class="m-label">SPECIALIST SURGEONS</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="clinics.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">04</span>
+                <span class="m-label">SURGICAL SUITES</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="research.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">05</span>
+                <span class="m-label">CLINICAL RESEARCH</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="contact.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">06</span>
+                <span class="m-label">CONTACT &amp; CAMPUSES</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Concierge Hotline & Primary CTA -->
+        <div class="mobile-menu-bottom">
+          <div class="mobile-concierge-row">
+            <div class="live-pulse-group">
+              <span class="pulse-animation"></span>
+              <span class="concierge-status">24/7 VIP SURGICAL DESK</span>
+            </div>
+            <a href="tel:+41228190000" class="mobile-tel-link">+41 (22) 819 0000</a>
+          </div>
+
+          <button class="btn btn-rust btn-pill mobile-cta-btn" onclick="openDoctorBookingModal(); closeMobileMenu();">
+            <span>SCHEDULE PRIVATE CONSULTATION</span>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=2200&q=85" alt="Medical Research Laboratory" class="page-hero-img">
+      <div class="page-hero-overlay"></div>
+    </div>
+    <div class="container page-hero-content">
+      <div class="page-breadcrumb">
+        <a href="index.html">HOME</a>
+        <i data-lucide="chevron-right" style="width: 12px; height: 12px;"></i>
+        <span>CLINICAL RESEARCH &amp; TRIALS</span>
+      </div>
+      <h1 class="page-title">PIONEERING TOMORROW'S SURGERY TODAY</h1>
+      <p class="page-subtitle">
+        Bridging the gap between molecular laboratory discovery and direct patient recovery through peer-reviewed research published in The Lancet, NEJM, and Nature Medicine.
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured Paper Spotlight -->
+  <section class="research-featured-section">
+    <div class="container">
+      <div class="section-tag-center">SPOTLIGHT STUDY • NOVEMBER 2026</div>
+      <h2 class="editorial-headline">FEATURED CLINICAL MONOGRAPH</h2>
+
+      <div class="featured-paper-card tilt-card mt-6">
+        <div class="featured-paper-img-box">
+          <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1000&q=80" alt="Cardiovascular Surgery Research" class="featured-paper-img">
+        </div>
+        <div class="featured-paper-body">
+          <span class="paper-journal-tag">PUBLISHED IN THE LANCET CARDIOLOGY • DOI: 10.1016/S0140-6736</span>
+          <h3 class="paper-title">10-YEAR DURABILITY OF SUTURELESS BIO-PROSTHETIC AORTIC VALVE RECONSTRUCTIONS</h3>
+          <p class="paper-author-line">Lead Investigator: Dr. Julian Vance, MD, FACS, with European Multicenter Registry</p>
+          <p class="paper-abstract">
+            A comprehensive 10-year longitudinal analysis of 2,400 patients demonstrating a 99.2% hemodynamic valve stability rate with zero structural degradation, verifying the superiority of robotic sub-coronary sutureless implantation.
+          </p>
+          <div style="display: flex; gap: 1rem; align-items: center;">
+            <button class="btn btn-rust btn-pill" onclick="openDoctorBookingModal('Vance Clinical Study')">
+              <span>REQUEST STUDY REPRINT</span>
+              <i data-lucide="download" style="width:14px; height:14px;"></i>
+            </button>
+            <a href="doctors.html?doc=vance" class="btn btn-outline-dark btn-pill">CONSULT DR. VANCE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Active Clinical Trials Explorer -->
+  <section class="trials-section" id="trials">
+    <div class="container">
+      <div class="section-tag-left">ACTIVE ENROLLMENT • 2026-2027</div>
+      <h2 class="editorial-title-left">INTERNATIONAL CLINICAL TRIALS REGISTRY</h2>
+      <p style="font-size: 0.95rem; color: var(--text-muted); max-width: 740px;">
+        Patients seeking experimental access to novel therapies under rigorous ethical guidelines may consult our clinical trials director for eligibility screening.
+      </p>
+
+      <div class="trials-table-wrap tilt-card">
+        <table class="trials-table">
+          <thead>
+            <tr>
+              <th>Trial ID</th>
+              <th>Therapeutic Focus</th>
+              <th>Phase</th>
+              <th>Lead Chair</th>
+              <th>Location</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>ORY-CARD-08</strong></td>
+              <td>Robotic Catheter Leaflet Resection in Severe Aortic Stenosis</td>
+              <td><span class="trial-phase-badge phase-3">Phase III</span></td>
+              <td>Dr. Julian Vance</td>
+              <td>Zurich &amp; New York</td>
+              <td><span style="color:#215934; font-weight:700;">● Recruiting</span></td>
+              <td><button class="btn btn-rust btn-sm btn-pill" onclick="openDoctorBookingModal('Trial ORY-CARD-08')">APPLY</button></td>
+            </tr>
+            <tr>
+              <td><strong>ORY-NEUR-14</strong></td>
+              <td>Intraoperative 3T MRI Cortical Stimulation in Glioblastoma</td>
+              <td><span class="trial-phase-badge phase-2">Phase II</span></td>
+              <td>Dr. Elena Rostova</td>
+              <td>Geneva &amp; London</td>
+              <td><span style="color:#215934; font-weight:700;">● Recruiting</span></td>
+              <td><button class="btn btn-rust btn-sm btn-pill" onclick="openDoctorBookingModal('Trial ORY-NEUR-14')">APPLY</button></td>
+            </tr>
+            <tr>
+              <td><strong>ORY-ONCO-22</strong></td>
+              <td>Bispecific CAR-T Cellular Immunotherapy in Solid Tumors</td>
+              <td><span class="trial-phase-badge phase-1">Phase I/II</span></td>
+              <td>Dr. Arthur Pendelton</td>
+              <td>New York Pavilion</td>
+              <td><span style="color:#215934; font-weight:700;">● Active</span></td>
+              <td><button class="btn btn-rust btn-sm btn-pill" onclick="openDoctorBookingModal('Trial ORY-ONCO-22')">APPLY</button></td>
+            </tr>
+            <tr>
+              <td><strong>ORY-ORTH-05</strong></td>
+              <td>Autologous Synovial Mesenchymal Stem Therapy for Cartilage</td>
+              <td><span class="trial-phase-badge phase-3">Phase III</span></td>
+              <td>Dr. Marcus Sterling</td>
+              <td>London &amp; Amalfi</td>
+              <td><span style="color:#215934; font-weight:700;">● Recruiting</span></td>
+              <td><button class="btn btn-rust btn-sm btn-pill" onclick="openDoctorBookingModal('Trial ORY-ORTH-05')">APPLY</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col footer-col-brand">
+        <h3 class="footer-tagline">Exceptional care.<br>Led by master physicians.</h3>
+        <p class="footer-jci-badge"><i data-lucide="shield-check" class="badge-icon"></i> JCI Accredited • Harvard &amp; Royal College Fellows</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">NAVIGATION</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="about.html">About Heritage</a></li>
+          <li><a href="doctors.html">Doctor Directory</a></li>
+          <li><a href="clinics.html">Surgical Suites</a></li>
+          <li><a href="research.html">Research Papers</a></li>
+          <li><a href="contact.html">Contact &amp; Campuses</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">ACADEMIC DESK</h4>
+        <div class="footer-contact-info">
+          <a href="mailto:trials@orynthhealth.org" class="contact-link">trials@orynthhealth.org</a>
+          <a href="tel:+123456789012" class="contact-link">+1 (234) 567 890 12</a>
+        </div>
+      </div>
+      <div class="footer-col footer-col-form">
+        <div class="newsletter-card tilt-card">
+          <h4 class="newsletter-card-title">RESEARCH ALERTS</h4>
+          <p class="newsletter-card-subtitle">Quarterly journal reprints and trial updates.</p>
+          <form onsubmit="handleNewsletter(event)">
+            <input type="email" class="form-input mb-2" placeholder="Email Address *" required>
+            <button type="submit" class="btn btn-rust btn-block btn-square"><span>SUBSCRIBE</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-footer">
+      <div class="container sub-footer-content">
+        <div class="sub-footer-left">
+          <p class="sub-footer-credit"><span class="credit-brand">Orynth Medical Faculty</span> | Made with <span class="heart-red">❤️</span> by <a href="https://regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a></p>
+          <p class="sub-footer-copyright">&copy; 2026 ORYNTH MEDICAL FACULTY &amp; RESEARCH SANCTUARY. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="sub-footer-links"><a href="#">PRIVACY POLICY</a><a href="#">CLINICAL ETHICS</a><a href="#">ACCESSIBILITY</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="doctorBookingModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeDoctorBookingModal()"><i data-lucide="x"></i></button>
+      <div class="modal-header">
+        <h3 class="modal-title">CLINICAL TRIAL CANDIDACY</h3>
+        <p class="modal-subtitle">Submit diagnostic records for review by our principal investigator.</p>
+      </div>
+      <form class="modal-form" onsubmit="handleDoctorBooking(event)">
+        <div class="form-group"><input type="text" class="form-input" placeholder="Full Name *" required></div>
+        <div class="form-group"><input type="email" class="form-input" placeholder="Email Address *" required></div>
+        <div class="form-group"><input type="tel" class="form-input" placeholder="Phone Number *" required></div>
+        <button type="submit" class="btn btn-rust btn-block btn-pill mt-4"><span>SUBMIT CANDIDACY REQUEST</span></button>
+        <div class="form-status" id="bookingStatus"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | ORYNTH MEDICAL - Clinical Heritage & Governance</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23141F1C'/%3E%3Cpath d='M50 18 C54 34 66 46 82 50 C66 54 54 66 50 82 C46 66 34 54 18 50 C34 46 46 34 50 18 Z' fill='%23C5A059'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%23FFFFFF'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-orynth">
+
+  <!-- Custom Luxury Cursor -->
+  <div class="custom-cursor" id="customCursor">
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing">
+      <span class="cursor-text" id="cursorText"></span>
+    </div>
+  </div>
+
+  <!-- Luxury Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-overlay preloader-left"></div>
+    <div class="preloader-overlay preloader-right"></div>
+    <div class="preloader-content">
+      <div class="preloader-emblem-wrap">
+        <svg viewBox="0 0 100 100" class="preloader-gold-emblem">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <ellipse cx="50" cy="22" rx="8" ry="18" class="petal petal-1"/>
+            <ellipse cx="50" cy="78" rx="8" ry="18" class="petal petal-2"/>
+            <ellipse cx="22" cy="50" rx="18" ry="8" class="petal petal-3"/>
+            <ellipse cx="78" cy="50" rx="18" ry="8" class="petal petal-4"/>
+          </g>
+          <circle cx="50" cy="50" r="4" fill="#C5A059"/>
+        </svg>
+      </div>
+      <div class="preloader-brand">
+        <span class="preloader-badge">OUR CLINICAL HERITAGE</span>
+        <h2 class="preloader-title">ORYNTH MEDICAL</h2>
+      </div>
+      <div class="preloader-counter-box">
+        <div class="preloader-bar-bg"><div class="preloader-bar-fill" id="preloaderFill"></div></div>
+        <div class="preloader-percent" id="preloaderPercent">0%</div>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="ambientCanvas" class="ambient-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" data-cursor="HOME">
+        <span class="logo-emblem">
+          <svg viewBox="0 0 100 100">
+            <g fill="currentColor">
+              <ellipse cx="50" cy="22" rx="8" ry="18"/>
+              <ellipse cx="50" cy="78" rx="8" ry="18"/>
+              <ellipse cx="22" cy="50" rx="18" ry="8"/>
+              <ellipse cx="78" cy="50" rx="18" ry="8"/>
+              <circle cx="50" cy="50" r="5" fill="#C5A059"/>
+            </g>
+          </svg>
+        </span>
+        <div class="logo-text-group">
+          <span class="logo-text">ORYNTH</span>
+          <span class="logo-subtext">MEDICAL FACULTY</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-cursor="HOME">HOME</a></li>
+          <li><a href="about.html" class="nav-link active" data-cursor="ABOUT">ABOUT</a></li>
+          <li class="has-dropdown">
+            <a href="doctors.html" class="nav-link" data-cursor="DOCTORS">
+              DOCTORS <i data-lucide="chevron-down" class="nav-icon"></i>
+            </a>
+            <div class="nav-dropdown">
+              <a href="doctors.html?doc=vance">Dr. Julian Vance (Cardiology)</a>
+              <a href="doctors.html?doc=rostova">Dr. Elena Rostova (Neurosurgery)</a>
+              <a href="doctors.html?doc=sterling">Dr. Marcus Sterling (Orthopedics)</a>
+              <a href="doctors.html?doc=pendelton">Dr. Arthur Pendelton (Oncology)</a>
+              <a href="doctors.html">Browse All Faculty (40+ Chairs)</a>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="clinics.html" class="nav-link" data-cursor="SUITES">
+              CLINICS <i data-lucide="chevron-down" class="nav-icon"></i>
+            </a>
+            <div class="nav-dropdown">
+              <a href="clinics.html#suites">Private Doctor Consultation Suites</a>
+              <a href="clinics.html#theatres">Robotic Surgical Theatres</a>
+              <a href="clinics.html#diagnostics">Executive Diagnostic Labs</a>
+              <a href="clinics.html#campuses">International Medical Campuses</a>
+            </div>
+          </li>
+          <li><a href="research.html" class="nav-link" data-cursor="RESEARCH">RESEARCH</a></li>
+          <li><a href="contact.html" class="nav-link" data-cursor="CONTACT">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button (Matching "GET STARTED ->") -->
+      <div class="header-action">
+        <button class="btn btn-outline-dark btn-pill btn-sm magnetic-btn header-book-btn" onclick="openDoctorBookingModal()" data-cursor="BOOK">
+          <span>BOOK DOCTOR</span>
+          <i data-lucide="arrow-right" class="btn-arrow"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Luxury Fullscreen Mobile Overlay Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        
+        <!-- Mobile Drawer Top Bar -->
+        <div class="mobile-menu-header">
+          <a href="index.html" class="mobile-drawer-logo" onclick="closeMobileMenu()">
+            <span class="logo-mark">
+              <svg viewBox="0 0 100 100" class="logo-svg" width="30" height="30" aria-hidden="true">
+                <g fill="none" stroke="#C5A059" stroke-width="2.2">
+                  <ellipse cx="50" cy="22" rx="8" ry="18"/>
+                  <ellipse cx="50" cy="78" rx="8" ry="18"/>
+                  <ellipse cx="22" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="78" cy="50" rx="18" ry="8"/>
+                  <ellipse cx="30" cy="30" rx="8" ry="16" transform="rotate(-45 30 30)"/>
+                  <ellipse cx="70" cy="70" rx="8" ry="16" transform="rotate(-45 70 70)"/>
+                  <ellipse cx="70" cy="30" rx="8" ry="16" transform="rotate(45 70 30)"/>
+                  <ellipse cx="30" cy="70" rx="8" ry="16" transform="rotate(45 30 70)"/>
+                  <circle cx="50" cy="50" r="5" fill="#C5A059"/>
+                </g>
+              </svg>
+            </span>
+            <div class="logo-text-group">
+              <span class="light-logo">ORYNTH</span>
+              <span class="gold-subtext">MEDICAL FACULTY</span>
+            </div>
+          </a>
+
+          <button class="mobile-close-btn" onclick="closeMobileMenu()" aria-label="Close navigation menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Meta Tagline -->
+        <div class="mobile-menu-meta">
+          <span class="meta-star">✦</span>
+          <span>ZURICH • LONDON • GENEVA — PRIVATE MEDICAL SANCTUARY</span>
+        </div>
+
+        <!-- Numbered Editorial Navigation Links -->
+        <nav class="mobile-nav-body">
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a href="index.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">01</span>
+                <span class="m-label">HOME SANCTUARY</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="about.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">02</span>
+                <span class="m-label">ABOUT OUR HERITAGE</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="doctors.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">03</span>
+                <span class="m-label">SPECIALIST SURGEONS</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="clinics.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">04</span>
+                <span class="m-label">SURGICAL SUITES</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="research.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">05</span>
+                <span class="m-label">CLINICAL RESEARCH</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="contact.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <span class="m-num">06</span>
+                <span class="m-label">CONTACT &amp; CAMPUSES</span>
+                <span class="m-arrow">→</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Concierge Hotline & Primary CTA -->
+        <div class="mobile-menu-bottom">
+          <div class="mobile-concierge-row">
+            <div class="live-pulse-group">
+              <span class="pulse-animation"></span>
+              <span class="concierge-status">24/7 VIP SURGICAL DESK</span>
+            </div>
+            <a href="tel:+41228190000" class="mobile-tel-link">+41 (22) 819 0000</a>
+          </div>
+
+          <button class="btn btn-rust btn-pill mobile-cta-btn" onclick="openDoctorBookingModal(); closeMobileMenu();">
+            <span>SCHEDULE PRIVATE CONSULTATION</span>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================== -->
+  <!-- INNER HERO COMPONENT                                           -->
+  <!-- ============================================================== -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=2200&q=85" alt="Hospital Sanctuary Architecture" class="page-hero-img">
+      <div class="page-hero-overlay"></div>
+    </div>
+    <div class="container page-hero-content">
+      <div class="page-breadcrumb">
+        <a href="index.html">HOME</a>
+        <i data-lucide="chevron-right" style="width: 12px; height: 12px;"></i>
+        <span>OUR CLINICAL HERITAGE</span>
+      </div>
+      <h1 class="page-title">WHERE CLINICAL MASTERMIND MEETS TIMELESS EMPATHY</h1>
+      <p class="page-subtitle">
+        Founded in Zurich in 1996, Orynth Medical Sanctuary was conceived by surgeons who rejected industrialized hospital bureaucracy in pursuit of unhurried, physician-owned medicine.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- SPLIT HERITAGE SECTION                                         -->
+  <!-- ============================================================== -->
+  <section class="split-heritage-section">
+    <div class="container">
+      <div class="split-heritage-grid">
+        <div class="heritage-media-box tilt-card">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80" alt="Zurich Medical Campus" class="heritage-img-main">
+          <div class="heritage-badge-float">
+            <span class="heritage-badge-year">1996</span>
+            <span class="heritage-badge-text">FOUNDED IN ZURICH, SWITZERLAND</span>
+          </div>
+        </div>
+        <div class="heritage-content-box">
+          <div class="section-tag-left">THE FOUNDING CONVICTION</div>
+          <h2 class="editorial-title-left">RESTORING DIGNITY TO THE PATIENT-PHYSICIAN BOND</h2>
+          <blockquote class="heritage-lead-quote">
+            “The finest surgical instrument in the world will never replace the profound reassurance of a master physician who sits by your side, listens to your heartbeat, and knows your name.”
+          </blockquote>
+          <p style="font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.5rem;">
+            Over three decades ago, Dr. Julian Vance and a founding circle of thoracic, neurosurgical, and orthopedic chairs united to construct a sanctuary where patient outcomes—not quarterly balance sheets—governed every protocol.
+          </p>
+          <p style="font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 2rem;">
+            Today, Orynth operates state-of-the-art medical pavilions across Switzerland, London, and the Mediterranean, maintaining an unwavering 1:1 nurse-to-patient ratio and the lowest surgical complication rate in Europe.
+          </p>
+          <div style="display: flex; gap: 1rem;">
+            <a href="doctors.html" class="btn btn-rust btn-pill magnetic-btn" data-cursor="DOCTORS">
+              <span>EXPLORE SURGICAL FACULTY</span>
+              <i data-lucide="arrow-right" class="btn-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- CHRONOLOGICAL TIMELINE MILESTONES                              -->
+  <!-- ============================================================== -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-tag-center">THIRTY YEARS OF SURGICAL INNOVATION</div>
+      <h2 class="editorial-headline">OUR HISTORIC MILESTONES</h2>
+      
+      <div class="timeline-track">
+        <!-- 1996 -->
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card tilt-card">
+            <div class="timeline-year">1996</div>
+            <h4 class="timeline-title">THE ZURICH FOUNDATION</h4>
+            <p class="timeline-desc">Dr. Julian Vance establishes the Zurich Cardiovascular Institute, introducing sutureless aortic valve repair protocols in private Alpine suites.</p>
+          </div>
+        </div>
+
+        <!-- 2004 -->
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card tilt-card">
+            <div class="timeline-year">2004</div>
+            <h4 class="timeline-title">JCI GOLD SEAL ACCREDITATION</h4>
+            <p class="timeline-desc">Awarded the highest international healthcare standard by Joint Commission International with a perfect 99.8% compliance score.</p>
+          </div>
+        </div>
+
+        <!-- 2011 -->
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card tilt-card">
+            <div class="timeline-year">2011</div>
+            <h4 class="timeline-title">PIONEERING ROBOTIC STEREOTAXIS</h4>
+            <p class="timeline-desc">Dr. Elena Rostova joins to open Europe's premier intraoperative 3T MRI neurosurgical theatre, eliminating motor nerve trauma in cranial operations.</p>
+          </div>
+        </div>
+
+        <!-- 2018 -->
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card tilt-card">
+            <div class="timeline-year">2018</div>
+            <h4 class="timeline-title">MOLECULAR GENOMICS &amp; IMMUNOTHERAPY</h4>
+            <p class="timeline-desc">Inauguration of the 20,000 sq ft Precision Oncology Pavilion under Dr. Arthur Pendelton, introducing liquid biopsy tumor profiling.</p>
+          </div>
+        </div>
+
+        <!-- 2026 -->
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card tilt-card">
+            <div class="timeline-year">2026</div>
+            <h4 class="timeline-title">THE BIOPHILIC SANCTUARY ERA</h4>
+            <p class="timeline-desc">Expansion into Monaco and New York, merging robotic surgery with acoustic-insulated botanical recovery courtyards and executive longevity lodges.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- MEDICAL BOARD & GOVERNANCE                                     -->
+  <!-- ============================================================== -->
+  <section class="governors-section">
+    <div class="container">
+      <div class="section-tag-center">CLINICAL LEADERSHIP</div>
+      <h2 class="editorial-headline">THE BOARD OF MEDICAL GOVERNORS</h2>
+      <p class="editorial-subtext" style="max-width: 760px; margin: 0 auto 3rem auto; text-align: center;">
+        Governed exclusively by attending physicians, ensuring that surgical rigor, clinical safety, and compassionate patient care remain our highest obligations.
+      </p>
+
+      <div class="governors-grid">
+        <div class="governor-card tilt-card">
+          <div class="governor-img-box">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" alt="Dr. Julian Vance" class="governor-img">
+          </div>
+          <div class="governor-info">
+            <h3 class="governor-name">DR. JULIAN VANCE, MD, FACS</h3>
+            <span class="governor-title">President of Medical Board &amp; Chief Surgeon</span>
+            <p class="governor-bio">Harvard Medical School alumni, former Chief of Cardiothoracic Surgery at Johns Hopkins Hospital, author of 85+ surgical monographs.</p>
+          </div>
+        </div>
+
+        <div class="governor-card tilt-card">
+          <div class="governor-img-box">
+            <img src="https://images.unsplash.com/photo-1594824813583-4a187d7b3ea0?auto=format&fit=crop&w=800&q=80" alt="Dr. Elena Rostova" class="governor-img">
+          </div>
+          <div class="governor-info">
+            <h3 class="governor-name">DR. ELENA ROSTOVA, MD, PHD</h3>
+            <span class="governor-title">Dean of Clinical Research &amp; Neurosurgery</span>
+            <p class="governor-bio">Karolinska Institute Fellow, pioneering intraoperative cortical mapping and robotic spine reconstruction across Europe.</p>
+          </div>
+        </div>
+
+        <div class="governor-card tilt-card">
+          <div class="governor-img-box">
+            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80" alt="Dr. Arthur Pendelton" class="governor-img">
+          </div>
+          <div class="governor-info">
+            <h3 class="governor-name">DR. ARTHUR PENDELTON, MD</h3>
+            <span class="governor-title">Director of Bioethics &amp; Precision Oncology</span>
+            <p class="governor-bio">Chair of Translational Oncology, Memorial Sloan Kettering alumni, overseeing international clinical trials and targeted genomics.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="footer">
+    <div class="container footer-container">
+      <div class="footer-col footer-col-brand">
+        <div class="footer-emblem-box">
+          <svg viewBox="0 0 100 100" class="footer-logo-svg"><circle cx="50" cy="50" r="45" fill="none" stroke="#C5A059" stroke-width="2"/><ellipse cx="50" cy="22" rx="8" ry="18" fill="#C5A059"/><ellipse cx="50" cy="78" rx="8" ry="18" fill="#C5A059"/><ellipse cx="22" cy="50" rx="18" ry="8" fill="#C5A059"/><ellipse cx="78" cy="50" rx="18" ry="8" fill="#C5A059"/></svg>
+        </div>
+        <h3 class="footer-tagline">Exceptional care.<br>Led by master physicians.</h3>
+        <p class="footer-jci-badge"><i data-lucide="shield-check" class="badge-icon"></i> JCI Accredited • Harvard &amp; Royal College Fellows</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">NAVIGATION</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="about.html">About Clinical Heritage</a></li>
+          <li><a href="doctors.html">Doctor Directory</a></li>
+          <li><a href="clinics.html">Surgical Suites &amp; Wings</a></li>
+          <li><a href="research.html">Research Journal</a></li>
+          <li><a href="contact.html">Global Campuses</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">STANDARDS</h4>
+        <ul class="footer-links">
+          <li><a href="#">JCI Quality Accreditation</a></li>
+          <li><a href="#">Physician Governance Code</a></li>
+          <li><a href="#">Infection Prevention (0.01%)</a></li>
+          <li><a href="#">Patient Privacy &amp; HIPAA</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">CONTACT SANCTUARY</h4>
+        <address class="footer-address">789 Health Sanctuary Way,<br>Zurich &amp; New York, 52178</address>
+        <div class="footer-contact-info mt-4">
+          <a href="tel:+123456789012" class="contact-link">+1 (234) 567 890 12</a>
+          <a href="mailto:doctors@orynthhealth.org" class="contact-link">doctors@orynthhealth.org</a>
+        </div>
+      </div>
+
+      <div class="footer-col footer-col-form">
+        <div class="newsletter-card tilt-card">
+          <h4 class="newsletter-card-title">RECEIVE MEDICAL DISPATCH</h4>
+          <p class="newsletter-card-subtitle">Quarterly clinical breakthroughs in surgery, oncology &amp; longevity.</p>
+          <form onsubmit="handleNewsletter(event)">
+            <div class="form-group"><input type="text" class="form-input" placeholder="Full Name" required></div>
+            <div class="form-group"><input type="email" class="form-input" placeholder="Email Address" required></div>
+            <button type="submit" class="btn btn-rust btn-block btn-square"><span>SUBSCRIBE</span></button>
+            <div class="form-status" id="newsletterStatus"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-footer">
+      <div class="container sub-footer-content">
+        <div class="sub-footer-left">
+          <p class="sub-footer-credit"><span class="credit-brand">Orynth Medical Faculty</span> | Made with <span class="heart-red">❤️</span> by <a href="https://regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a></p>
+          <p class="sub-footer-copyright">&copy; 2026 ORYNTH MEDICAL FACULTY &amp; RESEARCH SANCTUARY. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="sub-footer-links"><a href="#">PRIVACY POLICY</a><a href="#">CLINICAL ETHICS</a><a href="#">ACCESSIBILITY</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="doctorBookingModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeDoctorBookingModal()"><i data-lucide="x"></i></button>
+      <div class="modal-header">
+        <h3 class="modal-title">SCHEDULE DOCTOR CONSULTATION</h3>
+        <p class="modal-subtitle">Direct, unhurried appointment with our chief surgeons.</p>
+      </div>
+      <form class="modal-form" onsubmit="handleDoctorBooking(event)">
+        <div class="form-group"><input type="text" class="form-input" placeholder="Full Name *" required></div>
+        <div class="form-group"><input type="email" class="form-input" placeholder="Email Address *" required></div>
+        <div class="form-group"><input type="tel" class="form-input" placeholder="Phone Number *" required></div>
+        <button type="submit" class="btn btn-rust btn-block btn-pill mt-4"><span>CONFIRM APPOINTMENT</span></button>
+        <div class="form-status" id="bookingStatus"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
