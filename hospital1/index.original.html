@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Hospital | Where Excellence Meets Compassion</title>
+  <meta name="description" content="Hero Hospital - World-class healthcare, advanced technology and a patient-first approach all under one roof.">
+
+  <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Scroll Reading Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- ========================================================================
+       Top Navigation Bar
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Brand Logo with Golden Monogram -->
+        <a href="#home" class="brand-logo">
+          <svg class="logo-icon-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#0B3B2C"/>
+            <!-- Stylized H Monogram with curved golden swoop -->
+            <path d="M14 12V36M34 12V36" stroke="#C5A059" stroke-width="4.2" stroke-linecap="round"/>
+            <path d="M12 24C20 22 28 26 36 24" stroke="#E7CF9B" stroke-width="4.2" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="3.5" fill="#FAF7F2"/>
+            <path d="M24 19V29M19 24H29" stroke="#0B3B2C" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <div class="logo-text-block">
+            <span class="logo-title">Hero Hospital</span>
+            <span class="logo-subtitle">ADVANCED CARE • COMPASSIONATE PEOPLE</span>
+          </div>
+        </a>
+
+        <!-- Desktop & Mobile Navigation Links -->
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li class="nav-dropdown-wrapper">
+            <a href="#specialities" class="nav-link">
+              Departments <span class="dropdown-arrow">▼</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#specialities">❤️ Cardiology</a></li>
+              <li><a href="#specialities">🦴 Orthopaedics</a></li>
+              <li><a href="#specialities">🧠 Neurology</a></li>
+              <li><a href="#specialities">👶 Maternity &amp; Gynaecology</a></li>
+              <li><a href="#specialities">🎗️ Oncology</a></li>
+              <li><a href="#specialities">🩺 Gastroenterology</a></li>
+            </ul>
+          </li>
+          <li><a href="#doctors" class="nav-link">Doctors</a></li>
+          <li><a href="#technology" class="nav-link">Facilities</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <!-- Mobile Drawer Action Items (Visible on Mobile inside drawer only) -->
+          <li class="nav-mobile-action nav-mobile-call">
+            <a href="tel:+911204567890" class="mobile-drawer-call-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>Call: +91 120 456 7890</span>
+            </a>
+          </li>
+          <li class="nav-mobile-action nav-mobile-book">
+            <button type="button" class="btn-primary trigger-booking" style="width: 100%; justify-content: center; padding: 12px 20px;">
+              <span>Book Appointment Now</span>
+              <span class="btn-arrow-icon">➔</span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- Right Action Items -->
+        <div class="nav-actions">
+          <a href="tel:+911204567890" class="phone-contact-pill">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>+91 120 456 7890</span>
+          </a>
+
+          <button type="button" class="btn-book-nav magnetic-btn trigger-booking">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Book Appointment</span>
+          </button>
+
+          <!-- Mobile Toggle Button -->
+          <button type="button" class="mobile-toggle" aria-label="Toggle navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Full-Width Hero Section
+       (Hospital Background Spans Full Width; Text Sits on Left; Card on Right)
+       ======================================================================== -->
+  <section class="hero-section" id="home">
+    <!-- Ambient floating particles and glow -->
+    <div class="hero-ambient-spot"></div>
+    <div class="hero-ambient-particles" aria-hidden="true">
+      <span class="particle p1">+</span>
+      <span class="particle p2">+</span>
+      <span class="particle p3">✦</span>
+      <span class="particle p4">+</span>
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-wrapper">
+        <!-- Left Content Column -->
+        <div class="hero-content">
+          <div class="eyebrow-tag">
+            <span class="pulse-dot"></span>
+            <span>MULTI-SPECIALITY HOSPITAL</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Where Excellence<br>
+            Meets <span class="highlight-serif-accent">Compassion</span>
+          </h1>
+
+          <p class="hero-lead">
+            World-class healthcare, advanced technology<br>
+            and a patient-first approach — all under one roof.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#heroBookingForm" class="btn-primary magnetic-btn trigger-booking">
+              <span>Book an Appointment</span>
+              <span class="btn-arrow-icon">➔</span>
+            </a>
+            <button type="button" class="btn-story magnetic-btn" id="watchStoryBtn">
+              <span class="play-icon-gold">▶</span>
+              <span>Watch Our Story</span>
+            </button>
+          </div>
+
+          <!-- Hero Stats Row with Vertical Dividers & Animated Numbers -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <div class="stat-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="8.5" cy="7" r="4"></circle>
+                  <line x1="20" y1="8" x2="20" y2="14"></line>
+                  <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <div class="stat-number"><span class="counter" data-target="500">500</span>+</div>
+                <div class="stat-label">Expert Doctors</div>
+              </div>
+            </div>
+
+            <div class="stat-divider"></div>
+
+            <div class="stat-item">
+              <div class="stat-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                  <path d="M2 4v16"></path>
+                  <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                  <path d="M2 17h20"></path>
+                  <path d="M6 8v9"></path>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <div class="stat-number"><span class="counter" data-target="300">300</span>+</div>
+                <div class="stat-label">Beds Capacity</div>
+              </div>
+            </div>
+
+            <div class="stat-divider"></div>
+
+            <div class="stat-item">
+              <div class="stat-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <div class="stat-number">1L+</div>
+                <div class="stat-label">Happy Patients</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Elevated 3D Tilt Appointment Form Card -->
+        <div class="hero-card-col">
+          <div class="floating-booking-card">
+            <div class="booking-header">
+              <h3 class="booking-title">Book Your Appointment</h3>
+              <p class="booking-subtitle">Fast consultation with our top specialists</p>
+            </div>
+
+            <form class="booking-form" id="heroBookingForm">
+              <div class="form-group-custom">
+                <span class="input-icon-left">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </span>
+                <select class="form-control-input" name="department" id="deptSelect" required>
+                  <option value="" disabled selected>Select Department</option>
+                  <option value="Cardiology">Cardiology</option>
+                  <option value="Orthopaedics">Orthopaedics</option>
+                  <option value="Neurology">Neurology</option>
+                  <option value="Maternity &amp; Gynaecology">Maternity &amp; Gynaecology</option>
+                  <option value="Oncology">Oncology</option>
+                  <option value="Gastroenterology">Gastroenterology</option>
+                </select>
+                <span class="select-arrow-right">▼</span>
+              </div>
+
+              <div class="form-group-custom">
+                <span class="input-icon-left">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle></svg>
+                </span>
+                <select class="form-control-input" name="doctor" id="doctorSelect">
+                  <option value="" disabled selected>Select Doctor (Optional)</option>
+                  <option value="Dr. Rajiv Mehta (Cardiology)">Dr. Rajiv Mehta (Cardiology)</option>
+                  <option value="Dr. Neha Sharma (Neurology)">Dr. Neha Sharma (Neurology)</option>
+                  <option value="Dr. Arjun Singh (Orthopaedics)">Dr. Arjun Singh (Orthopaedics)</option>
+                  <option value="Dr. Priya Verma (Gynaecology)">Dr. Priya Verma (Gynaecology)</option>
+                </select>
+                <span class="select-arrow-right">▼</span>
+              </div>
+
+              <div class="form-group-custom">
+                <span class="input-icon-left">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </span>
+                <input type="date" class="form-control-input" name="date" required value="2026-11-20">
+              </div>
+
+              <div class="form-group-custom">
+                <span class="input-icon-left">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </span>
+                <input type="time" class="form-control-input" name="time" id="bookingTimeInput" required value="10:30">
+              </div>
+
+              <!-- Quick Time Slot Chips -->
+              <div class="slot-chips-row">
+                <button type="button" class="time-chip-btn active" data-time="10:30">10:30 AM</button>
+                <button type="button" class="time-chip-btn" data-time="12:00">12:00 PM</button>
+                <button type="button" class="time-chip-btn" data-time="15:30">03:30 PM</button>
+                <button type="button" class="time-chip-btn" data-time="17:00">05:00 PM</button>
+              </div>
+
+              <button type="submit" class="btn-book-submit magnetic-btn">
+                <span>Book Now</span>
+                <span class="btn-arrow-icon">➔</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Double-Layered Organic Flowing Waves at Bottom of Hero -->
+    <div class="hero-layered-waves">
+      <!-- Layer 1: Champagne Gold Wave Ribbon -->
+      <svg class="wave-svg-gold" viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,45 C280,105 520,15 820,70 C1120,120 1320,35 1440,55 L1440,120 L0,120 Z" fill="#E8D9B8" fill-opacity="0.65"/>
+      </svg>
+      <!-- Layer 2: Foreground Crisp White Wave -->
+      <svg class="wave-svg-white" viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,60 C320,125 560,30 880,85 C1180,135 1360,50 1440,75 L1440,120 L0,120 Z" fill="#FFFFFF"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Trust Highlights Bar (4 Pillars with Vertical Dividers)
+       ======================================================================== -->
+  <section class="trust-pillars-section">
+    <div class="container">
+      <div class="trust-pillars-grid">
+        <div class="pillar-item">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div class="pillar-title">24x7<br>Emergency Care</div>
+        </div>
+
+        <div class="pillar-v-sep"></div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="pillar-title">Advanced<br>Medical Technology</div>
+        </div>
+
+        <div class="pillar-v-sep"></div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="pillar-title">Quality &amp;<br>Patient Safety</div>
+        </div>
+
+        <div class="pillar-v-sep"></div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </div>
+          <div class="pillar-title">Personalized<br>Patient Care</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Section: The Hero Difference (About Us)
+       ======================================================================== -->
+  <section class="difference-section" id="about">
+    <div class="container">
+      <div class="difference-grid">
+        <!-- Visual Suite Image with Organic Curved Shape -->
+        <div class="difference-visual-col reveal-on-scroll">
+          <div class="suite-organic-card">
+            <img 
+              src="assets/luxury-suite.jpg" 
+              alt="Hero Hospital Luxury Inpatient Suite" 
+              class="suite-room-img"
+            >
+          </div>
+        </div>
+
+        <!-- Content Column with Side-by-Side Checkmarks & Circular Gold NABH Medal -->
+        <div class="difference-content-col reveal-on-scroll">
+          <div class="difference-eyebrow">THE HERO DIFFERENCE</div>
+          <h2 class="section-title">
+            A Healthier Tomorrow<br>
+            for You and Your Family
+          </h2>
+          <p class="difference-description">
+            At Hero Hospital, we combine medical expertise, advanced infrastructure and a human touch to deliver comprehensive healthcare for every stage of life.
+          </p>
+
+          <div class="diff-features-and-seal-row">
+            <!-- Left: 4 Bullet Points -->
+            <ul class="difference-features-list">
+              <li class="diff-feature-item">
+                <span class="diff-check-gold">✔</span>
+                <span>Experienced &amp; Trusted Specialists</span>
+              </li>
+              <li class="diff-feature-item">
+                <span class="diff-check-gold">✔</span>
+                <span>State-of-the-Art Infrastructure</span>
+              </li>
+              <li class="diff-feature-item">
+                <span class="diff-check-gold">✔</span>
+                <span>Comprehensive Multi-Specialty Care</span>
+              </li>
+              <li class="diff-feature-item">
+                <span class="diff-check-gold">✔</span>
+                <span>Patient-Centric &amp; Compassionate Support</span>
+              </li>
+            </ul>
+
+            <!-- Right: Circular Gold Embossed NABH Medallion with Subtle Cross Backdrop -->
+            <div class="nabh-medallion-container">
+              <div class="seal-cross-backdrop"></div>
+              <div class="circular-gold-seal">
+                <svg class="medallion-svg" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <radialGradient id="goldMedalBg" cx="45%" cy="38%" r="65%">
+                      <stop offset="0%" stop-color="#FFF8E7"/>
+                      <stop offset="35%" stop-color="#F2DDAD"/>
+                      <stop offset="70%" stop-color="#C5A059"/>
+                      <stop offset="100%" stop-color="#9C772F"/>
+                    </radialGradient>
+                    <linearGradient id="goldMedalRim" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#F5E3BD"/>
+                      <stop offset="50%" stop-color="#C5A059"/>
+                      <stop offset="100%" stop-color="#7B5614"/>
+                    </linearGradient>
+                    <filter id="medallionGlow" x="-25%" y="-25%" width="150%" height="150%">
+                      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0B3B2C" flood-opacity="0.14"/>
+                    </filter>
+                  </defs>
+                  
+                  <!-- Circular Coin Base -->
+                  <circle cx="70" cy="70" r="64" fill="url(#goldMedalRim)" filter="url(#medallionGlow)"/>
+                  <circle cx="70" cy="70" r="59" fill="url(#goldMedalBg)"/>
+                  <circle cx="70" cy="70" r="55" stroke="#9C772F" stroke-width="1.2" stroke-dasharray="2.5 2.5" fill="none"/>
+                  
+                  <!-- Laurel Wreath -->
+                  <path d="M42 92 C34 82 34 58 48 44 C44 54 46 76 54 86 Z" fill="#84601A" opacity="0.9"/>
+                  <path d="M37 78 C33 72 34 60 42 52 C39 60 42 70 46 74 Z" fill="#B38D40"/>
+                  <path d="M44 60 C41 52 44 42 52 38 C48 45 49 54 52 58 Z" fill="#84601A"/>
+                  
+                  <path d="M98 92 C106 82 106 58 92 44 C96 54 94 76 86 86 Z" fill="#84601A" opacity="0.9"/>
+                  <path d="M103 78 C107 72 106 60 98 52 C101 60 98 70 94 74 Z" fill="#B38D40"/>
+                  <path d="M96 60 C99 52 96 42 88 38 C92 45 91 54 88 58 Z" fill="#84601A"/>
+                  
+                  <!-- Medallion Text -->
+                  <text x="70" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="15" fill="#0B3B2C" text-anchor="middle" letter-spacing="1">NABH</text>
+                  <text x="70" y="70" font-family="'Playfair Display', serif" font-weight="700" font-size="9.5" fill="#0B3B2C" text-anchor="middle">Accredited</text>
+                  <text x="70" y="82" font-family="'Playfair Display', serif" font-weight="700" font-size="9.5" fill="#0B3B2C" text-anchor="middle">Hospital</text>
+                  
+                  <!-- Three Stars -->
+                  <path d="M70 91 L71.5 95.5 L76 95.5 L72.5 98 L74 102.5 L70 100 L66 102.5 L67.5 98 L64 95.5 L68.5 95.5 Z" fill="#84601A"/>
+                  <path d="M60 92.5 L61.2 96 L65 96 L62 98 L63.2 101.5 L60 99.5 L56.8 101.5 L58 98 L55 96 L58.8 96 Z" fill="#84601A" transform="scale(0.85) translate(13, 17)"/>
+                  <path d="M80 92.5 L81.2 96 L85 96 L82 98 L83.2 101.5 L80 99.5 L76.8 101.5 L78 98 L75 96 L78.8 96 Z" fill="#84601A" transform="scale(0.85) translate(18, 17)"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Section: Our Specialities (Department Cards Carousel)
+       ======================================================================== -->
+  <section class="specialities-section" id="specialities">
+    <div class="container">
+      <div class="section-header-flex">
+        <div>
+          <div class="specialties-eyebrow">OUR SPECIALITIES</div>
+          <h2 class="section-title">Comprehensive Care Under One Roof</h2>
+        </div>
+        <div class="carousel-nav-arrows">
+          <button type="button" class="carousel-arrow-btn" id="specPrev" aria-label="Previous specialities">‹</button>
+          <button type="button" class="carousel-arrow-btn" id="specNext" aria-label="Next specialities">›</button>
+        </div>
+      </div>
+
+      <!-- 6 Department Cards (Alternating Dark Green & Light Cream) -->
+      <div class="specialities-grid" id="specialitiesGrid">
+        <!-- 1. Cardiology -->
+        <div class="specialty-card theme-dark" data-dept="Cardiology">
+          <div class="spec-header">
+            <div class="spec-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="spec-name">Cardiology</h3>
+          </div>
+          <div class="spec-footer">
+            <span class="spec-arrow-circle">➔</span>
+          </div>
+          <svg class="spec-watermark" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+
+        <!-- 2. Orthopaedics -->
+        <div class="specialty-card theme-light" data-dept="Orthopaedics">
+          <div class="spec-header">
+            <div class="spec-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+            </div>
+            <h3 class="spec-name">Orthopaedics</h3>
+          </div>
+          <div class="spec-footer">
+            <span class="spec-arrow-circle">➔</span>
+          </div>
+          <svg class="spec-watermark" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+          </svg>
+        </div>
+
+        <!-- 3. Neurology -->
+        <div class="specialty-card theme-dark" data-dept="Neurology">
+          <div class="spec-header">
+            <div class="spec-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"/></svg>
+            </div>
+            <h3 class="spec-name">Neurology</h3>
+          </div>
+          <div class="spec-footer">
+            <span class="spec-arrow-circle">➔</span>
+          </div>
+          <svg class="spec-watermark" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 4.5v15M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"/>
+          </svg>
+        </div>
+
+        <!-- 4. Maternity & Gynaecology -->
+        <div class="specialty-card theme-light" data-dept="Maternity &amp; Gynaecology">
+          <div class="spec-header">
+            <div class="spec-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2"/></svg>
+            </div>
+            <h3 class="spec-name">Maternity &amp; Gynaecology</h3>
+          </div>
+          <div class="spec-footer">
+            <span class="spec-arrow-circle">➔</span>
+          </div>
+          <svg class="spec-watermark" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="7" r="4"/><path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2"/>
+          </svg>
+        </div>
+
+        <!-- 5. Oncology -->
+        <div class="specialty-card theme-dark" data-dept="Oncology">
+          <div class="spec-header">
+            <div class="spec-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/></svg>
+            </div>
+            <h3 class="spec-name">Oncology</h3>
+          </div>
+          <div class="spec-footer">
+            <span class="spec-arrow-circle">➔</span>
+          </div>
+          <svg class="spec-watermark" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="8"/>
+          </svg>
+        </div>
+
+        <!-- 6. Gastroenterology -->
+        <div class="specialty-card theme-light" data-dept="Gastroenterology">
+          <div class="spec-header">
+            <div class="spec-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v8M8 6h8M6 10c0 4 2 8 6 8s6-4 6-8"/></svg>
+            </div>
+            <h3 class="spec-name">Gastroenterology</h3>
+          </div>
+          <div class="spec-footer">
+            <span class="spec-arrow-circle">➔</span>
+          </div>
+          <svg class="spec-watermark" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 10c0 4 2 8 6 8s6-4 6-8"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Section: Meet Our Experts (Doctors)
+       ======================================================================== -->
+  <section class="doctors-section" id="doctors">
+    <div class="container">
+      <div class="section-header-flex">
+        <div>
+          <span class="eyebrow-tag">
+            <span class="pulse-dot"></span>
+            <span>MEET OUR EXPERTS</span>
+          </span>
+          <h2 class="section-title">Our Leading Specialists</h2>
+        </div>
+        <button type="button" class="btn-view-all">
+          <span>View All Doctors</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+
+      <div class="doctors-grid">
+        <!-- Doctor 1: Dr. Rajiv Mehta -->
+        <div class="doctor-card reveal-on-scroll">
+          <div class="doctor-image-wrapper">
+            <img 
+              src="assets/doctor-rajiv.jpg" 
+              alt="Dr. Rajiv Mehta - Director Cardiology" 
+              class="doctor-photo"
+            >
+          </div>
+          <div class="doctor-details-box">
+            <h3 class="doctor-name">Dr. Rajiv Mehta</h3>
+            <div class="doctor-specialty">Director • Cardiology</div>
+            <div class="doctor-footer-row">
+              <div class="doctor-experience">
+                <span>🩺</span>
+                <span>25+ Years Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 2: Dr. Neha Sharma -->
+        <div class="doctor-card reveal-on-scroll">
+          <div class="doctor-image-wrapper">
+            <img 
+              src="assets/doctor-neha.jpg" 
+              alt="Dr. Neha Sharma - Neurologist" 
+              class="doctor-photo"
+            >
+          </div>
+          <div class="doctor-details-box">
+            <h3 class="doctor-name">Dr. Neha Sharma</h3>
+            <div class="doctor-specialty">Neurologist</div>
+            <div class="doctor-footer-row">
+              <div class="doctor-experience">
+                <span>🧠</span>
+                <span>14+ Years Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 3: Dr. Arjun Singh -->
+        <div class="doctor-card reveal-on-scroll">
+          <div class="doctor-image-wrapper">
+            <img 
+              src="assets/doctor-arjun.jpg" 
+              alt="Dr. Arjun Singh - Orthopaedic Surgeon" 
+              class="doctor-photo"
+            >
+          </div>
+          <div class="doctor-details-box">
+            <h3 class="doctor-name">Dr. Arjun Singh</h3>
+            <div class="doctor-specialty">Orthopaedic Surgeon</div>
+            <div class="doctor-footer-row">
+              <div class="doctor-experience">
+                <span>🦴</span>
+                <span>18+ Years Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 4: Dr. Priya Verma -->
+        <div class="doctor-card reveal-on-scroll">
+          <div class="doctor-image-wrapper">
+            <img 
+              src="assets/doctor-priya.jpg" 
+              alt="Dr. Priya Verma - Gynaecologist" 
+              class="doctor-photo"
+            >
+          </div>
+          <div class="doctor-details-box">
+            <h3 class="doctor-name">Dr. Priya Verma</h3>
+            <div class="doctor-specialty">Gynaecologist</div>
+            <div class="doctor-footer-row">
+              <div class="doctor-experience">
+                <span>👶</span>
+                <span>12+ Years Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Section: Advanced Technology (Robotic Surgery & Hotspots)
+       ======================================================================== -->
+  <section class="technology-section" id="technology">
+    <div class="container">
+      <div class="technology-grid">
+        <!-- Visual OT Image with Interactive Hotspots -->
+        <div class="tech-visual-col reveal-on-scroll">
+          <div class="tech-image-card">
+            <img 
+              src="assets/robotic-surgery.jpg" 
+              alt="Hero Hospital Robotic-Assisted Surgery Modular Operation Theatre" 
+              class="tech-room-img"
+            >
+            <!-- Hotspot 1 -->
+            <div class="tech-hotspot hotspot-1">
+              <div class="hotspot-tooltip">Robotic Surgical Multi-Arm System</div>
+            </div>
+            <!-- Hotspot 2 -->
+            <div class="tech-hotspot hotspot-2">
+              <div class="hotspot-tooltip">High-Definition Endoscopic 3D Monitor</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Column -->
+        <div class="tech-content-col reveal-on-scroll">
+          <span class="eyebrow-tag">
+            <span class="pulse-dot"></span>
+            <span>ADVANCED TECHNOLOGY</span>
+          </span>
+          <h2 class="section-title">Next-Gen Healthcare, Today</h2>
+          <p class="tech-description">
+            Equipped with the latest medical technology, from robotic surgery to advanced imaging, we ensure faster, safer and more accurate treatment.
+          </p>
+
+          <ul class="tech-features-list">
+            <li class="tech-feature-item">
+              <span class="tech-check-icon">✓</span>
+              <span>Robotic-Assisted Surgery</span>
+            </li>
+            <li class="tech-feature-item">
+              <span class="tech-check-icon">✓</span>
+              <span>Advanced Imaging (MRI, CT, PET)</span>
+            </li>
+            <li class="tech-feature-item">
+              <span class="tech-check-icon">✓</span>
+              <span>ICU with Real-Time Monitoring</span>
+            </li>
+            <li class="tech-feature-item">
+              <span class="tech-check-icon">✓</span>
+              <span>Fully Equipped Modular OT</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Section: Patient Stories (Testimonials)
+       ======================================================================== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header-flex">
+        <div>
+          <span class="eyebrow-tag">
+            <span class="pulse-dot"></span>
+            <span>PATIENT STORIES</span>
+          </span>
+          <h2 class="section-title">Trusted by Thousands</h2>
+        </div>
+        <div class="carousel-nav-arrows">
+          <button type="button" class="carousel-arrow-btn" id="testPrev" aria-label="Previous story">‹</button>
+          <button type="button" class="carousel-arrow-btn" id="testNext" aria-label="Next story">›</button>
+        </div>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Story 1 -->
+        <div class="testimonial-card reveal-on-scroll">
+          <div class="patient-avatar-box">
+            <img 
+              src="assets/patient-amit.jpg" 
+              alt="Amit Khanna - Patient Story" 
+              class="patient-avatar-img"
+            >
+          </div>
+          <div class="testimonial-body">
+            <p class="quote-text">
+              “The care and support at Hero Hospital was truly exceptional. The doctors explained everything clearly and the whole team was very compassionate.”
+            </p>
+            <div class="patient-footer">
+              <span class="patient-author">– Amit Khanna</span>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="testimonial-card reveal-on-scroll">
+          <div class="patient-avatar-box">
+            <img 
+              src="assets/patient-sneha.jpg" 
+              alt="Sneha Gupta - Patient Story" 
+              class="patient-avatar-img"
+            >
+          </div>
+          <div class="testimonial-body">
+            <p class="quote-text">
+              “Excellent infrastructure, very professional staff and a smooth treatment experience. I would highly recommend Hero Hospital to my family and friends.”
+            </p>
+            <div class="patient-footer">
+              <span class="patient-author">– Sneha Gupta</span>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand & Tagline -->
+        <div class="footer-brand-col">
+          <a href="#home" class="footer-logo">
+            <svg class="logo-icon-svg" viewBox="0 0 48 48" fill="none">
+              <rect width="48" height="48" rx="12" fill="#0E4433"/>
+              <path d="M14 12V36M34 12V36" stroke="#C5A059" stroke-width="4.2" stroke-linecap="round"/>
+              <path d="M12 24C20 22 28 26 36 24" stroke="#E7CF9B" stroke-width="4.2" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="3.5" fill="#FAF7F2"/>
+              <path d="M24 19V29M19 24H29" stroke="#0B3B2C" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+            <div class="logo-text-block">
+              <span class="logo-title">Hero Hospital</span>
+              <span class="logo-subtitle">ADVANCED CARE • COMPASSIONATE PEOPLE</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            A leading multi-speciality hospital committed to delivering world-class, trusted and compassionate healthcare to build a healthier society.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-btn" aria-label="Facebook">f</a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube">▶</a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter">𝕏</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-link-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#specialities">Departments</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#technology">Facilities</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Departments -->
+        <div>
+          <h4 class="footer-col-title">Departments</h4>
+          <ul class="footer-link-list">
+            <li><a href="#specialities">Cardiology</a></li>
+            <li><a href="#specialities">Neurology</a></li>
+            <li><a href="#specialities">Orthopaedics</a></li>
+            <li><a href="#specialities">Oncology</a></li>
+            <li><a href="#specialities">Gynaecology</a></li>
+            <li><a href="#specialities">Gastroenterology</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Us -->
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <span class="footer-contact-icon">📍</span>
+              <span>Hero Hospital, Sector 24, City Center, Uttar Pradesh - 201301</span>
+            </li>
+            <li class="footer-contact-item">
+              <span class="footer-contact-icon">📞</span>
+              <span>+91 120 456 7890</span>
+            </li>
+            <li class="footer-contact-item">
+              <span class="footer-contact-icon">✉️</span>
+              <span>info@herohospital.com</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Locate Us Map Card -->
+        <div>
+          <h4 class="footer-col-title">Locate Us</h4>
+          <div class="footer-map-card">
+            <img 
+              src="assets/map-location.jpg" 
+              alt="Hero Hospital Map Location" 
+              class="map-preview-img"
+            >
+            <div class="map-pin-overlay">
+              <span class="map-pin-icon">📍</span>
+              <span class="map-pin-text">Hero Hospital</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Copyright Bar -->
+      <div class="footer-bottom-bar">
+        <div>© 2026 Hero Hospital. All Rights Reserved.</div>
+        <div class="footer-credit">
+          Hero Hospital | Made with <span class="footer-heart" style="color: #ff3344; display: inline-block; margin: 0 2px;">❤️</span> by <a href="https://regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <span>|</span>
+          <a href="#">Terms &amp; Conditions</a>
+          <span>|</span>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Back to Top Floating Button with Circular Progress Ring
+       ======================================================================== -->
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+    <svg class="progress-ring" width="50" height="50">
+      <circle class="progress-ring-circle" stroke="#C5A059" stroke-width="3" fill="transparent" r="23" cx="25" cy="25"/>
+    </svg>
+    <span class="top-arrow-icon">↑</span>
+  </button>
+
+  <!-- ========================================================================
+       Modals
+       ======================================================================== -->
+  <!-- Appointment Confirmation Modal -->
+  <div class="modal-overlay" id="appointmentSuccessModal">
+    <div class="modal-box">
+      <button type="button" class="modal-close-btn close-modal-trigger" aria-label="Close dialog">✕</button>
+      <div class="modal-icon-success">✓</div>
+      <h3 class="modal-title">Appointment Confirmed!</h3>
+      <p class="modal-desc">Your request has been registered with Hero Hospital. Our care coordinator will contact you shortly.</p>
+
+      <div class="appointment-ticket-details">
+        <div class="ticket-row">
+          <span class="ticket-label">Appointment ID:</span>
+          <span class="ticket-val" id="ticketId">HH-849201</span>
+        </div>
+        <div class="ticket-row">
+          <span class="ticket-label">Department:</span>
+          <span class="ticket-val" id="ticketDept">Cardiology</span>
+        </div>
+        <div class="ticket-row">
+          <span class="ticket-label">Doctor:</span>
+          <span class="ticket-val" id="ticketDoc">Dr. Rajiv Mehta</span>
+        </div>
+        <div class="ticket-row">
+          <span class="ticket-label">Date:</span>
+          <span class="ticket-val" id="ticketDate">2026-11-20</span>
+        </div>
+        <div class="ticket-row">
+          <span class="ticket-label">Time:</span>
+          <span class="ticket-val" id="ticketTime">10:30 AM</span>
+        </div>
+      </div>
+
+      <button type="button" class="btn-primary close-modal-trigger" style="width: 100%; justify-content: center;">
+        Done &amp; Return
+      </button>
+    </div>
+  </div>
+
+  <!-- Video Modal ("Watch Our Story") -->
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-box video-modal-box">
+      <button type="button" class="modal-close-btn close-modal-trigger" style="color: #fff; background: rgba(255,255,255,0.2);">✕</button>
+      <div class="video-responsive-wrap">
+        <iframe 
+          id="storyVideoIframe" 
+          src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?rel=0" 
+          title="Hero Hospital Story Video" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infrastructure &amp; Facilities | Hero Hospital</title>
+  <meta name="description" content="Discover Hero Hospital's state-of-the-art medical technology: Da Vinci Xi Robotic Surgery, 3.0T Silent MRI, 18 Modular OTs, Luxury Healing Suites, and 120-bed ICU.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main & Inner Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="inner-pages.css">
+</head>
+<body>
+
+  <!-- Top Scroll Reading Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Left Floating Navigation Dock -->
+  <aside class="side-nav-dock" aria-label="Quick Navigation">
+    <div class="dock-inner">
+      <a href="index.html" class="dock-logo" title="Hero Hospital Home">
+        <svg class="dock-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="10" fill="#0B192C"/>
+          <path d="M11 10V30M29 10V30" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M9 20C17 17 23 23 31 20" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="3" fill="#FF6B35"/>
+        </svg>
+      </a>
+
+      <nav class="dock-menu">
+        <a href="index.html" class="dock-item" data-tooltip="Home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span class="dock-tooltip">Home</span>
+        </a>
+
+        <a href="about.html" class="dock-item" data-tooltip="About Us">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span class="dock-tooltip">About Us</span>
+        </a>
+
+        <a href="specialties.html" class="dock-item" data-tooltip="Specialties">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span class="dock-tooltip">Specialties</span>
+        </a>
+
+        <a href="doctors.html" class="dock-item" data-tooltip="Doctors">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path>
+            <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path>
+            <circle cx="20" cy="10" r="2"></circle>
+          </svg>
+          <span class="dock-tooltip">Doctors</span>
+        </a>
+
+        <a href="facilities.html" class="dock-item active" data-tooltip="Facilities">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <span class="dock-tooltip">Facilities</span>
+        </a>
+
+        <a href="contact.html" class="dock-item" data-tooltip="Contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="dock-tooltip">Contact</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Top Navigation Bar -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="nav-left">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-mark">
+            <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="11" fill="#0B192C"/>
+              <path d="M12 11V33M32 11V33" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round"/>
+              <path d="M10 22C18 19 26 25 34 22" stroke="#FF6B35" stroke-width="3.8" stroke-linecap="round"/>
+              <circle cx="22" cy="22" r="3.2" fill="#FF6B35"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">Hero Hospital</span>
+            <span class="logo-tagline">CARE • CURE • COMPASSION</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="nav-center">
+        <ul class="nav-links-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-dropdown-item">
+            <a href="specialties.html" class="nav-link">Specialties <span class="caret">▾</span></a>
+            <ul class="nav-dropdown-sub">
+              <li><a href="specialties.html#cardiology">❤️ Cardiology</a></li>
+              <li><a href="specialties.html#neurology">🧠 Neurology</a></li>
+              <li><a href="specialties.html#orthopaedics">🦴 Orthopaedics</a></li>
+              <li><a href="specialties.html#maternity">👶 Maternity &amp; Gynaecology</a></li>
+              <li><a href="specialties.html#oncology">🎗️ Oncology</a></li>
+            </ul>
+          </li>
+          <li><a href="doctors.html" class="nav-link">Doctors</a></li>
+          <li><a href="facilities.html" class="nav-link active">Facilities</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="mobile-drawer-actions">
+          <a href="tel:+911204567890" class="drawer-call-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>24/7 Helpline: +91 120 456 7890</span>
+          </a>
+          <button type="button" class="btn-orange-primary trigger-booking" style="width: 100%; justify-content: center; padding: 13px 20px;">
+            <span>Book Appointment Now</span>
+            <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div class="nav-right">
+        <a href="tel:+911204567890" class="phone-chip">
+          <svg class="phone-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="phone-chip-number">+91 120 456 7890</span>
+        </a>
+
+        <button type="button" class="btn-orange-primary trigger-booking nav-book-btn">
+          <span>Book Appointment</span>
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+
+        <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="page-wrapper">
+
+    <!-- Unique Hero Banner -->
+    <section class="inner-hero-section">
+      <div class="inner-hero-container">
+        <div class="inner-breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <span class="current">Infrastructure &amp; Advanced Facilities</span>
+        </div>
+
+        <div class="inner-hero-tag">
+          <span class="tag-dot"></span>
+          <span>750 BEDS • 18 MODULAR OTS • LEVEL-1 TRAUMA CENTER</span>
+        </div>
+
+        <h1 class="inner-hero-title">
+          Engineered for Healing, Powered by <br>
+          <span class="text-orange-gradient">Next-Gen Medical Technology</span>
+        </h1>
+
+        <p class="inner-hero-desc">
+          Step into a medical campus crafted to eliminate anxiety and maximize healing. Featuring Da Vinci Xi robotic theatres, 3.0T silent MRI suites, positive-pressure laminar airflow, and resort-grade private recovery suites.
+        </p>
+      </div>
+    </section>
+
+    <!-- Campus Architecture Split: Interactive Floor Breakdown & Campus Visual -->
+    <section class="facility-campus-section">
+      <div class="campus-split-grid">
+        <div>
+          <span style="color: var(--color-orange-500); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.08em; display: inline-block; margin-bottom: 8px;">SMART CAMPUS DIRECTORY</span>
+          <h2 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: var(--color-navy-900); line-height: 1.25; margin-bottom: 14px;">
+            A Vertical Sanctuary of Healing and Clinical Mastery
+          </h2>
+          <p style="color: var(--color-text-body); font-size: 0.96rem; line-height: 1.6;">
+            Every square meter of Hero Hospital has been mapped to minimize patient transit times, isolate contagious pathogens with negative pressure airlocks, and ensure rapid sub-4-minute emergency code response.
+          </p>
+
+          <div class="campus-floors-list">
+            <div class="floor-spec-item">
+              <div class="floor-pill">L1</div>
+              <div class="floor-info">
+                <h4>Level 1: 24/7 Trauma, Triage &amp; Automated Pharmacy</h4>
+                <p>12 Emergency bays, dedicated resuscitation suite, high-speed pneumatic sample transit, and 24/7 blood bank.</p>
+              </div>
+            </div>
+
+            <div class="floor-spec-item">
+              <div class="floor-pill">L2</div>
+              <div class="floor-info">
+                <h4>Level 2: 18 Modular Laminar Robotic Surgical Suites</h4>
+                <p>Da Vinci Xi 4th Gen robotic consoles, MAKO orthopaedic systems, and ultra-sterile Class 100 laminar airflow OTs.</p>
+              </div>
+            </div>
+
+            <div class="floor-spec-item">
+              <div class="floor-pill">L3</div>
+              <div class="floor-info">
+                <h4>Level 3: 120-Bed Comprehensive ICU &amp; Dual Cath Labs</h4>
+                <p>Coronary Care (CCU), Neuro ICU, Level-III Neonatal ICU (NICU), and Biplane Hybrid Cath Labs for emergency stroke &amp; heart.</p>
+              </div>
+            </div>
+
+            <div class="floor-spec-item">
+              <div class="floor-pill">L4</div>
+              <div class="floor-info">
+                <h4>Level 4: Diagnostic Imaging &amp; AI Radiology Hub</h4>
+                <p>3.0 Tesla Silent MRI, 128-Slice Dual Source CT, 3D Digital Mammography, and automated molecular pathology labs.</p>
+              </div>
+            </div>
+
+            <div class="floor-spec-item">
+              <div class="floor-pill">L5-7</div>
+              <div class="floor-info">
+                <h4>Levels 5 - 7: Inpatient Healing Suites &amp; Rooftop Helipad</h4>
+                <p>Presidential &amp; Super Deluxe rooms, rehabilitation gym, sky meditation garden, and certified air ambulance helipad.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="campus-visual-interactive">
+          <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=1200&q=80" alt="Hero Hospital Campus Architecture" class="campus-main-img">
+          <div class="campus-tech-overlay-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+              <span style="font-weight: 800; color: #FF6B35; font-size: 0.85rem;">LEED PLATINUM GREEN BUILDING</span>
+              <span style="font-size: 0.78rem; background: rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 9999px;">100% HEPA</span>
+            </div>
+            <div style="font-size: 0.95rem; font-weight: 700; color: #FFFFFF;">Zero Cross-Infection Infrastructure Design</div>
+            <div style="font-size: 0.8rem; color: #CBD5E1; margin-top: 4px;">Triple air-filtration, touchless automated clinical doors, and antimicrobial medical copper surfaces.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cutting-Edge Medical Technology & Surgical Equipment Showcase -->
+    <section class="tech-showcase-section">
+      <div class="section-head-center">
+        <span class="sub-label">PRECISION MEDICAL TECHNOLOGY</span>
+        <h2 class="main-title">World-Class Tools for Sub-Millimeter Accuracy</h2>
+      </div>
+
+      <div class="tech-cards-grid">
+
+        <!-- Tech Card 1 -->
+        <div class="tech-card">
+          <div class="tech-card-img-wrap">
+            <img src="assets/robotic-surgery.jpg" alt="Da Vinci Robotic Surgery" class="tech-card-img">
+            <span class="tech-badge-flag">Da Vinci Xi 4th Gen</span>
+          </div>
+          <div class="tech-card-body">
+            <h3 class="tech-card-title">Robotic Surgical Consoles</h3>
+            <p class="tech-card-desc">
+              Multi-jointed robotic arms that bend and rotate far beyond the human wrist with 10x magnified 3D-HD visualization for oncology and bypass surgery.
+            </p>
+            <div class="tech-features-checklist">
+              <div class="tech-feature-item">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Sub-millimeter pinhole incision incisions</span>
+              </div>
+              <div class="tech-feature-item">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Over 70% reduction in blood loss</span>
+              </div>
+              <div class="tech-feature-item">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Faster return home in under 48 hours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Card 2 -->
+        <div class="tech-card">
+          <div class="tech-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=80" alt="3.0 Tesla Silent MRI" class="tech-card-img">
+            <span class="tech-badge-flag">3.0 Tesla Silent MRI</span>
+          </div>
+          <div class="tech-card-body">
+            <h3 class="tech-card-title">Ambient Acoustic MRI Hub</h3>
+            <p class="tech-card-desc">
+              Ultra-high-definition neural and musculoskeletal scans performed with 70% less acoustic noise, cinema ceiling projections, and wide 70cm patient bore.
+            </p>
+            <div class="tech-features-checklist">
+              <div class="tech-feature-item">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Zero claustrophobia ambient experience</span>
+              </div>
+              <div class="tech-feature-item">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Instant AI-assisted diagnostic reporting</span>
+              </div>
+              <div class="tech-feature-item">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Non-invasive brain fiber tractography</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Card 3 -->
+        <div class="tech-card">
+          <div class="tech-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80" alt="120-Bed Critical Care ICU" class="tech-card-img">
+            <span class="tech-badge-flag">120-Bed Smart ICU</span>
+          </div>
+          <div class="tech-card-body">
+            <h3 class="tech-card-title">Intensive Care Sanctuary</h3>
+            <p class="tech-card-desc">
+              1:1 dedicated nursing ratio in an isolated negative/positive pressure environment with smart hemodynamic monitors providing real-time vital telemetry.
+            </p>
+            <div class="tech-features-checklist">
+              <div class="tech-feature-item">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>1:1 Patient-to-ICU-Nurse Ratio</span>
+              </div>
+              <div class="tech-feature-item">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Advanced ECMO and CRRT life support</span>
+              </div>
+              <div class="tech-feature-item">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Automated infection surveillance cameras</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Inpatient Room Accommodation Interactive Tabs -->
+    <section class="rooms-tabs-section">
+      <div class="section-head-center">
+        <span class="sub-label">INPATIENT ACCOMMODATION</span>
+        <h2 class="main-title">Recovery Environments Tailored to Your Comfort</h2>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="room-tab-buttons-bar">
+        <button type="button" class="room-tab-btn active" data-room="presidentialRoom">Presidential Suite</button>
+        <button type="button" class="room-tab-btn" data-room="deluxeRoom">Super Deluxe Private</button>
+        <button type="button" class="room-tab-btn" data-room="twinRoom">Twin Sharing Room</button>
+        <button type="button" class="room-tab-btn" data-room="daycareRoom">Daycare Ambulatory</button>
+      </div>
+
+      <!-- Room Panel 1: Presidential Suite -->
+      <div class="room-panel active" id="presidentialRoom">
+        <div class="room-panel-visual">
+          <img src="assets/luxury-suite.jpg" alt="Presidential Suite" class="room-panel-img">
+        </div>
+        <div class="room-panel-details">
+          <span class="room-panel-badge">PREMIUM RECOVERY EXPERIENCE</span>
+          <h3 class="room-panel-title">Presidential Healing Suite</h3>
+          <p class="room-panel-desc">
+            Designed for patients and families desiring complete privacy and hotel-grade luxury. Includes a private patient sanctuary, an adjoining family lounge with sleeper couch, dining area, and dedicated 24/7 personal attendant.
+          </p>
+
+          <div class="room-amenities-grid">
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Fully Motorized Ergonomic Bed</span>
+            </div>
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Separate Attendant Bedroom</span>
+            </div>
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Smart 55" Entertainment &amp; Wi-Fi</span>
+            </div>
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Private Pantry &amp; Microwave</span>
+            </div>
+          </div>
+
+          <button type="button" class="btn-orange-primary trigger-booking" style="align-self: flex-start;">
+            <span>Inquire About Suite Booking</span>
+            <span class="btn-arrow">➔</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Room Panel 2: Super Deluxe Room -->
+      <div class="room-panel" id="deluxeRoom">
+        <div class="room-panel-visual">
+          <img src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&w=800&q=80" alt="Super Deluxe Private Room" class="room-panel-img">
+        </div>
+        <div class="room-panel-details">
+          <span class="room-panel-badge">PRIVATE COMFORT</span>
+          <h3 class="room-panel-title">Super Deluxe Private Room</h3>
+          <p class="room-panel-desc">
+            An expansive single-occupancy room equipped with large picture windows offering soothing skyline and garden views, high-efficiency HEPA filtration, and comfortable seating for family visitors.
+          </p>
+
+          <div class="room-amenities-grid">
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Electronic Patient Bed</span>
+            </div>
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Attendant Sofa-Cum-Bed</span>
+            </div>
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Private En-Suite Bathroom</span>
+            </div>
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Smart Nurse Call System</span>
+            </div>
+          </div>
+
+          <button type="button" class="btn-orange-primary trigger-booking" style="align-self: flex-start;">
+            <span>Reserve Deluxe Room</span>
+            <span class="btn-arrow">➔</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Room Panel 3: Twin Sharing -->
+      <div class="room-panel" id="twinRoom">
+        <div class="room-panel-visual">
+          <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=800&q=80" alt="Twin Sharing Room" class="room-panel-img">
+        </div>
+        <div class="room-panel-details">
+          <span class="room-panel-badge">AFFORDABLE CARE</span>
+          <h3 class="room-panel-title">Semi-Private Twin Sharing</h3>
+          <p class="room-panel-desc">
+            Comfortable twin-bedded ward designed with acoustic privacy curtains, independent wardrobe and television sets, making high-end medical care accessible without compromise.
+          </p>
+
+          <div class="room-amenities-grid">
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Acoustic Privacy Dividers</span>
+            </div>
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Dedicated Attendant Recliner</span>
+            </div>
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Individual Nurse Call Buttons</span>
+            </div>
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Full Insurance &amp; TPA Support</span>
+            </div>
+          </div>
+
+          <button type="button" class="btn-orange-primary trigger-booking" style="align-self: flex-start;">
+            <span>Check Room Availability</span>
+            <span class="btn-arrow">➔</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Room Panel 4: Daycare -->
+      <div class="room-panel" id="daycareRoom">
+        <div class="room-panel-visual">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Daycare Ambulatory Unit" class="room-panel-img">
+        </div>
+        <div class="room-panel-details">
+          <span class="room-panel-badge">SAME-DAY DISCHARGE</span>
+          <h3 class="room-panel-title">Ambulatory Daycare Hub</h3>
+          <p class="room-panel-desc">
+            Engineered for rapid recovery procedures like cataract micro-surgery, minor laparoscopy, diagnostic endoscopies, and chemotherapy infusions. Arrive in the morning and return home by evening.
+          </p>
+
+          <div class="room-amenities-grid">
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Same-Day Discharge Track</span>
+            </div>
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Automated Infusion Pumps</span>
+            </div>
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Nutritious Post-Op Meals</span>
+            </div>
+            <div class="room-amenity-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Express Pharmacy Clearance</span>
+            </div>
+          </div>
+
+          <button type="button" class="btn-orange-primary trigger-booking" style="align-self: flex-start;">
+            <span>Schedule Daycare Procedure</span>
+            <span class="btn-arrow">➔</span>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Patient Amenities Grid -->
+    <section class="hospital-highlight-banner facility-amenities-section">
+      <div class="facility-amenities-container">
+        <div class="section-head-center">
+          <span class="sub-label">THOUGHTFUL AMENITIES</span>
+          <h2 class="main-title">Every Convenience for Patients and Families</h2>
+        </div>
+
+        <div class="facility-amenities-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3 class="pillar-title">24/7 Automated Pharmacy</h3>
+            <p class="pillar-desc">Fully stocked genuine medication dispensary with pneumatic tube delivery to all inpatient beds.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            </div>
+            <h3 class="pillar-title">Multi-Cuisine Health Cafe</h3>
+            <p class="pillar-desc">Hygienic dietetics-approved meals for patients alongside a gourmet cafeteria for attendants.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            </div>
+            <h3 class="pillar-title">International Patient Desk</h3>
+            <p class="pillar-desc">Language translators, airport transfers, visa assistance, and customized currency exchange.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            </div>
+            <h3 class="pillar-title">15-Fleet Ambulance Network</h3>
+            <p class="pillar-desc">GPS-tracked ICU-on-wheels equipped with transport ventilators, defibrillators, and paramedics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top-grid">
+          <div class="footer-col brand-col">
+            <div class="footer-logo">
+              <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="44" height="44" rx="11" fill="#0B192C"/>
+                <path d="M12 11V33M32 11V33" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round"/>
+                <path d="M10 22C18 19 26 25 34 22" stroke="#FF6B35" stroke-width="3.8" stroke-linecap="round"/>
+                <circle cx="22" cy="22" r="3.2" fill="#FF6B35"/>
+              </svg>
+              <div class="logo-text">
+                <span class="logo-title text-white">Hero Hospital</span>
+                <span class="logo-tagline text-slate">CARE • CURE • COMPASSION</span>
+              </div>
+            </div>
+            <p class="footer-desc">
+              Hero Hospital is committed to delivering world-class, affordable, and compassionate medical care empowered by cutting-edge medical science.
+            </p>
+            <div class="footer-accredit-badges">
+              <span class="accredit-tag">NABH Accredited</span>
+              <span class="accredit-tag">JCI Certified</span>
+              <span class="accredit-tag">ISO 9001:2015</span>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Hero Hospital</a></li>
+              <li><a href="specialties.html">Centers of Excellence</a></li>
+              <li><a href="doctors.html">Meet Our Doctors</a></li>
+              <li><a href="facilities.html">Infrastructure &amp; Rooms</a></li>
+              <li><a href="contact.html">Contact &amp; Emergency</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Departments</h4>
+            <ul class="footer-links">
+              <li><a href="specialties.html#cardiology">Cardiology &amp; Cardiac Surgery</a></li>
+              <li><a href="specialties.html#neurology">Neurology &amp; Neurosurgery</a></li>
+              <li><a href="specialties.html#orthopaedics">Orthopaedics &amp; Joint Replacement</a></li>
+              <li><a href="specialties.html#maternity">Maternity, Gynaecology &amp; IVF</a></li>
+              <li><a href="specialties.html#oncology">Oncology &amp; Radiation Care</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">24/7 Helpline</h4>
+            <div class="emergency-contact-box">
+              <div class="emergency-label">EMERGENCY HOTLINE</div>
+              <a href="tel:+911204567890" class="emergency-number">+91 120 456 7890</a>
+              <div class="emergency-sub">Ambulance &amp; Critical Care available 24/7</div>
+            </div>
+            <div class="footer-address">
+              📍 Sector 62, Institutional Area, Noida, Uttar Pradesh 201309
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div class="footer-copy">
+            © 2026 Hero Hospital. All rights reserved. Designed for Excellence in Healthcare.
+          </div>
+          <div class="footer-credit">
+            Hero Hospital | Made with <span class="footer-heart" style="color: #ff3344; display: inline-block; margin: 0 2px;">❤️</span> by <a href="https://regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a>
+          </div>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <span>•</span>
+            <a href="#">Terms of Care</a>
+            <span>•</span>
+            <a href="#">Patient Rights</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Appointment Booking Modal -->
+  <div class="modal-overlay" id="appointmentModal">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn close-modal-trigger" aria-label="Close modal">×</button>
+      <div class="modal-header">
+        <span class="modal-eyebrow">FAST-TRACK APPOINTMENT PASS</span>
+        <h3 class="modal-title">Schedule Your Consultation</h3>
+        <p class="modal-desc">Book with world-class specialists in less than 60 seconds.</p>
+      </div>
+
+      <form id="mainBookingForm" class="booking-modal-form">
+        <div class="form-grid">
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDeptSelect">Department</label>
+            <div class="custom-select-wrap">
+              <select id="dialogDeptSelect" name="department" class="custom-select" required>
+                <option value="" disabled selected>Select Medical Specialty</option>
+                <option value="Cardiology">Cardiology &amp; Heart Care</option>
+                <option value="Neurology">Neurology &amp; Brain Care</option>
+                <option value="Orthopaedics">Orthopaedics &amp; Joint Surgery</option>
+                <option value="Maternity">Maternity &amp; Gynaecology</option>
+                <option value="Oncology">Oncology &amp; Cancer Care</option>
+                <option value="General">General Consultation</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDocSelect">Doctor (Optional)</label>
+            <div class="custom-select-wrap">
+              <select id="dialogDocSelect" name="doctor" class="custom-select">
+                <option value="" disabled selected>Select Specialist</option>
+                <option value="Dr. Rajiv Mehta (Cardiology)">Dr. Rajiv Mehta (Cardiologist)</option>
+                <option value="Dr. Neha Sharma (Neurology)">Dr. Neha Sharma (Neurologist)</option>
+                <option value="Dr. Arjun Singh (Orthopaedics)">Dr. Arjun Singh (Orthopaedic Surgeon)</option>
+                <option value="Dr. Priya Verma (Gynaecology)">Dr. Priya Verma (Gynaecologist)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDateInput">Date</label>
+            <input type="date" id="dialogDateInput" name="date" class="custom-input" required>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label">Preferred Time Slot</label>
+            <div class="time-chips-container">
+              <button type="button" class="time-slot-chip active" data-time="09:30 AM">09:30 AM</button>
+              <button type="button" class="time-slot-chip" data-time="11:00 AM">11:00 AM</button>
+              <button type="button" class="time-slot-chip" data-time="02:30 PM">02:30 PM</button>
+              <button type="button" class="time-slot-chip" data-time="04:00 PM">04:00 PM</button>
+              <input type="hidden" name="time" id="dialogTimeInput" value="09:30 AM">
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogPatientName">Patient Name</label>
+            <input type="text" id="dialogPatientName" name="patient_name" class="custom-input" placeholder="Full Name" required>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogPatientPhone">Phone Number</label>
+            <input type="tel" id="dialogPatientPhone" name="patient_phone" class="custom-input" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-orange-primary btn-full-width">
+          <span>Confirm &amp; Generate Appointment Pass</span>
+          <span class="btn-arrow">➔</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="appointmentSuccessModal">
+    <div class="modal-card ticket-card">
+      <button type="button" class="modal-close-btn close-modal-trigger" aria-label="Close modal">×</button>
+      <div class="ticket-header">
+        <div class="ticket-check-circle">✓</div>
+        <h3 class="ticket-title">Appointment Confirmed!</h3>
+        <p class="ticket-subtitle">Your appointment ticket pass has been generated.</p>
+      </div>
+
+      <div class="appointment-ticket">
+        <div class="ticket-top">
+          <div class="ticket-brand">
+            <span class="ticket-logo-h">H</span>
+            <span>Hero Hospital Official Pass</span>
+          </div>
+          <div class="ticket-id-tag" id="ticketId">HH-849201</div>
+        </div>
+
+        <div class="ticket-grid">
+          <div class="ticket-item">
+            <span class="ticket-label">Department</span>
+            <span class="ticket-val" id="ticketDept">Cardiology</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Doctor</span>
+            <span class="ticket-val" id="ticketDoc">Dr. Rajiv Mehta</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Date</span>
+            <span class="ticket-val" id="ticketDate">Tomorrow</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Time Slot</span>
+            <span class="ticket-val" id="ticketTime">09:30 AM</span>
+          </div>
+          <div class="ticket-item ticket-item-full">
+            <span class="ticket-label">Patient Name</span>
+            <span class="ticket-val" id="ticketPatient">Guest Patient</span>
+          </div>
+        </div>
+
+        <div class="ticket-perforated-line"></div>
+
+        <div class="ticket-bottom">
+          <div class="ticket-notice">
+            <small>Please present this digital pass at the Reception Desk upon arrival.</small>
+          </div>
+          <button type="button" class="btn-print-ticket" onclick="window.print()">
+            <span>🖨️ Print Pass</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

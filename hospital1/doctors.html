@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Our Doctors &amp; Specialists | Hero Hospital</title>
+  <meta name="description" content="Find top doctors and super-specialists at Hero Hospital. Filter by department, view clinical schedules, patient ratings, and book an appointment in seconds.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main & Inner Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="inner-pages.css">
+</head>
+<body>
+
+  <!-- Top Scroll Reading Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Left Floating Navigation Dock -->
+  <aside class="side-nav-dock" aria-label="Quick Navigation">
+    <div class="dock-inner">
+      <a href="index.html" class="dock-logo" title="Hero Hospital Home">
+        <svg class="dock-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="10" fill="#0B192C"/>
+          <path d="M11 10V30M29 10V30" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M9 20C17 17 23 23 31 20" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="3" fill="#FF6B35"/>
+        </svg>
+      </a>
+
+      <nav class="dock-menu">
+        <a href="index.html" class="dock-item" data-tooltip="Home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span class="dock-tooltip">Home</span>
+        </a>
+
+        <a href="about.html" class="dock-item" data-tooltip="About Us">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span class="dock-tooltip">About Us</span>
+        </a>
+
+        <a href="specialties.html" class="dock-item" data-tooltip="Specialties">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span class="dock-tooltip">Specialties</span>
+        </a>
+
+        <a href="doctors.html" class="dock-item active" data-tooltip="Doctors">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path>
+            <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path>
+            <circle cx="20" cy="10" r="2"></circle>
+          </svg>
+          <span class="dock-tooltip">Doctors</span>
+        </a>
+
+        <a href="facilities.html" class="dock-item" data-tooltip="Facilities">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <span class="dock-tooltip">Facilities</span>
+        </a>
+
+        <a href="contact.html" class="dock-item" data-tooltip="Contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="dock-tooltip">Contact</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Top Navigation Bar -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="nav-left">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-mark">
+            <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="11" fill="#0B192C"/>
+              <path d="M12 11V33M32 11V33" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round"/>
+              <path d="M10 22C18 19 26 25 34 22" stroke="#FF6B35" stroke-width="3.8" stroke-linecap="round"/>
+              <circle cx="22" cy="22" r="3.2" fill="#FF6B35"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">Hero Hospital</span>
+            <span class="logo-tagline">CARE • CURE • COMPASSION</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="nav-center">
+        <ul class="nav-links-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-dropdown-item">
+            <a href="specialties.html" class="nav-link">Specialties <span class="caret">▾</span></a>
+            <ul class="nav-dropdown-sub">
+              <li><a href="specialties.html#cardiology">❤️ Cardiology</a></li>
+              <li><a href="specialties.html#neurology">🧠 Neurology</a></li>
+              <li><a href="specialties.html#orthopaedics">🦴 Orthopaedics</a></li>
+              <li><a href="specialties.html#maternity">👶 Maternity &amp; Gynaecology</a></li>
+              <li><a href="specialties.html#oncology">🎗️ Oncology</a></li>
+            </ul>
+          </li>
+          <li><a href="doctors.html" class="nav-link active">Doctors</a></li>
+          <li><a href="facilities.html" class="nav-link">Facilities</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="mobile-drawer-actions">
+          <a href="tel:+911204567890" class="drawer-call-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>24/7 Helpline: +91 120 456 7890</span>
+          </a>
+          <button type="button" class="btn-orange-primary trigger-booking" style="width: 100%; justify-content: center; padding: 13px 20px;">
+            <span>Book Appointment Now</span>
+            <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div class="nav-right">
+        <a href="tel:+911204567890" class="phone-chip">
+          <svg class="phone-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="phone-chip-number">+91 120 456 7890</span>
+        </a>
+
+        <button type="button" class="btn-orange-primary trigger-booking nav-book-btn">
+          <span>Book Appointment</span>
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+
+        <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="page-wrapper">
+
+    <!-- Unique Hero Banner -->
+    <section class="inner-hero-section">
+      <div class="inner-hero-container">
+        <div class="inner-breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <span class="current">Find a Doctor &amp; Specialists</span>
+        </div>
+
+        <div class="inner-hero-tag">
+          <span class="tag-dot"></span>
+          <span>450+ SUPER-SPECIALISTS &amp; SURGEONS</span>
+        </div>
+
+        <h1 class="inner-hero-title">
+          Distinguished Medical Faculty, <br>
+          <span class="text-orange-gradient">Driven by Genuine Empathy</span>
+        </h1>
+
+        <p class="inner-hero-desc">
+          Search and book consultations with India's leading medical minds. Our clinicians combine decades of surgical experience from premier institutions including AIIMS, Harvard, and Oxford with compassionate bedside care.
+        </p>
+      </div>
+    </section>
+
+    <!-- Interactive Sticky Search & Department Filter Hub -->
+    <section class="doctors-filter-hub">
+      <div class="filter-hub-container">
+        <div class="doctor-search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="doctorSearchInput" class="doctor-search-input" placeholder="Search doctor by name, condition, or qualification...">
+        </div>
+
+        <div class="dept-filter-select-wrap">
+          <select id="deptFilterSelect" class="dept-filter-select">
+            <option value="all">All Clinical Departments</option>
+            <option value="cardiology">Cardiology &amp; Cardiac Surgery</option>
+            <option value="neurology">Neurology &amp; Spine Surgery</option>
+            <option value="orthopaedics">Robotic Orthopaedics</option>
+            <option value="maternity">Obstetrics, Gynaecology &amp; IVF</option>
+            <option value="oncology">Comprehensive Oncology</option>
+            <option value="critical">Critical Care &amp; Emergency</option>
+            <option value="pediatrics">Pediatrics &amp; Neonatology</option>
+            <option value="gastro">Gastroenterology &amp; Hepatology</option>
+          </select>
+        </div>
+
+        <div class="filter-results-count" id="filterResultsCount">
+          Showing 8 Specialists
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Department Head Spotlight -->
+    <section class="doctor-spotlight-section">
+      <div class="spotlight-container">
+        <div class="spotlight-card">
+          <div class="spotlight-img-wrap">
+            <img src="assets/doctor-neha.jpg" alt="Dr. Neha Sharma" class="spotlight-img">
+            <span class="spotlight-badge">Surgeon of the Year</span>
+          </div>
+
+          <div class="spotlight-content">
+            <div class="spotlight-eyebrow">DEPARTMENT SPOTLIGHT</div>
+            <h2 class="spotlight-name">Dr. Neha Sharma</h2>
+            <div class="spotlight-role">Director of Neurosciences &amp; Robotic Spine Surgery</div>
+            <p class="spotlight-bio">
+              A globally acclaimed neurosurgeon with over 21 years of surgical mastery. Dr. Sharma specializes in complex brain micro-vascular surgery, awake craniotomies, and minimally invasive robotic spinal stabilization. Trained at AIIMS and Johns Hopkins.
+            </p>
+
+            <div class="spotlight-stats">
+              <div>
+                <div class="spotlight-stat-val">6,200+</div>
+                <div class="spotlight-stat-lbl">Micro-Surgeries</div>
+              </div>
+              <div>
+                <div class="spotlight-stat-val">21+ Yrs</div>
+                <div class="spotlight-stat-lbl">Clinical Practice</div>
+              </div>
+              <div>
+                <div class="spotlight-stat-val">99.1%</div>
+                <div class="spotlight-stat-lbl">Procedure Success</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <button type="button" class="btn-orange-primary trigger-booking" style="padding: 12px 24px;">
+                <span>Book Priority Consult</span>
+                <span class="btn-arrow">➔</span>
+              </button>
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: #E2E8F0;">
+                <span style="color:#10B981; font-weight: 800;">●</span> Next OPD Slot: Tomorrow 10:00 AM
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comprehensive Doctor Directory Grid -->
+    <section class="doctors-grid-section">
+      <div class="doctors-cards-grid">
+
+        <!-- Doctor 1: Dr. Rajiv Mehta -->
+        <div class="doc-dir-card" data-dept="cardiology">
+          <div class="doc-card-photo-wrap">
+            <img src="assets/doctor-rajiv.jpg" alt="Dr. Rajiv Mehta" class="doc-card-photo">
+            <span class="doc-card-status-chip">
+              <span class="live-dot"></span> Available Today
+            </span>
+            <span class="doc-card-dept-tag">Cardiology</span>
+          </div>
+          <div class="doc-card-body">
+            <h3 class="doc-card-name">Dr. Rajiv Mehta</h3>
+            <div class="doc-card-specialty">Director — Interventional Cardiology</div>
+            <div class="doc-card-creds">MBBS, MD, DM (Cardiology, AIIMS), FACC</div>
+            <div class="doc-card-meta-list">
+              <div class="meta-row">
+                <span>Experience:</span>
+                <span class="val">26+ Years</span>
+              </div>
+              <div class="meta-row">
+                <span>OPD Hours:</span>
+                <span class="val">Mon - Fri (09:30 AM - 01:00 PM)</span>
+              </div>
+              <div class="meta-row">
+                <span>Patient Rating:</span>
+                <span class="meta-rating">★ 4.9 (1,240 Reviews)</span>
+              </div>
+            </div>
+            <div class="doc-card-actions">
+              <button type="button" class="btn-book-doc">
+                <span>Book Appointment</span>
+                <span>➔</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 2: Dr. Neha Sharma -->
+        <div class="doc-dir-card" data-dept="neurology">
+          <div class="doc-card-photo-wrap">
+            <img src="assets/doctor-neha.jpg" alt="Dr. Neha Sharma" class="doc-card-photo">
+            <span class="doc-card-status-chip">
+              <span class="live-dot"></span> Available Today
+            </span>
+            <span class="doc-card-dept-tag">Neurology</span>
+          </div>
+          <div class="doc-card-body">
+            <h3 class="doc-card-name">Dr. Neha Sharma</h3>
+            <div class="doc-card-specialty">Head of Neurosciences &amp; Spine</div>
+            <div class="doc-card-creds">MBBS, M.Ch (Neurosurgery), Johns Hopkins Fellow</div>
+            <div class="doc-card-meta-list">
+              <div class="meta-row">
+                <span>Experience:</span>
+                <span class="val">21+ Years</span>
+              </div>
+              <div class="meta-row">
+                <span>OPD Hours:</span>
+                <span class="val">Tue, Thu, Sat (10:00 AM - 02:00 PM)</span>
+              </div>
+              <div class="meta-row">
+                <span>Patient Rating:</span>
+                <span class="meta-rating">★ 4.9 (980 Reviews)</span>
+              </div>
+            </div>
+            <div class="doc-card-actions">
+              <button type="button" class="btn-book-doc">
+                <span>Book Appointment</span>
+                <span>➔</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 3: Dr. Arjun Singh -->
+        <div class="doc-dir-card" data-dept="orthopaedics">
+          <div class="doc-card-photo-wrap">
+            <img src="assets/doctor-arjun.jpg" alt="Dr. Arjun Singh" class="doc-card-photo">
+            <span class="doc-card-status-chip">
+              <span class="live-dot"></span> Available Today
+            </span>
+            <span class="doc-card-dept-tag">Orthopaedics</span>
+          </div>
+          <div class="doc-card-body">
+            <h3 class="doc-card-name">Dr. Arjun Singh</h3>
+            <div class="doc-card-specialty">Senior Joint Replacement Surgeon</div>
+            <div class="doc-card-creds">MBBS, MS (Ortho), Oxford Fellow in MAKO Robotics</div>
+            <div class="doc-card-meta-list">
+              <div class="meta-row">
+                <span>Experience:</span>
+                <span class="val">19+ Years</span>
+              </div>
+              <div class="meta-row">
+                <span>OPD Hours:</span>
+                <span class="val">Mon, Wed, Fri (11:00 AM - 03:00 PM)</span>
+              </div>
+              <div class="meta-row">
+                <span>Patient Rating:</span>
+                <span class="meta-rating">★ 4.8 (850 Reviews)</span>
+              </div>
+            </div>
+            <div class="doc-card-actions">
+              <button type="button" class="btn-book-doc">
+                <span>Book Appointment</span>
+                <span>➔</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 4: Dr. Priya Verma -->
+        <div class="doc-dir-card" data-dept="maternity">
+          <div class="doc-card-photo-wrap">
+            <img src="assets/doctor-priya.jpg" alt="Dr. Priya Verma" class="doc-card-photo">
+            <span class="doc-card-status-chip">
+              <span class="live-dot"></span> Available Today
+            </span>
+            <span class="doc-card-dept-tag">Maternity &amp; IVF</span>
+          </div>
+          <div class="doc-card-body">
+            <h3 class="doc-card-name">Dr. Priya Verma</h3>
+            <div class="doc-card-specialty">Director — Obstetrics, Gynaecology &amp; IVF</div>
+            <div class="doc-card-creds">MBBS, MD (Obs &amp; Gynae), FRCOG London</div>
+            <div class="doc-card-meta-list">
+              <div class="meta-row">
+                <span>Experience:</span>
+                <span class="val">18+ Years</span>
+              </div>
+              <div class="meta-row">
+                <span>OPD Hours:</span>
+                <span class="val">Mon - Sat (09:00 AM - 01:30 PM)</span>
+              </div>
+              <div class="meta-row">
+                <span>Patient Rating:</span>
+                <span class="meta-rating">★ 4.9 (1,420 Reviews)</span>
+              </div>
+            </div>
+            <div class="doc-card-actions">
+              <button type="button" class="btn-book-doc">
+                <span>Book Appointment</span>
+                <span>➔</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 5: Dr. Vikramaditya Roy -->
+        <div class="doc-dir-card" data-dept="critical">
+          <div class="doc-card-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" alt="Dr. Vikramaditya Roy" class="doc-card-photo">
+            <span class="doc-card-status-chip">
+              <span class="live-dot"></span> On Duty 24/7
+            </span>
+            <span class="doc-card-dept-tag">Trauma &amp; ICU</span>
+          </div>
+          <div class="doc-card-body">
+            <h3 class="doc-card-name">Dr. Vikramaditya Roy</h3>
+            <div class="doc-card-specialty">Director of Critical Care &amp; Emergency</div>
+            <div class="doc-card-creds">MBBS, MD (Anaesthesia), EDIC (European Diploma)</div>
+            <div class="doc-card-meta-list">
+              <div class="meta-row">
+                <span>Experience:</span>
+                <span class="val">22+ Years</span>
+              </div>
+              <div class="meta-row">
+                <span>Coverage:</span>
+                <span class="val">Level-1 Trauma Command Center</span>
+              </div>
+              <div class="meta-row">
+                <span>Patient Rating:</span>
+                <span class="meta-rating">★ 4.9 (780 Reviews)</span>
+              </div>
+            </div>
+            <div class="doc-card-actions">
+              <button type="button" class="btn-book-doc">
+                <span>Emergency Consult</span>
+                <span>➔</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 6: Dr. Ananya Sen -->
+        <div class="doc-dir-card" data-dept="oncology">
+          <div class="doc-card-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1594824813627-2c96c46a6730?auto=format&fit=crop&w=800&q=80" alt="Dr. Ananya Sen" class="doc-card-photo">
+            <span class="doc-card-status-chip">
+              <span class="live-dot"></span> Available Today
+            </span>
+            <span class="doc-card-dept-tag">Oncology</span>
+          </div>
+          <div class="doc-card-body">
+            <h3 class="doc-card-name">Dr. Ananya Sen</h3>
+            <div class="doc-card-specialty">Consultant — Medical Oncology &amp; Immunotherapy</div>
+            <div class="doc-card-creds">MBBS, MD, DM (Medical Oncology, Tata Memorial)</div>
+            <div class="doc-card-meta-list">
+              <div class="meta-row">
+                <span>Experience:</span>
+                <span class="val">16+ Years</span>
+              </div>
+              <div class="meta-row">
+                <span>OPD Hours:</span>
+                <span class="val">Mon - Fri (10:00 AM - 02:00 PM)</span>
+              </div>
+              <div class="meta-row">
+                <span>Patient Rating:</span>
+                <span class="meta-rating">★ 4.9 (610 Reviews)</span>
+              </div>
+            </div>
+            <div class="doc-card-actions">
+              <button type="button" class="btn-book-doc">
+                <span>Book Appointment</span>
+                <span>➔</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 7: Dr. Rohan Kapoor -->
+        <div class="doc-dir-card" data-dept="pediatrics">
+          <div class="doc-card-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80" alt="Dr. Rohan Kapoor" class="doc-card-photo">
+            <span class="doc-card-status-chip">
+              <span class="live-dot"></span> Available Today
+            </span>
+            <span class="doc-card-dept-tag">Paediatrics</span>
+          </div>
+          <div class="doc-card-body">
+            <h3 class="doc-card-name">Dr. Rohan Kapoor</h3>
+            <div class="doc-card-specialty">Chief Paediatrician &amp; Neonatologist</div>
+            <div class="doc-card-creds">MBBS, MD (Pediatrics), Fellowship in Neonatal ICU</div>
+            <div class="doc-card-meta-list">
+              <div class="meta-row">
+                <span>Experience:</span>
+                <span class="val">14+ Years</span>
+              </div>
+              <div class="meta-row">
+                <span>OPD Hours:</span>
+                <span class="val">Mon - Sat (09:00 AM - 01:00 PM)</span>
+              </div>
+              <div class="meta-row">
+                <span>Patient Rating:</span>
+                <span class="meta-rating">★ 4.8 (530 Reviews)</span>
+              </div>
+            </div>
+            <div class="doc-card-actions">
+              <button type="button" class="btn-book-doc">
+                <span>Book Appointment</span>
+                <span>➔</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 8: Dr. Meera Nambiar -->
+        <div class="doc-dir-card" data-dept="gastro">
+          <div class="doc-card-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Dr. Meera Nambiar" class="doc-card-photo">
+            <span class="doc-card-status-chip">
+              <span class="live-dot"></span> Available Today
+            </span>
+            <span class="doc-card-dept-tag">Gastroenterology</span>
+          </div>
+          <div class="doc-card-body">
+            <h3 class="doc-card-name">Dr. Meera Nambiar</h3>
+            <div class="doc-card-specialty">Senior Consultant — Gastroenterology &amp; Hepatology</div>
+            <div class="doc-card-creds">MBBS, MD, DM (Gastroenterology, SGPGI)</div>
+            <div class="doc-card-meta-list">
+              <div class="meta-row">
+                <span>Experience:</span>
+                <span class="val">17+ Years</span>
+              </div>
+              <div class="meta-row">
+                <span>OPD Hours:</span>
+                <span class="val">Mon, Wed, Sat (11:00 AM - 03:00 PM)</span>
+              </div>
+              <div class="meta-row">
+                <span>Patient Rating:</span>
+                <span class="meta-rating">★ 4.9 (720 Reviews)</span>
+              </div>
+            </div>
+            <div class="doc-card-actions">
+              <button type="button" class="btn-book-doc">
+                <span>Book Appointment</span>
+                <span>➔</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Teleconsultation / Second Opinion Banner -->
+    <section class="teleconsult-section">
+      <div class="teleconsult-container">
+        <div class="teleconsult-content">
+          <span class="teleconsult-tag">GLOBAL ACCESS</span>
+          <h2 class="teleconsult-title">Need a Fast-Track Second Medical Opinion?</h2>
+          <p class="teleconsult-desc">
+            Facing a major surgery or complex diagnosis? Connect with our senior board of medical experts via HD video consultation or upload clinical scans for a comprehensive written review within 24 hours.
+          </p>
+        </div>
+        <div class="teleconsult-actions">
+          <button type="button" class="btn-orange-primary trigger-booking teleconsult-btn">
+            <span>Request Second Opinion</span>
+            <span class="btn-arrow">➔</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top-grid">
+          <div class="footer-col brand-col">
+            <div class="footer-logo">
+              <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="44" height="44" rx="11" fill="#0B192C"/>
+                <path d="M12 11V33M32 11V33" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round"/>
+                <path d="M10 22C18 19 26 25 34 22" stroke="#FF6B35" stroke-width="3.8" stroke-linecap="round"/>
+                <circle cx="22" cy="22" r="3.2" fill="#FF6B35"/>
+              </svg>
+              <div class="logo-text">
+                <span class="logo-title text-white">Hero Hospital</span>
+                <span class="logo-tagline text-slate">CARE • CURE • COMPASSION</span>
+              </div>
+            </div>
+            <p class="footer-desc">
+              Hero Hospital is committed to delivering world-class, affordable, and compassionate medical care empowered by cutting-edge medical science.
+            </p>
+            <div class="footer-accredit-badges">
+              <span class="accredit-tag">NABH Accredited</span>
+              <span class="accredit-tag">JCI Certified</span>
+              <span class="accredit-tag">ISO 9001:2015</span>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Hero Hospital</a></li>
+              <li><a href="specialties.html">Centers of Excellence</a></li>
+              <li><a href="doctors.html">Meet Our Doctors</a></li>
+              <li><a href="facilities.html">Infrastructure &amp; Rooms</a></li>
+              <li><a href="contact.html">Contact &amp; Emergency</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Departments</h4>
+            <ul class="footer-links">
+              <li><a href="specialties.html#cardiology">Cardiology &amp; Cardiac Surgery</a></li>
+              <li><a href="specialties.html#neurology">Neurology &amp; Neurosurgery</a></li>
+              <li><a href="specialties.html#orthopaedics">Orthopaedics &amp; Joint Replacement</a></li>
+              <li><a href="specialties.html#maternity">Maternity, Gynaecology &amp; IVF</a></li>
+              <li><a href="specialties.html#oncology">Oncology &amp; Radiation Care</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">24/7 Helpline</h4>
+            <div class="emergency-contact-box">
+              <div class="emergency-label">EMERGENCY HOTLINE</div>
+              <a href="tel:+911204567890" class="emergency-number">+91 120 456 7890</a>
+              <div class="emergency-sub">Ambulance &amp; Critical Care available 24/7</div>
+            </div>
+            <div class="footer-address">
+              📍 Sector 62, Institutional Area, Noida, Uttar Pradesh 201309
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div class="footer-copy">
+            © 2026 Hero Hospital. All rights reserved. Designed for Excellence in Healthcare.
+          </div>
+          <div class="footer-credit">
+            Hero Hospital | Made with <span class="footer-heart" style="color: #ff3344; display: inline-block; margin: 0 2px;">❤️</span> by <a href="https://regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a>
+          </div>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <span>•</span>
+            <a href="#">Terms of Care</a>
+            <span>•</span>
+            <a href="#">Patient Rights</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Appointment Booking Modal -->
+  <div class="modal-overlay" id="appointmentModal">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn close-modal-trigger" aria-label="Close modal">×</button>
+      <div class="modal-header">
+        <span class="modal-eyebrow">FAST-TRACK APPOINTMENT PASS</span>
+        <h3 class="modal-title">Schedule Your Consultation</h3>
+        <p class="modal-desc">Book with world-class specialists in less than 60 seconds.</p>
+      </div>
+
+      <form id="mainBookingForm" class="booking-modal-form">
+        <div class="form-grid">
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDeptSelect">Department</label>
+            <div class="custom-select-wrap">
+              <select id="dialogDeptSelect" name="department" class="custom-select" required>
+                <option value="" disabled selected>Select Medical Specialty</option>
+                <option value="Cardiology">Cardiology &amp; Heart Care</option>
+                <option value="Neurology">Neurology &amp; Brain Care</option>
+                <option value="Orthopaedics">Orthopaedics &amp; Joint Surgery</option>
+                <option value="Maternity">Maternity &amp; Gynaecology</option>
+                <option value="Oncology">Oncology &amp; Cancer Care</option>
+                <option value="Critical">Critical Care &amp; Emergency</option>
+                <option value="Pediatrics">Pediatrics &amp; Neonatology</option>
+                <option value="Gastro">Gastroenterology &amp; Hepatology</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDocSelect">Doctor</label>
+            <div class="custom-select-wrap">
+              <select id="dialogDocSelect" name="doctor" class="custom-select">
+                <option value="" disabled selected>Select Specialist</option>
+                <option value="Dr. Rajiv Mehta (Cardiology)">Dr. Rajiv Mehta (Cardiologist)</option>
+                <option value="Dr. Neha Sharma (Neurology)">Dr. Neha Sharma (Neurologist)</option>
+                <option value="Dr. Arjun Singh (Orthopaedics)">Dr. Arjun Singh (Orthopaedic Surgeon)</option>
+                <option value="Dr. Priya Verma (Gynaecology)">Dr. Priya Verma (Gynaecologist &amp; IVF)</option>
+                <option value="Dr. Vikramaditya Roy (Critical Care)">Dr. Vikramaditya Roy (Trauma Specialist)</option>
+                <option value="Dr. Ananya Sen (Oncology)">Dr. Ananya Sen (Medical Oncologist)</option>
+                <option value="Dr. Rohan Kapoor (Pediatrics)">Dr. Rohan Kapoor (Paediatrician)</option>
+                <option value="Dr. Meera Nambiar (Gastroenterology)">Dr. Meera Nambiar (Gastroenterologist)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDateInput">Date</label>
+            <input type="date" id="dialogDateInput" name="date" class="custom-input" required>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label">Preferred Time Slot</label>
+            <div class="time-chips-container">
+              <button type="button" class="time-slot-chip active" data-time="09:30 AM">09:30 AM</button>
+              <button type="button" class="time-slot-chip" data-time="11:00 AM">11:00 AM</button>
+              <button type="button" class="time-slot-chip" data-time="02:30 PM">02:30 PM</button>
+              <button type="button" class="time-slot-chip" data-time="04:00 PM">04:00 PM</button>
+              <input type="hidden" name="time" id="dialogTimeInput" value="09:30 AM">
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogPatientName">Patient Name</label>
+            <input type="text" id="dialogPatientName" name="patient_name" class="custom-input" placeholder="Full Name" required>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogPatientPhone">Phone Number</label>
+            <input type="tel" id="dialogPatientPhone" name="patient_phone" class="custom-input" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-orange-primary btn-full-width">
+          <span>Confirm &amp; Generate Appointment Pass</span>
+          <span class="btn-arrow">➔</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="appointmentSuccessModal">
+    <div class="modal-card ticket-card">
+      <button type="button" class="modal-close-btn close-modal-trigger" aria-label="Close modal">×</button>
+      <div class="ticket-header">
+        <div class="ticket-check-circle">✓</div>
+        <h3 class="ticket-title">Appointment Confirmed!</h3>
+        <p class="ticket-subtitle">Your appointment ticket pass has been generated.</p>
+      </div>
+
+      <div class="appointment-ticket">
+        <div class="ticket-top">
+          <div class="ticket-brand">
+            <span class="ticket-logo-h">H</span>
+            <span>Hero Hospital Official Pass</span>
+          </div>
+          <div class="ticket-id-tag" id="ticketId">HH-849201</div>
+        </div>
+
+        <div class="ticket-grid">
+          <div class="ticket-item">
+            <span class="ticket-label">Department</span>
+            <span class="ticket-val" id="ticketDept">Cardiology</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Doctor</span>
+            <span class="ticket-val" id="ticketDoc">Dr. Rajiv Mehta</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Date</span>
+            <span class="ticket-val" id="ticketDate">Tomorrow</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Time Slot</span>
+            <span class="ticket-val" id="ticketTime">09:30 AM</span>
+          </div>
+          <div class="ticket-item ticket-item-full">
+            <span class="ticket-label">Patient Name</span>
+            <span class="ticket-val" id="ticketPatient">Guest Patient</span>
+          </div>
+        </div>
+
+        <div class="ticket-perforated-line"></div>
+
+        <div class="ticket-bottom">
+          <div class="ticket-notice">
+            <small>Please present this digital pass at the Reception Desk upon arrival.</small>
+          </div>
+          <button type="button" class="btn-print-ticket" onclick="window.print()">
+            <span>🖨️ Print Pass</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

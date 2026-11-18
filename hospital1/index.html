@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Hospital | Advanced Healthcare with a Human Touch</title>
+  <meta name="description" content="Hero Hospital - World-class medical care, modern infrastructure, and compassionate specialists all under one roof.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="inner-pages.css">
+</head>
+<body>
+
+  <!-- Top Scroll Reading Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- ========================================================================
+       Left Floating Navigation Dock (Desktop Signature Feature)
+       ======================================================================== -->
+  <aside class="side-nav-dock" aria-label="Quick Navigation">
+    <div class="dock-inner">
+      <!-- Monogram Logo Icon -->
+      <a href="#home" class="dock-logo" title="Hero Hospital Home">
+        <svg class="dock-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="10" fill="#0B192C"/>
+          <path d="M11 10V30M29 10V30" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M9 20C17 17 23 23 31 20" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="3" fill="#FF6B35"/>
+        </svg>
+      </a>
+
+      <!-- Dock Navigation Icons -->
+      <nav class="dock-menu">
+        <a href="index.html" class="dock-item active" data-tooltip="Home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span class="dock-tooltip">Home</span>
+        </a>
+
+        <a href="about.html" class="dock-item" data-tooltip="About Us">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span class="dock-tooltip">About Us</span>
+        </a>
+
+        <a href="specialties.html" class="dock-item" data-tooltip="Specialties">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span class="dock-tooltip">Specialties</span>
+        </a>
+
+        <a href="doctors.html" class="dock-item" data-tooltip="Doctors">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path>
+            <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path>
+            <circle cx="20" cy="10" r="2"></circle>
+          </svg>
+          <span class="dock-tooltip">Doctors</span>
+        </a>
+
+        <a href="facilities.html" class="dock-item" data-tooltip="Facilities">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <span class="dock-tooltip">Facilities</span>
+        </a>
+
+        <a href="contact.html" class="dock-item" data-tooltip="Contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="dock-tooltip">Contact</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Top Navigation Bar
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="nav-left">
+        <!-- Brand Logo -->
+        <a href="#home" class="brand-logo">
+          <div class="logo-mark">
+            <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="11" fill="#0B192C"/>
+              <path d="M12 11V33M32 11V33" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round"/>
+              <path d="M10 22C18 19 26 25 34 22" stroke="#FF6B35" stroke-width="3.8" stroke-linecap="round"/>
+              <circle cx="22" cy="22" r="3.2" fill="#FF6B35"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">Hero Hospital</span>
+            <span class="logo-tagline">CARE • CURE • COMPASSION</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Center Nav Links & Mobile Drawer -->
+      <nav class="nav-center">
+        <ul class="nav-links-list">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-dropdown-item">
+            <a href="specialties.html" class="nav-link">Specialties <span class="caret">▾</span></a>
+            <ul class="nav-dropdown-sub">
+              <li><a href="specialties.html#cardiology">❤️ Cardiology</a></li>
+              <li><a href="specialties.html#neurology">🧠 Neurology</a></li>
+              <li><a href="specialties.html#orthopaedics">🦴 Orthopaedics</a></li>
+              <li><a href="specialties.html#maternity">👶 Maternity &amp; Gynaecology</a></li>
+              <li><a href="specialties.html#oncology">🎗️ Oncology</a></li>
+            </ul>
+          </li>
+          <li><a href="doctors.html" class="nav-link">Doctors</a></li>
+          <li><a href="facilities.html" class="nav-link">Facilities</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Drawer Direct Actions (Visible in Mobile Drawer) -->
+        <div class="mobile-drawer-actions">
+          <a href="tel:+911204567890" class="drawer-call-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>24/7 Helpline: +91 120 456 7890</span>
+          </a>
+          <button type="button" class="btn-orange-primary trigger-booking" style="width: 100%; justify-content: center; padding: 13px 20px;">
+            <span>Book Appointment Now</span>
+            <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Right Action Items -->
+      <div class="nav-right">
+        <!-- Desktop Phone Chip -->
+        <a href="tel:+911204567890" class="phone-chip">
+          <svg class="phone-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="phone-chip-number">+91 120 456 7890</span>
+        </a>
+
+        <!-- Mobile Quick Phone Call Icon Button -->
+        <a href="tel:+911204567890" class="mobile-phone-btn" aria-label="Call emergency hospital number">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </a>
+
+        <!-- Header Book Button -->
+        <button type="button" class="btn-orange-primary trigger-booking nav-book-btn">
+          <span>Book Appointment</span>
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+
+        <!-- Mobile Drawer Toggle -->
+        <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Main Content Container (Aligned with left dock)
+       ======================================================================== -->
+  <main class="page-wrapper">
+
+    <!-- ======================================================================
+         Hero Section
+         ====================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="hero-container">
+        <!-- Left Hero Column -->
+        <div class="hero-content-col">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span class="eyebrow-text">MULTI-SPECIALITY HOSPITAL</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Advanced Healthcare<br>
+            with a <span class="text-orange-gradient">Human Touch</span>
+          </h1>
+
+          <p class="hero-description">
+            World-class treatment, cutting-edge technology and compassionate care for you and your family.
+          </p>
+
+          <div class="hero-cta-group">
+            <button type="button" class="btn-orange-primary trigger-booking">
+              <span>Book Appointment</span>
+              <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+
+            <button type="button" class="btn-glass-play" id="watchStoryBtn">
+              <span class="play-icon-circle">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </span>
+              <span>Watch Video</span>
+            </button>
+          </div>
+
+          <!-- 3D Medical Cross Shape (Collage) -->
+          <div class="cross-collage-wrapper">
+            <div class="cross-sculpture">
+              <!-- Top Arm: Surgery -->
+              <div class="cross-arm arm-top">
+                <img src="assets/robotic-surgery.jpg" alt="Advanced Surgery" class="cross-img">
+                <div class="arm-overlay"></div>
+              </div>
+              <!-- Left Arm: Doctor Consultation -->
+              <div class="cross-arm arm-left">
+                <img src="assets/doctor-rajiv.jpg" alt="Doctor Consultation" class="cross-img">
+                <div class="arm-overlay"></div>
+              </div>
+              <!-- Center Hub -->
+              <div class="cross-center-hub">
+                <div class="hub-emblem">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="3" stroke-linecap="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <!-- Right Arm: Specialist Care -->
+              <div class="cross-arm arm-right">
+                <img src="assets/doctor-neha.jpg" alt="Specialist Care" class="cross-img">
+                <div class="arm-overlay"></div>
+              </div>
+              <!-- Bottom Arm: Diagnostics & Healing -->
+              <div class="cross-arm arm-bottom">
+                <img src="assets/luxury-suite.jpg" alt="Modern Healing Suites" class="cross-img">
+                <div class="arm-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Column: Interactive Floating Badges over Background Building -->
+        <div class="hero-visual-col">
+          <div class="hero-building-backdrop-showcase">
+            <!-- Floating Quality Accreditation Badge -->
+            <div class="floating-hero-pill">
+              <div class="pill-badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2.2" stroke-linecap="round">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+              </div>
+              <div class="pill-badge-text">
+                <div class="pill-badge-title">NABH &amp; JCI Accredited</div>
+                <div class="pill-badge-sub">International Gold Standard</div>
+              </div>
+            </div>
+
+            <!-- Main Campus Spec Card -->
+            <div class="floating-campus-card">
+              <div class="campus-card-header">
+                <span class="campus-dot-active"></span>
+                <span class="campus-tag">HERO HOSPITAL MAIN CAMPUS</span>
+              </div>
+              <div class="campus-card-title">World-Class Healthcare Facility</div>
+              <div class="campus-ratings">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">4.9</span>
+                <span class="reviews-count">(12,000+ Patient Reviews)</span>
+              </div>
+            </div>
+
+            <!-- 24/7 Emergency Pill -->
+            <div class="floating-emergency-pill">
+              <span class="emergency-radar-pulse"></span>
+              <span class="emergency-pill-text">24/7 Trauma &amp; Emergency Live</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           4 Floating Quick-Action Service Cards
+           ==================================================================== -->
+      <div class="quick-actions-bar">
+        <!-- Action 1: Book Appointment -->
+        <div class="quick-card trigger-booking">
+          <div class="quick-icon-circle bg-blue-subtle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <div class="quick-card-body">
+            <div class="quick-card-title">Book Appointment</div>
+            <div class="quick-card-desc">Schedule your visit</div>
+          </div>
+          <div class="quick-card-arrow">›</div>
+        </div>
+
+        <!-- Action 2: Find a Doctor -->
+        <a href="#doctors" class="quick-card">
+          <div class="quick-icon-circle bg-teal-subtle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.2" stroke-linecap="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <line x1="20" y1="8" x2="20" y2="14"></line>
+              <line x1="23" y1="11" x2="17" y2="11"></line>
+            </svg>
+          </div>
+          <div class="quick-card-body">
+            <div class="quick-card-title">Find a Doctor</div>
+            <div class="quick-card-desc">Search our specialists</div>
+          </div>
+          <div class="quick-card-arrow">›</div>
+        </a>
+
+        <!-- Action 3: Emergency (Highlighted with subtle orange/peach tint) -->
+        <a href="tel:+911204567890" class="quick-card emergency-highlight">
+          <div class="quick-icon-circle bg-orange-subtle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2.2" stroke-linecap="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+          </div>
+          <div class="quick-card-body">
+            <div class="quick-card-title">Emergency</div>
+            <div class="quick-card-desc">24/7 Care</div>
+          </div>
+          <div class="quick-card-arrow">›</div>
+        </a>
+
+        <!-- Action 4: Get Directions -->
+        <a href="#contact" class="quick-card">
+          <div class="quick-icon-circle bg-indigo-subtle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2.2" stroke-linecap="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <div class="quick-card-body">
+            <div class="quick-card-title">Get Directions</div>
+            <div class="quick-card-desc">Find our hospital</div>
+          </div>
+          <div class="quick-card-arrow">›</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         About Hero Hospital Section
+         ====================================================================== -->
+    <section class="about-destination-section" id="about">
+      <div class="section-container">
+        <div class="about-header-centered">
+          <div class="section-badge-orange">ABOUT HERO HOSPITAL</div>
+          <h2 class="section-title">
+            More Than a Hospital<br>
+            A Complete <span class="text-blue-accent">Care Destination</span>
+          </h2>
+          <p class="about-lead-text">
+            At Hero Hospital, we blend medical expertise, modern infrastructure and a patient-first approach to deliver holistic healthcare at every stage of life.
+          </p>
+        </div>
+
+        <!-- 3 Feature Badges in a horizontal row -->
+        <div class="about-features-row">
+          <div class="feature-badge-card">
+            <div class="badge-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </div>
+            <div class="badge-content">
+              <div class="badge-title">Trusted Experts</div>
+              <div class="badge-desc">Experienced Specialists</div>
+            </div>
+          </div>
+
+          <div class="feature-badge-card">
+            <div class="badge-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2.2" stroke-linecap="round">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="14" x2="23" y2="14"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="14" x2="4" y2="14"></line>
+              </svg>
+            </div>
+            <div class="badge-content">
+              <div class="badge-title">Advanced Technology</div>
+              <div class="badge-desc">Smart Medical Care</div>
+            </div>
+          </div>
+
+          <div class="feature-badge-card">
+            <div class="badge-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="2.2" stroke-linecap="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <div class="badge-content">
+              <div class="badge-title">Patient First</div>
+              <div class="badge-desc">Compassionate Care</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Centers of Excellence / Specialties Section (3D Dais Pedestal)
+         ====================================================================== -->
+    <section class="specialities-showcase-section" id="specialities">
+      <div class="section-container">
+        <div class="specialties-header">
+          <div class="specialties-title-block">
+            <div class="section-badge-orange">OUR SPECIALTIES</div>
+            <h2 class="section-title">Centers of Excellence</h2>
+          </div>
+
+          <!-- Carousel Controls -->
+          <div class="carousel-nav-buttons">
+            <button type="button" class="carousel-arrow-btn" id="specPrev" aria-label="Previous specialty">‹</button>
+            <button type="button" class="carousel-arrow-btn" id="specNext" aria-label="Next specialty">›</button>
+          </div>
+        </div>
+
+        <!-- 3D Pedestal Stage Container -->
+        <div class="pedestal-stage-wrapper">
+          <!-- 5 Futuristic Specialty Cards Row -->
+          <div class="specialties-cards-track" id="specialitiesGrid">
+            <!-- Card 1: Cardiology -->
+            <div class="pedestal-card" data-dept="Cardiology">
+              <div class="pedestal-card-visual bg-gradient-heart">
+                <!-- 3D Heart Holographic SVG -->
+                <svg class="specialty-3d-svg" viewBox="0 0 100 100" fill="none">
+                  <defs>
+                    <radialGradient id="heartGlow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#FF4D4D" stop-opacity="0.9"/>
+                      <stop offset="60%" stop-color="#DC2626" stop-opacity="0.8"/>
+                      <stop offset="100%" stop-color="#7F1D1D" stop-opacity="0.2"/>
+                    </radialGradient>
+                    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="3" result="blur" />
+                      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                    </filter>
+                  </defs>
+                  <circle cx="50" cy="50" r="38" fill="url(#heartGlow)" filter="url(#glowFilter)"/>
+                  <path d="M50 72C50 72 26 56 26 38C26 28 34 22 43 24C47 25 50 28 50 28C50 28 53 25 57 24C66 22 74 28 74 38C74 56 50 72 50 72Z" fill="#FFFFFF" fill-opacity="0.95"/>
+                  <path d="M30 46H42L47 34L53 58L58 46H70" stroke="#FF4D4D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="pedestal-card-footer">
+                <span class="specialty-name">Cardiology</span>
+                <span class="specialty-subtext">Heart &amp; Vascular</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Neurology -->
+            <div class="pedestal-card" data-dept="Neurology">
+              <div class="pedestal-card-visual bg-gradient-brain">
+                <!-- 3D Brain Holographic SVG -->
+                <svg class="specialty-3d-svg" viewBox="0 0 100 100" fill="none">
+                  <defs>
+                    <radialGradient id="brainGlow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.9"/>
+                      <stop offset="70%" stop-color="#0284C7" stop-opacity="0.75"/>
+                      <stop offset="100%" stop-color="#0C4A6E" stop-opacity="0.2"/>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="50" cy="50" r="38" fill="url(#brainGlow)" filter="url(#glowFilter)"/>
+                  <path d="M50 24C41 24 35 29 35 37C35 40 37 43 39 45C36 47 34 51 34 56C34 62 38 67 43 69C45 74 50 76 50 76C50 76 55 74 57 69C62 67 66 62 66 56C66 51 64 47 61 45C63 43 65 40 65 37C65 29 59 24 50 24Z" fill="#FFFFFF" fill-opacity="0.92"/>
+                  <!-- Neural Synapses -->
+                  <circle cx="44" cy="38" r="2.5" fill="#0284C7"/>
+                  <circle cx="56" cy="38" r="2.5" fill="#0284C7"/>
+                  <circle cx="42" cy="54" r="2.5" fill="#0284C7"/>
+                  <circle cx="58" cy="54" r="2.5" fill="#0284C7"/>
+                  <path d="M44 38L50 46L56 38M42 54L50 46L58 54" stroke="#0284C7" stroke-width="1.8"/>
+                </svg>
+              </div>
+              <div class="pedestal-card-footer">
+                <span class="specialty-name">Neurology</span>
+                <span class="specialty-subtext">Brain &amp; Spine</span>
+              </div>
+            </div>
+
+            <!-- Card 3: Orthopaedics -->
+            <div class="pedestal-card" data-dept="Orthopaedics">
+              <div class="pedestal-card-visual bg-gradient-ortho">
+                <!-- 3D Joint/Bone Holographic SVG -->
+                <svg class="specialty-3d-svg" viewBox="0 0 100 100" fill="none">
+                  <defs>
+                    <radialGradient id="orthoGlow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.9"/>
+                      <stop offset="70%" stop-color="#2563EB" stop-opacity="0.7"/>
+                      <stop offset="100%" stop-color="#1E3A8A" stop-opacity="0.2"/>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="50" cy="50" r="38" fill="url(#orthoGlow)" filter="url(#glowFilter)"/>
+                  <path d="M44 26C41 26 39 28 39 31C39 34 41 36 44 36H47V45C42 46 38 50 38 55C38 60 42 64 47 65V69H44C41 69 39 71 39 74C39 77 41 79 44 79H56C59 79 61 77 61 74C61 71 59 69 56 69H53V65C58 64 62 60 62 55C62 50 58 46 53 45V36H56C59 36 61 34 61 31C61 28 59 26 56 26H44Z" fill="#FFFFFF" fill-opacity="0.92"/>
+                  <circle cx="50" cy="55" r="4" fill="#2563EB"/>
+                </svg>
+              </div>
+              <div class="pedestal-card-footer">
+                <span class="specialty-name">Orthopaedics</span>
+                <span class="specialty-subtext">Bones &amp; Joints</span>
+              </div>
+            </div>
+
+            <!-- Card 4: Maternity & Gynaecology -->
+            <div class="pedestal-card" data-dept="Maternity &amp; Gynaecology">
+              <div class="pedestal-card-visual bg-gradient-maternity">
+                <!-- Mother & Child SVG -->
+                <svg class="specialty-3d-svg" viewBox="0 0 100 100" fill="none">
+                  <defs>
+                    <radialGradient id="matGlow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#F472B6" stop-opacity="0.9"/>
+                      <stop offset="70%" stop-color="#DB2777" stop-opacity="0.75"/>
+                      <stop offset="100%" stop-color="#831843" stop-opacity="0.2"/>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="50" cy="50" r="38" fill="url(#matGlow)" filter="url(#glowFilter)"/>
+                  <circle cx="48" cy="33" r="6" fill="#FFFFFF"/>
+                  <circle cx="60" cy="46" r="4.5" fill="#FFFFFF"/>
+                  <path d="M48 42C41 42 36 48 36 57C36 68 47 73 53 73C57 73 66 69 66 59C66 53 62 51 58 51C55 51 53 53 51 53C49 53 48 50 48 47C48 44 49 43 48 42Z" fill="#FFFFFF" fill-opacity="0.92"/>
+                </svg>
+              </div>
+              <div class="pedestal-card-footer">
+                <span class="specialty-name">Maternity &amp; Gynaecology</span>
+                <span class="specialty-subtext">Mother &amp; Child</span>
+              </div>
+            </div>
+
+            <!-- Card 5: Oncology -->
+            <div class="pedestal-card" data-dept="Oncology">
+              <div class="pedestal-card-visual bg-gradient-oncology">
+                <!-- Cancer Ribbon & Cellular Molecule SVG -->
+                <svg class="specialty-3d-svg" viewBox="0 0 100 100" fill="none">
+                  <defs>
+                    <radialGradient id="oncoGlow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#FB923C" stop-opacity="0.9"/>
+                      <stop offset="70%" stop-color="#EA580C" stop-opacity="0.8"/>
+                      <stop offset="100%" stop-color="#7C2D12" stop-opacity="0.2"/>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="50" cy="50" r="38" fill="url(#oncoGlow)" filter="url(#glowFilter)"/>
+                  <path d="M50 24C44 24 40 29 40 36C40 43 45 52 50 60C55 52 60 43 60 36C60 29 56 24 50 24ZM50 38C47.8 38 46 36.2 46 34C46 31.8 47.8 30 50 30C52.2 30 54 31.8 54 34C54 36.2 52.2 38 50 38Z" fill="#FFFFFF" fill-opacity="0.92"/>
+                  <path d="M43 56L32 75M57 56L68 75" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="pedestal-card-footer">
+                <span class="specialty-name">Oncology</span>
+                <span class="specialty-subtext">Comprehensive Cancer Care</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- The Glowing 3D Pedestal Dais Ellipse -->
+          <div class="pedestal-dais-platform">
+            <div class="dais-glow-rim"></div>
+          </div>
+        </div>
+
+        <!-- ==================================================================
+             Key Statistics Bar (Horizontal Rounded Capsule)
+             ================================================================== -->
+        <div class="hospital-stats-bar">
+          <!-- Stat 1: Beds -->
+          <div class="stat-cell">
+            <div class="stat-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round">
+                <path d="M2 4v16"></path>
+                <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                <path d="M2 17h20"></path>
+                <path d="M6 8v9"></path>
+              </svg>
+            </div>
+            <div class="stat-content">
+              <div class="stat-digit"><span class="counter" data-target="300">300</span>+</div>
+              <div class="stat-name">Bed Capacity</div>
+            </div>
+          </div>
+
+          <div class="stat-cell-divider"></div>
+
+          <!-- Stat 2: Doctors -->
+          <div class="stat-cell">
+            <div class="stat-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2.2" stroke-linecap="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="8.5" cy="7" r="4"></circle>
+                <line x1="20" y1="8" x2="20" y2="14"></line>
+                <line x1="23" y1="11" x2="17" y2="11"></line>
+              </svg>
+            </div>
+            <div class="stat-content">
+              <div class="stat-digit"><span class="counter" data-target="500">500</span>+</div>
+              <div class="stat-name">Expert Doctors</div>
+            </div>
+          </div>
+
+          <div class="stat-cell-divider"></div>
+
+          <!-- Stat 3: Patients -->
+          <div class="stat-cell">
+            <div class="stat-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="2.2" stroke-linecap="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="stat-content">
+              <div class="stat-digit">1L+</div>
+              <div class="stat-name">Happy Patients</div>
+            </div>
+          </div>
+
+          <div class="stat-cell-divider"></div>
+
+          <!-- Stat 4: Emergency Care -->
+          <div class="stat-cell">
+            <div class="stat-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.2" stroke-linecap="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="stat-content">
+              <div class="stat-digit">24x7</div>
+              <div class="stat-name">Emergency Care</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Our Specialist Doctors Section
+         ====================================================================== -->
+    <section class="doctors-showcase-section" id="doctors">
+      <div class="section-container">
+        <div class="doctors-header-row">
+          <div class="doctors-title-block">
+            <div class="section-badge-orange">MEET OUR EXPERTS</div>
+            <h2 class="section-title">Our Specialist Doctors</h2>
+          </div>
+
+          <button type="button" class="btn-text-action trigger-booking">
+            <span>View All Doctors</span>
+            <span class="arrow-right">→</span>
+          </button>
+        </div>
+
+        <!-- 4 Specialist Doctors Row -->
+        <div class="doctors-cards-grid">
+          <!-- Doctor 1: Dr. Rajiv Mehta -->
+          <div class="specialist-doctor-card" data-doctor="Dr. Rajiv Mehta" data-dept="Cardiology">
+            <div class="doc-avatar-wrap">
+              <img src="assets/doctor-rajiv.jpg" alt="Dr. Rajiv Mehta - Cardiologist" class="doc-portrait">
+              <div class="doc-verified-check">✓</div>
+            </div>
+            <div class="doc-meta-info">
+              <h3 class="doc-name">Dr. Rajiv Mehta</h3>
+              <p class="doc-specialty">Cardiologist</p>
+              <div class="doc-exp-badge">18+ Years Experience</div>
+            </div>
+            <button type="button" class="doc-action-circle trigger-booking" aria-label="Book appointment with Dr. Rajiv Mehta">
+              <span>›</span>
+            </button>
+          </div>
+
+          <!-- Doctor 2: Dr. Neha Sharma -->
+          <div class="specialist-doctor-card" data-doctor="Dr. Neha Sharma" data-dept="Neurology">
+            <div class="doc-avatar-wrap">
+              <img src="assets/doctor-neha.jpg" alt="Dr. Neha Sharma - Neurologist" class="doc-portrait">
+              <div class="doc-verified-check">✓</div>
+            </div>
+            <div class="doc-meta-info">
+              <h3 class="doc-name">Dr. Neha Sharma</h3>
+              <p class="doc-specialty">Neurologist</p>
+              <div class="doc-exp-badge">14+ Years Experience</div>
+            </div>
+            <button type="button" class="doc-action-circle trigger-booking" aria-label="Book appointment with Dr. Neha Sharma">
+              <span>›</span>
+            </button>
+          </div>
+
+          <!-- Doctor 3: Dr. Arjun Singh -->
+          <div class="specialist-doctor-card" data-doctor="Dr. Arjun Singh" data-dept="Orthopaedics">
+            <div class="doc-avatar-wrap">
+              <img src="assets/doctor-arjun.jpg" alt="Dr. Arjun Singh - Orthopaedic Surgeon" class="doc-portrait">
+              <div class="doc-verified-check">✓</div>
+            </div>
+            <div class="doc-meta-info">
+              <h3 class="doc-name">Dr. Arjun Singh</h3>
+              <p class="doc-specialty">Orthopaedic Surgeon</p>
+              <div class="doc-exp-badge">20+ Years Experience</div>
+            </div>
+            <button type="button" class="doc-action-circle trigger-booking" aria-label="Book appointment with Dr. Arjun Singh">
+              <span>›</span>
+            </button>
+          </div>
+
+          <!-- Doctor 4: Dr. Priya Verma -->
+          <div class="specialist-doctor-card" data-doctor="Dr. Priya Verma" data-dept="Maternity &amp; Gynaecology">
+            <div class="doc-avatar-wrap">
+              <img src="assets/doctor-priya.jpg" alt="Dr. Priya Verma - Gynaecologist" class="doc-portrait">
+              <div class="doc-verified-check">✓</div>
+            </div>
+            <div class="doc-meta-info">
+              <h3 class="doc-name">Dr. Priya Verma</h3>
+              <p class="doc-specialty">Gynaecologist</p>
+              <div class="doc-exp-badge">12+ Years Experience</div>
+            </div>
+            <button type="button" class="doc-action-circle trigger-booking" aria-label="Book appointment with Dr. Priya Verma">
+              <span>›</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         World-Class Infrastructure Section
+         ====================================================================== -->
+    <section class="infrastructure-section" id="technology">
+      <div class="section-container">
+        <div class="infra-two-col-layout">
+          <!-- Left: Rounded Capsule Showcase Image -->
+          <div class="infra-visual-col">
+            <div class="infra-image-capsule">
+              <img src="assets/luxury-suite.jpg" alt="Hero Hospital Luxury Patient Suite" class="infra-suite-img">
+              <div class="infra-badge-tag">
+                <span class="infra-dot"></span>
+                <span>Deluxe Healing Suite</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Grid of 6 Key Infrastructure Points -->
+          <div class="infra-content-col">
+            <div class="section-badge-orange">OUR FACILITIES</div>
+            <h2 class="section-title">World-Class Infrastructure<br>for Better Healing</h2>
+
+            <div class="infra-features-grid">
+              <!-- Item 1: Modern ICU -->
+              <div class="infra-grid-item">
+                <div class="infra-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                </div>
+                <div class="infra-item-text">
+                  <div class="infra-item-title">Modern ICU</div>
+                  <div class="infra-item-desc">Advanced life support</div>
+                </div>
+              </div>
+
+              <!-- Item 2: Advanced Imaging -->
+              <div class="infra-grid-item">
+                <div class="infra-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2.2" stroke-linecap="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                    <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                  </svg>
+                </div>
+                <div class="infra-item-text">
+                  <div class="infra-item-title">Advanced Imaging</div>
+                  <div class="infra-item-desc">MRI, CT, PET Scan</div>
+                </div>
+              </div>
+
+              <!-- Item 3: 24/7 Critical Care -->
+              <div class="infra-grid-item">
+                <div class="infra-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                  </svg>
+                </div>
+                <div class="infra-item-text">
+                  <div class="infra-item-title">24/7 Critical Care</div>
+                  <div class="infra-item-desc">Immediate emergency response</div>
+                </div>
+              </div>
+
+              <!-- Item 4: Private Rooms -->
+              <div class="infra-grid-item">
+                <div class="infra-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.2" stroke-linecap="round">
+                    <path d="M2 4v16"></path>
+                    <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                    <path d="M2 17h20"></path>
+                    <path d="M6 8v9"></path>
+                  </svg>
+                </div>
+                <div class="infra-item-text">
+                  <div class="infra-item-title">Private Rooms</div>
+                  <div class="infra-item-desc">Deluxe &amp; Executive Suite</div>
+                </div>
+              </div>
+
+              <!-- Item 5: NABL Diagnostics -->
+              <div class="infra-grid-item">
+                <div class="infra-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#6366F1" stroke-width="2.2" stroke-linecap="round">
+                    <path d="M10 2v7.31"></path>
+                    <path d="M14 2v7.31"></path>
+                    <path d="M8.5 2h7"></path>
+                    <path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path>
+                  </svg>
+                </div>
+                <div class="infra-item-text">
+                  <div class="infra-item-title">NABL Diagnostics</div>
+                  <div class="infra-item-desc">&amp; 24-hr Lab Services</div>
+                </div>
+              </div>
+
+              <!-- Item 6: In-House Pharmacy -->
+              <div class="infra-grid-item">
+                <div class="infra-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round">
+                    <path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path>
+                    <path d="m8.5 8.5 7 7"></path>
+                  </svg>
+                </div>
+                <div class="infra-item-text">
+                  <div class="infra-item-title">In-House Pharmacy</div>
+                  <div class="infra-item-desc">24/7 Dispensing service</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Testimonials / Patient Stories Section
+         ====================================================================== -->
+    <section class="testimonials-showcase-section">
+      <div class="section-container">
+        <div class="testimonials-header-centered">
+          <div class="section-badge-orange">PATIENT STORIES</div>
+          <h2 class="section-title">Trusted by Thousands</h2>
+        </div>
+
+        <div class="testimonials-two-col-grid">
+          <!-- Story 1: Amit Sharma -->
+          <div class="patient-quote-card">
+            <div class="quote-card-header">
+              <img src="assets/patient-amit.jpg" alt="Amit Sharma" class="patient-avatar-img">
+              <div class="patient-name-block">
+                <h3 class="patient-name">Amit Sharma</h3>
+                <div class="patient-rating-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+            </div>
+            <p class="patient-quote-body">
+              “The care and support at Hero Hospital went beyond belief. The doctors and medical team were very professional, attentive and exceptionally kind throughout my treatment.”
+            </p>
+            <div class="patient-verified-tag">
+              <svg viewBox="0 0 20 20" fill="#10B981" width="14" height="14">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Verified Cardiology Patient</span>
+            </div>
+          </div>
+
+          <!-- Story 2: Sneha Gupta -->
+          <div class="patient-quote-card">
+            <div class="quote-card-header">
+              <img src="assets/patient-sneha.jpg" alt="Sneha Gupta" class="patient-avatar-img">
+              <div class="patient-name-block">
+                <h3 class="patient-name">Sneha Gupta</h3>
+                <div class="patient-rating-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+            </div>
+            <p class="patient-quote-body">
+              “Luxurious infrastructure, advanced facilities and a very compassionate healthcare team. I highly recommend Hero Hospital for maternal and child wellness care.”
+            </p>
+            <div class="patient-verified-tag">
+              <svg viewBox="0 0 20 20" fill="#10B981" width="14" height="14">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Verified Maternity Patient</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Bottom Call to Action Banner (Navy Ribbon with Stethoscope & ECG Pulse)
+         ====================================================================== -->
+    <section class="bottom-cta-banner-section">
+      <div class="cta-banner-wrapper">
+        <div class="navy-cta-card">
+          <div class="cta-card-content">
+            <h2 class="cta-headline">
+              Your Health,<br>
+              <span class="text-orange-glow">Our Priority</span>
+            </h2>
+            <p class="cta-subtitle">
+              Book an appointment today and take the first step towards a healthier tomorrow.
+            </p>
+            <button type="button" class="btn-orange-primary trigger-booking">
+              <span>Book Appointment</span>
+              <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Stethoscope & Glowing ECG Heartbeat Pulse Graphic -->
+          <div class="cta-card-visual">
+            <svg class="ecg-stethoscope-combined-svg" viewBox="0 0 540 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="ecgGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.2"/>
+                  <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.95"/>
+                  <stop offset="100%" stop-color="#0284C7" stop-opacity="0.9"/>
+                </linearGradient>
+                <linearGradient id="metalChrome" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#F1F5F9"/>
+                  <stop offset="35%" stop-color="#CBD5E1"/>
+                  <stop offset="65%" stop-color="#94A3B8"/>
+                  <stop offset="100%" stop-color="#E2E8F0"/>
+                </linearGradient>
+                <linearGradient id="metalTube" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#334155"/>
+                  <stop offset="50%" stop-color="#1E293B"/>
+                  <stop offset="100%" stop-color="#0F172A"/>
+                </linearGradient>
+                <radialGradient id="diaphragmGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.95"/>
+                  <stop offset="60%" stop-color="#0284C7" stop-opacity="0.6"/>
+                  <stop offset="100%" stop-color="#0B192C" stop-opacity="0.8"/>
+                </radialGradient>
+                <filter id="cyanNeon" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="3.5" result="blur"/>
+                  <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- Glowing ECG Heartbeat Wave -->
+              <path class="animated-ecg-path" d="M10 110 H80 C95 110 102 96 112 96 C122 96 128 110 140 110 L152 110 L160 125 L174 25 L188 175 L198 95 L206 118 L214 110 C226 110 234 85 248 85 C262 85 270 110 286 110 H360" stroke="url(#ecgGlowGrad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#cyanNeon)"/>
+
+              <!-- Pulse Traveling Node -->
+              <circle class="animated-ecg-dot" cx="174" cy="25" r="4.5" fill="#FFFFFF" filter="url(#cyanNeon)"/>
+
+              <!-- 3D Realistic Stethoscope Component -->
+              <g class="stethoscope-illustration" transform="translate(340, 10)">
+                <!-- Ear tips -->
+                <circle cx="50" cy="20" r="6" fill="#FF6B35" stroke="#FFFFFF" stroke-width="1.5"/>
+                <circle cx="110" cy="20" r="6" fill="#FF6B35" stroke="#FFFFFF" stroke-width="1.5"/>
+
+                <!-- Metallic Binaural headset tubes -->
+                <path d="M50 20 C50 48, 65 75, 80 85" stroke="url(#metalChrome)" stroke-width="4.5" stroke-linecap="round"/>
+                <path d="M110 20 C110 48, 95 75, 80 85" stroke="url(#metalChrome)" stroke-width="4.5" stroke-linecap="round"/>
+
+                <!-- Binaural Spring Bracket -->
+                <path d="M60 52 C70 56, 90 56, 100 52" stroke="url(#metalChrome)" stroke-width="2.5" stroke-linecap="round"/>
+
+                <!-- Y-Stem Connector -->
+                <rect x="76" y="82" width="8" height="12" rx="2" fill="url(#metalChrome)"/>
+
+                <!-- Flexible Rubber Y-Tubing Loop -->
+                <path d="M80 94 C80 135, 105 170, 135 170 C165 170, 175 135, 150 115 C135 102, 115 110, 115 125 L115 135" stroke="url(#metalTube)" stroke-width="6.5" stroke-linecap="round"/>
+                <path d="M80 94 C80 135, 105 170, 135 170 C165 170, 175 135, 150 115 C135 102, 115 110, 115 125 L115 135" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linecap="round"/>
+
+                <!-- Chrome Stem to Chestpiece -->
+                <rect x="110" y="132" width="10" height="8" rx="2" fill="url(#metalChrome)"/>
+
+                <!-- Dual-Head Chestpiece / Diaphragm -->
+                <g transform="translate(115, 155)">
+                  <!-- Outer Chrome Housing -->
+                  <circle cx="0" cy="0" r="24" fill="url(#metalChrome)" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.4))"/>
+                  <!-- Inner Diaphragm Glowing Face -->
+                  <circle cx="0" cy="0" r="18" fill="url(#diaphragmGlow)" stroke="#38BDF8" stroke-width="1.8"/>
+                  <circle cx="0" cy="0" r="11" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.5"/>
+                  <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Site Footer
+         ====================================================================== -->
+    <footer class="site-footer" id="contact">
+      <div class="footer-container">
+        <div class="footer-top-grid">
+          <!-- Col 1: Brand Info -->
+          <div class="footer-col brand-col">
+            <div class="footer-logo">
+              <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="44" height="44" rx="11" fill="#0B192C"/>
+                <path d="M12 11V33M32 11V33" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round"/>
+                <path d="M10 22C18 19 26 25 34 22" stroke="#FF6B35" stroke-width="3.8" stroke-linecap="round"/>
+                <circle cx="22" cy="22" r="3.2" fill="#FF6B35"/>
+              </svg>
+              <div class="logo-text">
+                <span class="logo-title text-white">Hero Hospital</span>
+                <span class="logo-tagline text-slate">CARE • CURE • COMPASSION</span>
+              </div>
+            </div>
+            <p class="footer-desc">
+              Hero Hospital is committed to delivering world-class, affordable, and compassionate medical care empowered by cutting-edge medical science.
+            </p>
+            <div class="footer-accredit-badges">
+              <span class="accredit-tag">NABH Accredited</span>
+              <span class="accredit-tag">JCI Certified</span>
+              <span class="accredit-tag">ISO 9001:2015</span>
+            </div>
+          </div>
+
+          <!-- Col 2: Quick Links -->
+          <div class="footer-col">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Hero Hospital</a></li>
+              <li><a href="specialties.html">Centers of Excellence</a></li>
+              <li><a href="doctors.html">Meet Our Doctors</a></li>
+              <li><a href="facilities.html">Infrastructure &amp; Rooms</a></li>
+              <li><a href="contact.html">Contact &amp; Emergency</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Specialties -->
+          <div class="footer-col">
+            <h4 class="footer-title">Departments</h4>
+            <ul class="footer-links">
+              <li><a href="specialties.html#cardiology">Cardiology &amp; Cardiac Surgery</a></li>
+              <li><a href="specialties.html#neurology">Neurology &amp; Neurosurgery</a></li>
+              <li><a href="specialties.html#orthopaedics">Orthopaedics &amp; Joint Replacement</a></li>
+              <li><a href="specialties.html#maternity">Maternity, Gynaecology &amp; IVF</a></li>
+              <li><a href="specialties.html#oncology">Oncology &amp; Radiation Care</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Contact & Emergency -->
+          <div class="footer-col">
+            <h4 class="footer-title">24/7 Helpline</h4>
+            <div class="emergency-contact-box">
+              <div class="emergency-label">EMERGENCY HOTLINE</div>
+              <a href="tel:+911204567890" class="emergency-number">+91 120 456 7890</a>
+              <div class="emergency-sub">Ambulance &amp; Critical Care available 24/7</div>
+            </div>
+            <div class="footer-address">
+              📍 Sector 62, Institutional Area, Noida, Uttar Pradesh 201309
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div class="footer-copy">
+            © 2026 Hero Hospital. All rights reserved. Designed for Excellence in Healthcare.
+          </div>
+          <div class="footer-credit">
+            Hero Hospital | Made with <span class="footer-heart" style="color: #ff3344; display: inline-block; margin: 0 2px;">❤️</span> by <a href="https://regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a>
+          </div>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <span>•</span>
+            <a href="#">Terms of Care</a>
+            <span>•</span>
+            <a href="#">Patient Rights</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ========================================================================
+       Interactive Appointment Booking Modal
+       ======================================================================== -->
+  <div class="modal-overlay" id="appointmentModal">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn close-modal-trigger" aria-label="Close modal">×</button>
+
+      <div class="modal-header">
+        <div class="modal-badge-tag">SCHEDULE CONSULTATION</div>
+        <h3 class="modal-title">Book an Appointment</h3>
+        <p class="modal-subtitle">Select your department, doctor, and preferred time slot.</p>
+      </div>
+
+      <form class="booking-dialog-form" id="mainBookingForm">
+        <div class="form-grid">
+          <!-- Department -->
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDeptSelect">Department</label>
+            <div class="custom-select-wrap">
+              <select id="dialogDeptSelect" name="department" class="custom-select" required>
+                <option value="" disabled selected>Select Department</option>
+                <option value="Cardiology">❤️ Cardiology</option>
+                <option value="Neurology">🧠 Neurology</option>
+                <option value="Orthopaedics">🦴 Orthopaedics</option>
+                <option value="Maternity & Gynaecology">👶 Maternity &amp; Gynaecology</option>
+                <option value="Oncology">🎗️ Oncology</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Doctor -->
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDocSelect">Doctor (Optional)</label>
+            <div class="custom-select-wrap">
+              <select id="dialogDocSelect" name="doctor" class="custom-select">
+                <option value="" disabled selected>Select Specialist</option>
+                <option value="Dr. Rajiv Mehta (Cardiology)">Dr. Rajiv Mehta (Cardiologist)</option>
+                <option value="Dr. Neha Sharma (Neurology)">Dr. Neha Sharma (Neurologist)</option>
+                <option value="Dr. Arjun Singh (Orthopaedics)">Dr. Arjun Singh (Orthopaedic Surgeon)</option>
+                <option value="Dr. Priya Verma (Gynaecology)">Dr. Priya Verma (Gynaecologist)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Date -->
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDateInput">Date</label>
+            <input type="date" id="dialogDateInput" name="date" class="custom-input" required>
+          </div>
+
+          <!-- Time Slot -->
+          <div class="form-field-group">
+            <label class="form-label">Preferred Time Slot</label>
+            <div class="time-chips-container">
+              <button type="button" class="time-slot-chip active" data-time="09:30 AM">09:30 AM</button>
+              <button type="button" class="time-slot-chip" data-time="11:00 AM">11:00 AM</button>
+              <button type="button" class="time-slot-chip" data-time="02:30 PM">02:30 PM</button>
+              <button type="button" class="time-slot-chip" data-time="04:00 PM">04:00 PM</button>
+              <input type="hidden" name="time" id="dialogTimeInput" value="09:30 AM">
+            </div>
+          </div>
+
+          <!-- Patient Name -->
+          <div class="form-field-group">
+            <label class="form-label" for="dialogPatientName">Patient Name</label>
+            <input type="text" id="dialogPatientName" name="patient_name" class="custom-input" placeholder="Full Name" required>
+          </div>
+
+          <!-- Phone Number -->
+          <div class="form-field-group">
+            <label class="form-label" for="dialogPatientPhone">Phone Number</label>
+            <input type="tel" id="dialogPatientPhone" name="patient_phone" class="custom-input" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-orange-primary btn-full-width">
+          <span>Confirm &amp; Generate Appointment Pass</span>
+          <span class="btn-arrow">➔</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Appointment Success Confirmation Ticket Modal
+       ======================================================================== -->
+  <div class="modal-overlay" id="appointmentSuccessModal">
+    <div class="modal-card ticket-card">
+      <button type="button" class="modal-close-btn close-modal-trigger" aria-label="Close modal">×</button>
+
+      <div class="ticket-header">
+        <div class="ticket-check-circle">✓</div>
+        <h3 class="ticket-title">Appointment Confirmed!</h3>
+        <p class="ticket-subtitle">Your appointment ticket pass has been generated.</p>
+      </div>
+
+      <div class="appointment-ticket">
+        <div class="ticket-top">
+          <div class="ticket-brand">
+            <span class="ticket-logo-h">H</span>
+            <span>Hero Hospital Official Pass</span>
+          </div>
+          <div class="ticket-id-tag" id="ticketId">HH-849201</div>
+        </div>
+
+        <div class="ticket-grid">
+          <div class="ticket-item">
+            <span class="ticket-label">Department</span>
+            <span class="ticket-val" id="ticketDept">Cardiology</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Doctor</span>
+            <span class="ticket-val" id="ticketDoc">Dr. Rajiv Mehta</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Date</span>
+            <span class="ticket-val" id="ticketDate">Tomorrow</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Time Slot</span>
+            <span class="ticket-val" id="ticketTime">09:30 AM</span>
+          </div>
+          <div class="ticket-item ticket-item-full">
+            <span class="ticket-label">Patient Name</span>
+            <span class="ticket-val" id="ticketPatient">Guest Patient</span>
+          </div>
+        </div>
+
+        <div class="ticket-perforated-line"></div>
+
+        <div class="ticket-bottom">
+          <div class="ticket-notice">
+            <small>Please present this digital pass at the Reception Desk upon arrival.</small>
+          </div>
+          <button type="button" class="btn-print-ticket" onclick="window.print()">
+            <span>🖨️ Print Pass</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Video Modal ("Watch Video")
+       ======================================================================== -->
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-card video-card">
+      <button type="button" class="modal-close-btn close-modal-trigger" aria-label="Close modal">×</button>
+      <div class="video-container">
+        <iframe id="storyVideoIframe" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?enablejsapi=1" title="Hero Hospital Story Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

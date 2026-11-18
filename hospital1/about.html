@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Hero Hospital - 28 Years of Clinical Distinction</title>
+  <meta name="description" content="Learn about Hero Hospital's 28-year medical heritage, visionary leadership, world-class surgical standards, and relentless dedication to human-centric healing.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main & Inner Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="inner-pages.css">
+</head>
+<body>
+
+  <!-- Top Scroll Reading Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- ========================================================================
+       Left Floating Navigation Dock
+       ======================================================================== -->
+  <aside class="side-nav-dock" aria-label="Quick Navigation">
+    <div class="dock-inner">
+      <a href="index.html" class="dock-logo" title="Hero Hospital Home">
+        <svg class="dock-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="10" fill="#0B192C"/>
+          <path d="M11 10V30M29 10V30" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M9 20C17 17 23 23 31 20" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="3" fill="#FF6B35"/>
+        </svg>
+      </a>
+
+      <nav class="dock-menu">
+        <a href="index.html" class="dock-item" data-tooltip="Home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span class="dock-tooltip">Home</span>
+        </a>
+
+        <a href="about.html" class="dock-item active" data-tooltip="About Us">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span class="dock-tooltip">About Us</span>
+        </a>
+
+        <a href="specialties.html" class="dock-item" data-tooltip="Specialties">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span class="dock-tooltip">Specialties</span>
+        </a>
+
+        <a href="doctors.html" class="dock-item" data-tooltip="Doctors">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path>
+            <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path>
+            <circle cx="20" cy="10" r="2"></circle>
+          </svg>
+          <span class="dock-tooltip">Doctors</span>
+        </a>
+
+        <a href="facilities.html" class="dock-item" data-tooltip="Facilities">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <span class="dock-tooltip">Facilities</span>
+        </a>
+
+        <a href="contact.html" class="dock-item" data-tooltip="Contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="dock-tooltip">Contact</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Top Navigation Bar
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="nav-left">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-mark">
+            <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="11" fill="#0B192C"/>
+              <path d="M12 11V33M32 11V33" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round"/>
+              <path d="M10 22C18 19 26 25 34 22" stroke="#FF6B35" stroke-width="3.8" stroke-linecap="round"/>
+              <circle cx="22" cy="22" r="3.2" fill="#FF6B35"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">Hero Hospital</span>
+            <span class="logo-tagline">CARE • CURE • COMPASSION</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="nav-center">
+        <ul class="nav-links-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About Us</a></li>
+          <li class="nav-dropdown-item">
+            <a href="specialties.html" class="nav-link">Specialties <span class="caret">▾</span></a>
+            <ul class="nav-dropdown-sub">
+              <li><a href="specialties.html#cardiology">❤️ Cardiology</a></li>
+              <li><a href="specialties.html#neurology">🧠 Neurology</a></li>
+              <li><a href="specialties.html#orthopaedics">🦴 Orthopaedics</a></li>
+              <li><a href="specialties.html#maternity">👶 Maternity &amp; Gynaecology</a></li>
+              <li><a href="specialties.html#oncology">🎗️ Oncology</a></li>
+            </ul>
+          </li>
+          <li><a href="doctors.html" class="nav-link">Doctors</a></li>
+          <li><a href="facilities.html" class="nav-link">Facilities</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="mobile-drawer-actions">
+          <a href="tel:+911204567890" class="drawer-call-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>24/7 Helpline: +91 120 456 7890</span>
+          </a>
+          <button type="button" class="btn-orange-primary trigger-booking" style="width: 100%; justify-content: center; padding: 13px 20px;">
+            <span>Book Appointment Now</span>
+            <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div class="nav-right">
+        <a href="tel:+911204567890" class="phone-chip">
+          <svg class="phone-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="phone-chip-number">+91 120 456 7890</span>
+        </a>
+
+        <button type="button" class="btn-orange-primary trigger-booking nav-book-btn">
+          <span>Book Appointment</span>
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+
+        <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Main Content Container
+       ======================================================================== -->
+  <main class="page-wrapper">
+
+    <!-- Unique Hero Banner with Split Visual & Stats Ribbon -->
+    <section class="inner-hero-section">
+      <div class="inner-hero-container">
+        <div class="inner-breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <span class="current">About Us</span>
+        </div>
+
+        <div class="about-hero-grid">
+          <div class="about-hero-text">
+            <div class="inner-hero-tag">
+              <span class="tag-dot"></span>
+              <span>28 YEARS OF CLINICAL DISTINCTION</span>
+            </div>
+
+            <h1 class="inner-hero-title">
+              Pioneering Modern Medicine, <br>
+              <span class="text-orange-gradient">Rooted in Empathy</span>
+            </h1>
+
+            <p class="inner-hero-desc">
+              Founded in 1998 with an unwavering vow to place patients above all else, Hero Hospital has evolved into India's premier 750-bed multi-super-speciality sanctuary. We harmonize cutting-edge surgical robotics with heartfelt warmth.
+            </p>
+
+            <div class="about-hero-stat-strip">
+              <div class="about-hero-stat-item">
+                <div class="stat-num">99.4<span class="stat-plus">%</span></div>
+                <div class="stat-lbl">Surgical Success Benchmark</div>
+              </div>
+              <div class="about-hero-stat-item">
+                <div class="stat-num">600K<span class="stat-plus">+</span></div>
+                <div class="stat-lbl">Healed Patient Lives</div>
+              </div>
+              <div class="about-hero-stat-item">
+                <div class="stat-num">450<span class="stat-plus">+</span></div>
+                <div class="stat-lbl">Super-Specialist Faculty</div>
+              </div>
+              <div class="about-hero-stat-item">
+                <div class="stat-num">18<span class="stat-plus">+</span></div>
+                <div class="stat-lbl">Robotic &amp; Modular OTs</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-hero-visual">
+            <div class="about-visual-frame">
+              <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=1200&q=80" alt="Hero Hospital Medical Campus" class="about-visual-img">
+            </div>
+            <div class="about-floating-quote-card">
+              <img src="assets/doctor-rajiv.jpg" alt="Dr. Rajiv Mehta" class="quote-avatar">
+              <div class="quote-content">
+                <div class="quote-text">"Medical science can restore the body, but only genuine empathy can heal the human spirit."</div>
+                <div class="quote-author">Dr. Rajiv Mehta — Chief Medical Officer &amp; Founder</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Guiding Pillars & Core Values -->
+    <section class="pillars-section">
+      <div class="section-head-center">
+        <span class="sub-label">OUR FOUNDATIONAL VALUES</span>
+        <h2 class="main-title">The Four Pillars that Guide Every Pulse and Procedure</h2>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <h3 class="pillar-title">Patient-First Ethics</h3>
+          <p class="pillar-desc">
+            No redundant tests, zero unnecessary surgeries, and transparent clinical counseling for families at every turn of diagnosis.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="pillar-title">Robotic Precision</h3>
+          <p class="pillar-desc">
+            Integrating 4th Gen Da Vinci Xi surgical robotics and AI-augmented radiology to turn invasive procedures into pinhole recoveries.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3 class="pillar-title">Infection-Free Safety</h3>
+          <p class="pillar-desc">
+            Adhering to strict positive-pressure laminar airflow OTs, automated UV-C disinfection, and zero-tolerance sepsis protocols.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+          </div>
+          <h3 class="pillar-title">Rapid Golden Hour</h3>
+          <p class="pillar-desc">
+            Guaranteed under-4-minute emergency response time with dedicated 24/7 Level-1 trauma, stroke, and STEMI cardiac alert teams.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Heritage Timeline Journey -->
+    <section class="heritage-timeline-section">
+      <div class="section-head-center">
+        <span class="sub-label">OUR 28-YEAR HERITAGE</span>
+        <h2 class="main-title">From a 50-Bed Clinic to a National Benchmark of Excellence</h2>
+      </div>
+
+      <div class="heritage-timeline">
+        <!-- Node 1 -->
+        <div class="timeline-node left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year-badge">1998</span>
+            <h3 class="timeline-title">Foundation of Hope</h3>
+            <p class="timeline-text">
+              Inaugurated as a specialized trauma and heart center with 50 beds, bringing modern critical care to the region for the first time.
+            </p>
+          </div>
+        </div>
+
+        <!-- Node 2 -->
+        <div class="timeline-node right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year-badge">2006</span>
+            <h3 class="timeline-title">Pediatric Cardiac Wing</h3>
+            <p class="timeline-text">
+              Established Northern India's first dedicated pediatric cardiovascular surgery unit, providing over 1,200 free surgeries for underprivileged children.
+            </p>
+          </div>
+        </div>
+
+        <!-- Node 3 -->
+        <div class="timeline-node left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year-badge">2014</span>
+            <h3 class="timeline-title">JCI Gold Seal Certification</h3>
+            <p class="timeline-text">
+              Awarded prestigious Joint Commission International (JCI) accreditation, validating global standards of patient safety and clinical clinical outcomes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Node 4 -->
+        <div class="timeline-node right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year-badge">2019</span>
+            <h3 class="timeline-title">Robotic Surgery &amp; Organ Transplant</h3>
+            <p class="timeline-text">
+              Commissioned the Da Vinci Xi 4th Gen robotic theatre suite alongside a state-of-the-art multi-organ transplant institute (Liver, Kidney, Cornea).
+            </p>
+          </div>
+        </div>
+
+        <!-- Node 5 -->
+        <div class="timeline-node left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year-badge">2023</span>
+            <h3 class="timeline-title">AI Diagnostic Hub &amp; Green Campus</h3>
+            <p class="timeline-text">
+              Integrated real-time AI radiology assistance with 3.0T silent MRI, earning LEED Platinum Green Hospital recognition.
+            </p>
+          </div>
+        </div>
+
+        <!-- Node 6 -->
+        <div class="timeline-node right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year-badge">2026 &amp; Beyond</span>
+            <h3 class="timeline-title">Quaternary Smart Healthcare</h3>
+            <p class="timeline-text">
+              Expanding to 750 smart hospital suites with automated medicine delivery, telehealth second opinions, and genomic precision medicine.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Governing Medical Council & Leadership -->
+    <section class="leadership-section">
+      <div class="section-head-center">
+        <span class="sub-label">GOVERNING MEDICAL COUNCIL</span>
+        <h2 class="main-title">Eminent Clinicians Guiding Clinical Innovation</h2>
+      </div>
+
+      <div class="leadership-grid">
+        <!-- Leader 1 -->
+        <div class="leader-card">
+          <div class="leader-img-wrap">
+            <img src="assets/doctor-rajiv.jpg" alt="Dr. Rajiv Mehta" class="leader-img">
+            <span class="leader-badge">Chief Medical Officer</span>
+          </div>
+          <div class="leader-info">
+            <h3 class="leader-name">Dr. Rajiv Mehta</h3>
+            <div class="leader-role">Director of Interventional Cardiology</div>
+            <div class="leader-creds">MBBS, MD, DM (Cardiology, AIIMS), Fellow of American College of Cardiology (FACC)</div>
+            <div class="leader-stats-row">
+              <span>Experience: <strong>26+ Years</strong></span>
+              <span>Procedures: <strong>14,000+</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leader 2 -->
+        <div class="leader-card">
+          <div class="leader-img-wrap">
+            <img src="assets/doctor-neha.jpg" alt="Dr. Neha Sharma" class="leader-img">
+            <span class="leader-badge">Chief of Neurosciences</span>
+          </div>
+          <div class="leader-info">
+            <h3 class="leader-name">Dr. Neha Sharma</h3>
+            <div class="leader-role">Head of Brain &amp; Spine Micro-Surgery</div>
+            <div class="leader-creds">MBBS, M.Ch (Neurosurgery), Fellowship in Robotic Spine Surgery (Johns Hopkins)</div>
+            <div class="leader-stats-row">
+              <span>Experience: <strong>21+ Years</strong></span>
+              <span>Brain Surgeries: <strong>6,200+</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leader 3 -->
+        <div class="leader-card">
+          <div class="leader-img-wrap">
+            <img src="assets/doctor-arjun.jpg" alt="Dr. Arjun Singh" class="leader-img">
+            <span class="leader-badge">Head of Orthopaedics</span>
+          </div>
+          <div class="leader-info">
+            <h3 class="leader-name">Dr. Arjun Singh</h3>
+            <div class="leader-role">Pioneer in MAKO Robotic Knee Replacement</div>
+            <div class="leader-creds">MBBS, MS (Ortho), Fellowship in Joint Reconstruction (Oxford, UK)</div>
+            <div class="leader-stats-row">
+              <span>Experience: <strong>19+ Years</strong></span>
+              <span>Replacements: <strong>8,900+</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leader 4 -->
+        <div class="leader-card">
+          <div class="leader-img-wrap">
+            <img src="assets/doctor-priya.jpg" alt="Dr. Priya Verma" class="leader-img">
+            <span class="leader-badge">Head of Women &amp; Child</span>
+          </div>
+          <div class="leader-info">
+            <h3 class="leader-name">Dr. Priya Verma</h3>
+            <div class="leader-role">Director of High-Risk Obstetrics &amp; IVF</div>
+            <div class="leader-creds">MBBS, MD (Obs &amp; Gynae), FRCOG (London), Diploma in Reproductive Medicine (Germany)</div>
+            <div class="leader-stats-row">
+              <span>Experience: <strong>18+ Years</strong></span>
+              <span>Safe Deliveries: <strong>9,500+</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Social Responsibility & Healing Hands Foundation -->
+    <section class="hospital-highlight-banner about-community-section">
+      <div class="about-community-grid">
+        <div class="about-community-content">
+          <span class="community-tag">COMMUNITY HEALING</span>
+          <h2 class="community-title">
+            Healing Hands Foundation: <br><span class="text-orange-gradient">Care Beyond Boundaries</span>
+          </h2>
+          <p class="community-desc">
+            We believe that life-saving healthcare is a fundamental human right. Through the Hero Healing Hands Foundation, our clinical specialists conduct weekly rural health camps, supply life-saving medications, and sponsor complex congenital surgeries for children in need.
+          </p>
+          <div class="community-cta-row">
+            <button type="button" class="btn-orange-primary trigger-booking">
+              <span>Support Mission / Consult</span>
+              <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+            <a href="contact.html" class="btn-glass-play">
+              <span>Visit Our Campus</span>
+            </a>
+          </div>
+        </div>
+        <div class="about-community-media">
+          <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" alt="Healing Hands Community Outreach" class="about-community-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Footer
+         ====================================================================== -->
+    <footer class="site-footer" id="contact">
+      <div class="footer-container">
+        <div class="footer-top-grid">
+          <div class="footer-col brand-col">
+            <div class="footer-logo">
+              <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="44" height="44" rx="11" fill="#0B192C"/>
+                <path d="M12 11V33M32 11V33" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round"/>
+                <path d="M10 22C18 19 26 25 34 22" stroke="#FF6B35" stroke-width="3.8" stroke-linecap="round"/>
+                <circle cx="22" cy="22" r="3.2" fill="#FF6B35"/>
+              </svg>
+              <div class="logo-text">
+                <span class="logo-title text-white">Hero Hospital</span>
+                <span class="logo-tagline text-slate">CARE • CURE • COMPASSION</span>
+              </div>
+            </div>
+            <p class="footer-desc">
+              Hero Hospital is committed to delivering world-class, affordable, and compassionate medical care empowered by cutting-edge medical science.
+            </p>
+            <div class="footer-accredit-badges">
+              <span class="accredit-tag">NABH Accredited</span>
+              <span class="accredit-tag">JCI Certified</span>
+              <span class="accredit-tag">ISO 9001:2015</span>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Hero Hospital</a></li>
+              <li><a href="specialties.html">Centers of Excellence</a></li>
+              <li><a href="doctors.html">Meet Our Doctors</a></li>
+              <li><a href="facilities.html">Infrastructure &amp; Rooms</a></li>
+              <li><a href="contact.html">Contact &amp; Emergency</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Departments</h4>
+            <ul class="footer-links">
+              <li><a href="specialties.html#cardiology">Cardiology &amp; Cardiac Surgery</a></li>
+              <li><a href="specialties.html#neurology">Neurology &amp; Neurosurgery</a></li>
+              <li><a href="specialties.html#orthopaedics">Orthopaedics &amp; Joint Replacement</a></li>
+              <li><a href="specialties.html#maternity">Maternity, Gynaecology &amp; IVF</a></li>
+              <li><a href="specialties.html#oncology">Oncology &amp; Radiation Care</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">24/7 Helpline</h4>
+            <div class="emergency-contact-box">
+              <div class="emergency-label">EMERGENCY HOTLINE</div>
+              <a href="tel:+911204567890" class="emergency-number">+91 120 456 7890</a>
+              <div class="emergency-sub">Ambulance &amp; Critical Care available 24/7</div>
+            </div>
+            <div class="footer-address">
+              📍 Sector 62, Institutional Area, Noida, Uttar Pradesh 201309
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div class="footer-copy">
+            © 2026 Hero Hospital. All rights reserved. Designed for Excellence in Healthcare.
+          </div>
+          <div class="footer-credit">
+            Hero Hospital | Made with <span class="footer-heart" style="color: #ff3344; display: inline-block; margin: 0 2px;">❤️</span> by <a href="https://regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a>
+          </div>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <span>•</span>
+            <a href="#">Terms of Care</a>
+            <span>•</span>
+            <a href="#">Patient Rights</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Appointment Booking Modal -->
+  <div class="modal-overlay" id="appointmentModal">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn close-modal-trigger" aria-label="Close modal">×</button>
+      <div class="modal-header">
+        <span class="modal-eyebrow">FAST-TRACK APPOINTMENT PASS</span>
+        <h3 class="modal-title">Schedule Your Consultation</h3>
+        <p class="modal-desc">Book with world-class specialists in less than 60 seconds.</p>
+      </div>
+
+      <form id="mainBookingForm" class="booking-modal-form">
+        <div class="form-grid">
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDeptSelect">Department</label>
+            <div class="custom-select-wrap">
+              <select id="dialogDeptSelect" name="department" class="custom-select" required>
+                <option value="" disabled selected>Select Medical Specialty</option>
+                <option value="Cardiology">Cardiology &amp; Heart Care</option>
+                <option value="Neurology">Neurology &amp; Brain Care</option>
+                <option value="Orthopaedics">Orthopaedics &amp; Joint Surgery</option>
+                <option value="Maternity">Maternity &amp; Gynaecology</option>
+                <option value="Oncology">Oncology &amp; Cancer Care</option>
+                <option value="General">General Consultation</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDocSelect">Doctor (Optional)</label>
+            <div class="custom-select-wrap">
+              <select id="dialogDocSelect" name="doctor" class="custom-select">
+                <option value="" disabled selected>Select Specialist</option>
+                <option value="Dr. Rajiv Mehta (Cardiology)">Dr. Rajiv Mehta (Cardiologist)</option>
+                <option value="Dr. Neha Sharma (Neurology)">Dr. Neha Sharma (Neurologist)</option>
+                <option value="Dr. Arjun Singh (Orthopaedics)">Dr. Arjun Singh (Orthopaedic Surgeon)</option>
+                <option value="Dr. Priya Verma (Gynaecology)">Dr. Priya Verma (Gynaecologist)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDateInput">Date</label>
+            <input type="date" id="dialogDateInput" name="date" class="custom-input" required>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label">Preferred Time Slot</label>
+            <div class="time-chips-container">
+              <button type="button" class="time-slot-chip active" data-time="09:30 AM">09:30 AM</button>
+              <button type="button" class="time-slot-chip" data-time="11:00 AM">11:00 AM</button>
+              <button type="button" class="time-slot-chip" data-time="02:30 PM">02:30 PM</button>
+              <button type="button" class="time-slot-chip" data-time="04:00 PM">04:00 PM</button>
+              <input type="hidden" name="time" id="dialogTimeInput" value="09:30 AM">
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogPatientName">Patient Name</label>
+            <input type="text" id="dialogPatientName" name="patient_name" class="custom-input" placeholder="Full Name" required>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogPatientPhone">Phone Number</label>
+            <input type="tel" id="dialogPatientPhone" name="patient_phone" class="custom-input" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-orange-primary btn-full-width">
+          <span>Confirm &amp; Generate Appointment Pass</span>
+          <span class="btn-arrow">➔</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="appointmentSuccessModal">
+    <div class="modal-card ticket-card">
+      <button type="button" class="modal-close-btn close-modal-trigger" aria-label="Close modal">×</button>
+      <div class="ticket-header">
+        <div class="ticket-check-circle">✓</div>
+        <h3 class="ticket-title">Appointment Confirmed!</h3>
+        <p class="ticket-subtitle">Your appointment ticket pass has been generated.</p>
+      </div>
+
+      <div class="appointment-ticket">
+        <div class="ticket-top">
+          <div class="ticket-brand">
+            <span class="ticket-logo-h">H</span>
+            <span>Hero Hospital Official Pass</span>
+          </div>
+          <div class="ticket-id-tag" id="ticketId">HH-849201</div>
+        </div>
+
+        <div class="ticket-grid">
+          <div class="ticket-item">
+            <span class="ticket-label">Department</span>
+            <span class="ticket-val" id="ticketDept">Cardiology</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Doctor</span>
+            <span class="ticket-val" id="ticketDoc">Dr. Rajiv Mehta</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Date</span>
+            <span class="ticket-val" id="ticketDate">Tomorrow</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Time Slot</span>
+            <span class="ticket-val" id="ticketTime">09:30 AM</span>
+          </div>
+          <div class="ticket-item ticket-item-full">
+            <span class="ticket-label">Patient Name</span>
+            <span class="ticket-val" id="ticketPatient">Guest Patient</span>
+          </div>
+        </div>
+
+        <div class="ticket-perforated-line"></div>
+
+        <div class="ticket-bottom">
+          <div class="ticket-notice">
+            <small>Please present this digital pass at the Reception Desk upon arrival.</small>
+          </div>
+          <button type="button" class="btn-print-ticket" onclick="window.print()">
+            <span>🖨️ Print Pass</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

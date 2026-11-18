@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specialties &amp; Centers of Excellence | Hero Hospital</title>
+  <meta name="description" content="Explore our clinical centers of excellence: Robotic Cardiac Surgery, Neurosciences, Orthopaedics, Comprehensive Oncology, Maternity, and Organ Transplants.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main & Inner Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="inner-pages.css">
+</head>
+<body>
+
+  <!-- Top Scroll Reading Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Left Floating Navigation Dock -->
+  <aside class="side-nav-dock" aria-label="Quick Navigation">
+    <div class="dock-inner">
+      <a href="index.html" class="dock-logo" title="Hero Hospital Home">
+        <svg class="dock-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="10" fill="#0B192C"/>
+          <path d="M11 10V30M29 10V30" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M9 20C17 17 23 23 31 20" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="3" fill="#FF6B35"/>
+        </svg>
+      </a>
+
+      <nav class="dock-menu">
+        <a href="index.html" class="dock-item" data-tooltip="Home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span class="dock-tooltip">Home</span>
+        </a>
+
+        <a href="about.html" class="dock-item" data-tooltip="About Us">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span class="dock-tooltip">About Us</span>
+        </a>
+
+        <a href="specialties.html" class="dock-item active" data-tooltip="Specialties">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span class="dock-tooltip">Specialties</span>
+        </a>
+
+        <a href="doctors.html" class="dock-item" data-tooltip="Doctors">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path>
+            <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path>
+            <circle cx="20" cy="10" r="2"></circle>
+          </svg>
+          <span class="dock-tooltip">Doctors</span>
+        </a>
+
+        <a href="facilities.html" class="dock-item" data-tooltip="Facilities">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <span class="dock-tooltip">Facilities</span>
+        </a>
+
+        <a href="contact.html" class="dock-item" data-tooltip="Contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="dock-tooltip">Contact</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Top Navigation Bar -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="nav-left">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-mark">
+            <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="11" fill="#0B192C"/>
+              <path d="M12 11V33M32 11V33" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round"/>
+              <path d="M10 22C18 19 26 25 34 22" stroke="#FF6B35" stroke-width="3.8" stroke-linecap="round"/>
+              <circle cx="22" cy="22" r="3.2" fill="#FF6B35"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">Hero Hospital</span>
+            <span class="logo-tagline">CARE • CURE • COMPASSION</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="nav-center">
+        <ul class="nav-links-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-dropdown-item">
+            <a href="specialties.html" class="nav-link active">Specialties <span class="caret">▾</span></a>
+            <ul class="nav-dropdown-sub">
+              <li><a href="specialties.html#cardiology">❤️ Cardiology</a></li>
+              <li><a href="specialties.html#neurology">🧠 Neurology</a></li>
+              <li><a href="specialties.html#orthopaedics">🦴 Orthopaedics</a></li>
+              <li><a href="specialties.html#maternity">👶 Maternity &amp; Gynaecology</a></li>
+              <li><a href="specialties.html#oncology">🎗️ Oncology</a></li>
+            </ul>
+          </li>
+          <li><a href="doctors.html" class="nav-link">Doctors</a></li>
+          <li><a href="facilities.html" class="nav-link">Facilities</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="mobile-drawer-actions">
+          <a href="tel:+911204567890" class="drawer-call-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>24/7 Helpline: +91 120 456 7890</span>
+          </a>
+          <button type="button" class="btn-orange-primary trigger-booking" style="width: 100%; justify-content: center; padding: 13px 20px;">
+            <span>Book Appointment Now</span>
+            <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div class="nav-right">
+        <a href="tel:+911204567890" class="phone-chip">
+          <svg class="phone-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="phone-chip-number">+91 120 456 7890</span>
+        </a>
+
+        <button type="button" class="btn-orange-primary trigger-booking nav-book-btn">
+          <span>Book Appointment</span>
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+
+        <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="page-wrapper">
+
+    <!-- Unique Asymmetrical Hero with Interactive Search & Filter Hub -->
+    <section class="inner-hero-section">
+      <div class="inner-hero-container">
+        <div class="inner-breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <span class="current">Specialties &amp; Centers of Excellence</span>
+        </div>
+
+        <div class="inner-hero-tag">
+          <span class="tag-dot"></span>
+          <span>CLINICAL EXCELLENCE DIRECTORY</span>
+        </div>
+
+        <h1 class="inner-hero-title">
+          World-Class Specialties &amp; <br>
+          <span class="text-orange-gradient">Centers of Clinical Mastery</span>
+        </h1>
+
+        <p class="inner-hero-desc">
+          From minimally invasive robotic bypasses to complex neonatal microsurgery, our 12 multidisciplinary institutes are staffed by globally recognized surgeons utilizing 4th Gen Da Vinci robotics and AI-powered diagnostic suites.
+        </p>
+
+        <!-- Interactive Search & Live Pills -->
+        <div class="specialties-hero-search-box">
+          <div class="specialties-search-input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="specSearchInput" class="specialties-search-input" placeholder="Search treatment, symptom or procedure (e.g. TAVI, Robotic Knee, Tumor Board)...">
+          </div>
+
+          <div class="specialty-quick-pills">
+            <span class="spec-filter-pill active" data-filter="all">All Specialties</span>
+            <span class="spec-filter-pill" data-filter="cardiology">Cardiology</span>
+            <span class="spec-filter-pill" data-filter="neurology">Neurology</span>
+            <span class="spec-filter-pill" data-filter="orthopaedics">Orthopaedics</span>
+            <span class="spec-filter-pill" data-filter="oncology">Oncology</span>
+            <span class="spec-filter-pill" data-filter="maternity">Maternity &amp; IVF</span>
+            <span class="spec-filter-pill" data-filter="transplant">Organ Transplant</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unique Bento Grid of Flagship Centers of Excellence -->
+    <section class="specialties-bento-section">
+      <div class="bento-grid">
+
+        <!-- Bento Card 1: Cardiology (Span 8 - Dark Flagship) -->
+        <div class="bento-card bento-span-8 bento-card-bg-dark" id="cardiology" data-dept="cardiology">
+          <div>
+            <div class="bento-header">
+              <div class="bento-icon-circle">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </div>
+              <span class="bento-badge">JCI Center of Excellence</span>
+            </div>
+
+            <div class="bento-media-split">
+              <div>
+                <h3 class="bento-title">Institute of Cardiac Sciences &amp; Robotic Heart Surgery</h3>
+                <p class="bento-desc">
+                  Ranked among India's top cardiology institutes with over 14,000 successful interventions. Equipped with dual Biplane Hybrid Cath Labs for non-surgical valve replacements and emergency primary angioplasties under 45 minutes.
+                </p>
+                <div class="bento-tags">
+                  <span class="bento-tag">TAVI / TAVR</span>
+                  <span class="bento-tag">Minimally Invasive CABG</span>
+                  <span class="bento-tag">3D Electrophysiology</span>
+                  <span class="bento-tag">Heart Failure Clinic</span>
+                </div>
+              </div>
+              <div>
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Cardiology Hybrid Cath Lab" class="bento-img-preview">
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-footer">
+            <span style="font-size:0.88rem; color:#94A3B8;">Lead Surgeon: <strong>Dr. Rajiv Mehta</strong> (26+ Yrs Exp)</span>
+            <button type="button" class="btn-orange-primary trigger-booking" style="padding: 9px 18px; font-size: 0.85rem;">
+              <span>Consult Cardiologist</span>
+              <span class="btn-arrow">➔</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bento Card 2: Neurology (Span 4) -->
+        <div class="bento-card bento-span-4" id="neurology" data-dept="neurology">
+          <div>
+            <div class="bento-header">
+              <div class="bento-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+                  <path d="M12 2a4 4 0 0 0-4 4v2a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"></path>
+                  <path d="M6 10a6 6 0 0 0 12 0"></path>
+                  <line x1="12" y1="16" x2="12" y2="22"></line>
+                </svg>
+              </div>
+              <span class="bento-badge">24/7 Stroke Alert</span>
+            </div>
+
+            <h3 class="bento-title">Institute of Neurosciences &amp; Spine Surgery</h3>
+            <p class="bento-desc">
+              Dedicated 4.5-hour golden window stroke rescue unit, stealth neuro-navigation, and pinhole microscopic cranial tumor resections.
+            </p>
+            <div class="bento-tags">
+              <span class="bento-tag">Stroke Thrombolysis</span>
+              <span class="bento-tag">Deep Brain Stimulation</span>
+              <span class="bento-tag">Endoscopic Spine</span>
+            </div>
+          </div>
+
+          <div class="bento-footer">
+            <button type="button" class="bento-btn-link trigger-booking">
+              <span>Book Neuro Consult</span>
+              <span>➔</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bento Card 3: Orthopaedics (Span 4) -->
+        <div class="bento-card bento-span-4" id="orthopaedics" data-dept="orthopaedics">
+          <div>
+            <div class="bento-header">
+              <div class="bento-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+                  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                  <path d="M9 12h6"></path>
+                  <path d="M12 9v6"></path>
+                </svg>
+              </div>
+              <span class="bento-badge">MAKO Robotics</span>
+            </div>
+
+            <h3 class="bento-title">Robotic Orthopaedics &amp; Joint Reconstruction</h3>
+            <p class="bento-desc">
+              Precision knee and hip arthroplasty with sub-millimeter robotic accuracy, leading to same-day weight bearing and half the recovery time.
+            </p>
+            <div class="bento-tags">
+              <span class="bento-tag">Robotic Knee Replacement</span>
+              <span class="bento-tag">Sports Arthroscopy</span>
+              <span class="bento-tag">Pelvic Trauma</span>
+            </div>
+          </div>
+
+          <div class="bento-footer">
+            <button type="button" class="bento-btn-link trigger-booking">
+              <span>Book Ortho Consult</span>
+              <span>➔</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bento Card 4: Oncology (Span 8) -->
+        <div class="bento-card bento-span-8" id="oncology" data-dept="oncology">
+          <div>
+            <div class="bento-header">
+              <div class="bento-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                  <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                  <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                </svg>
+              </div>
+              <span class="bento-badge">Multidisciplinary Tumor Board</span>
+            </div>
+
+            <div class="bento-media-split">
+              <div>
+                <h3 class="bento-title">Comprehensive Cancer Institute &amp; Precision Oncology</h3>
+                <p class="bento-desc">
+                  Providing complete personalized cancer care from genomic profiling and TrueBeam linear accelerator radiation to immunotherapy and sterile bone marrow transplantation.
+                </p>
+                <div class="bento-tags">
+                  <span class="bento-tag">TrueBeam Radiotherapy</span>
+                  <span class="bento-tag">Targeted Immunotherapy</span>
+                  <span class="bento-tag">HIPEC Surgery</span>
+                  <span class="bento-tag">Bone Marrow Transplant</span>
+                </div>
+              </div>
+              <div>
+                <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" alt="Cancer Diagnostics Hub" class="bento-img-preview">
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-footer">
+            <span style="font-size:0.88rem; color:#64748B;">Weekly Tumor Board: 14 Specialists Collaborating on Every Case</span>
+            <button type="button" class="btn-orange-primary trigger-booking" style="padding: 9px 18px; font-size: 0.85rem;">
+              <span>Second Opinion / Consult</span>
+              <span class="btn-arrow">➔</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bento Card 5: Maternity (Span 6) -->
+        <div class="bento-card bento-span-6" id="maternity" data-dept="maternity">
+          <div>
+            <div class="bento-header">
+              <div class="bento-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </div>
+              <span class="bento-badge">Level-III NICU Care</span>
+            </div>
+
+            <h3 class="bento-title">Maternity, Neonatal Care &amp; IVF Center</h3>
+            <p class="bento-desc">
+              Holistic birth suites offering painless labor analgesia, fetal medicine, advanced fertility treatments (ICSI/IVF), and 24/7 dedicated neonatal intensive care for premature infants.
+            </p>
+            <div class="bento-tags">
+              <span class="bento-tag">Luxury LDR Suites</span>
+              <span class="bento-tag">Fetal Echocardiography</span>
+              <span class="bento-tag">Advanced IVF Lab</span>
+            </div>
+          </div>
+
+          <div class="bento-footer">
+            <button type="button" class="bento-btn-link trigger-booking">
+              <span>Consult Maternity Specialist</span>
+              <span>➔</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bento Card 6: Organ Transplant (Span 6) -->
+        <div class="bento-card bento-span-6" id="transplant" data-dept="transplant">
+          <div>
+            <div class="bento-header">
+              <div class="bento-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <span class="bento-badge">NOTTO Licensed Institute</span>
+            </div>
+
+            <h3 class="bento-title">Organ Transplant &amp; Hepato-Biliary Center</h3>
+            <p class="bento-desc">
+              Pioneering living donor liver and kidney transplant surgery backed by 100% HEPA-filtered positive pressure ICU suites to ensure zero postoperative cross-infection.
+            </p>
+            <div class="bento-tags">
+              <span class="bento-tag">Living Donor Liver</span>
+              <span class="bento-tag">ABO-Incompatible Kidney</span>
+              <span class="bento-tag">Dedicated Isolation ICU</span>
+            </div>
+          </div>
+
+          <div class="bento-footer">
+            <button type="button" class="bento-btn-link trigger-booking">
+              <span>Transplant Coordinator Consult</span>
+              <span>➔</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section: 4-Step Clinical Care Journey -->
+    <section class="care-journey-section">
+      <div class="section-head-center">
+        <span class="sub-label">THE HERO CLINICAL PROTOCOL</span>
+        <h2 class="main-title">How We Coordinate Your Recovery Pathway</h2>
+      </div>
+
+      <div class="journey-steps-grid">
+        <div class="journey-step-card">
+          <div class="step-num-bubble">01</div>
+          <h3 class="journey-step-title">Rapid Digital Triage</h3>
+          <p class="journey-step-desc">
+            Same-day advanced imaging on 3.0T MRI or 128-Slice CT with verified digital lab reports delivered straight to your patient app.
+          </p>
+        </div>
+
+        <div class="journey-step-card">
+          <div class="step-num-bubble">02</div>
+          <h3 class="journey-step-title">Multidisciplinary Review</h3>
+          <p class="journey-step-desc">
+            Senior consultants, radiologists, and anesthetists analyze complex cases collectively to determine the safest clinical approach.
+          </p>
+        </div>
+
+        <div class="journey-step-card">
+          <div class="step-num-bubble">03</div>
+          <h3 class="journey-step-title">Robotic / Pinhole Surgery</h3>
+          <p class="journey-step-desc">
+            Surgeries executed in ultra-sterile laminar OTs using Da Vinci Xi robotics, cutting blood loss and postoperative pain by over 60%.
+          </p>
+        </div>
+
+        <div class="journey-step-card">
+          <div class="step-num-bubble">04</div>
+          <h3 class="journey-step-title">Enhanced Recovery &amp; Rehab</h3>
+          <p class="journey-step-desc">
+            Personalized physiotherapy, nutritional counseling, and post-discharge telehealth visits ensuring you return swiftly to normal life.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top-grid">
+          <div class="footer-col brand-col">
+            <div class="footer-logo">
+              <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="44" height="44" rx="11" fill="#0B192C"/>
+                <path d="M12 11V33M32 11V33" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round"/>
+                <path d="M10 22C18 19 26 25 34 22" stroke="#FF6B35" stroke-width="3.8" stroke-linecap="round"/>
+                <circle cx="22" cy="22" r="3.2" fill="#FF6B35"/>
+              </svg>
+              <div class="logo-text">
+                <span class="logo-title text-white">Hero Hospital</span>
+                <span class="logo-tagline text-slate">CARE • CURE • COMPASSION</span>
+              </div>
+            </div>
+            <p class="footer-desc">
+              Hero Hospital is committed to delivering world-class, affordable, and compassionate medical care empowered by cutting-edge medical science.
+            </p>
+            <div class="footer-accredit-badges">
+              <span class="accredit-tag">NABH Accredited</span>
+              <span class="accredit-tag">JCI Certified</span>
+              <span class="accredit-tag">ISO 9001:2015</span>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Hero Hospital</a></li>
+              <li><a href="specialties.html">Centers of Excellence</a></li>
+              <li><a href="doctors.html">Meet Our Doctors</a></li>
+              <li><a href="facilities.html">Infrastructure &amp; Rooms</a></li>
+              <li><a href="contact.html">Contact &amp; Emergency</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Departments</h4>
+            <ul class="footer-links">
+              <li><a href="specialties.html#cardiology">Cardiology &amp; Cardiac Surgery</a></li>
+              <li><a href="specialties.html#neurology">Neurology &amp; Neurosurgery</a></li>
+              <li><a href="specialties.html#orthopaedics">Orthopaedics &amp; Joint Replacement</a></li>
+              <li><a href="specialties.html#maternity">Maternity, Gynaecology &amp; IVF</a></li>
+              <li><a href="specialties.html#oncology">Oncology &amp; Radiation Care</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">24/7 Helpline</h4>
+            <div class="emergency-contact-box">
+              <div class="emergency-label">EMERGENCY HOTLINE</div>
+              <a href="tel:+911204567890" class="emergency-number">+91 120 456 7890</a>
+              <div class="emergency-sub">Ambulance &amp; Critical Care available 24/7</div>
+            </div>
+            <div class="footer-address">
+              📍 Sector 62, Institutional Area, Noida, Uttar Pradesh 201309
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div class="footer-copy">
+            © 2026 Hero Hospital. All rights reserved. Designed for Excellence in Healthcare.
+          </div>
+          <div class="footer-credit">
+            Hero Hospital | Made with <span class="footer-heart" style="color: #ff3344; display: inline-block; margin: 0 2px;">❤️</span> by <a href="https://regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a>
+          </div>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <span>•</span>
+            <a href="#">Terms of Care</a>
+            <span>•</span>
+            <a href="#">Patient Rights</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Appointment Booking Modal -->
+  <div class="modal-overlay" id="appointmentModal">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn close-modal-trigger" aria-label="Close modal">×</button>
+      <div class="modal-header">
+        <span class="modal-eyebrow">FAST-TRACK APPOINTMENT PASS</span>
+        <h3 class="modal-title">Schedule Your Consultation</h3>
+        <p class="modal-desc">Book with world-class specialists in less than 60 seconds.</p>
+      </div>
+
+      <form id="mainBookingForm" class="booking-modal-form">
+        <div class="form-grid">
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDeptSelect">Department</label>
+            <div class="custom-select-wrap">
+              <select id="dialogDeptSelect" name="department" class="custom-select" required>
+                <option value="" disabled selected>Select Medical Specialty</option>
+                <option value="Cardiology">Cardiology &amp; Heart Care</option>
+                <option value="Neurology">Neurology &amp; Brain Care</option>
+                <option value="Orthopaedics">Orthopaedics &amp; Joint Surgery</option>
+                <option value="Maternity">Maternity &amp; Gynaecology</option>
+                <option value="Oncology">Oncology &amp; Cancer Care</option>
+                <option value="Transplant">Organ Transplant &amp; Hepato-Biliary</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDocSelect">Doctor (Optional)</label>
+            <div class="custom-select-wrap">
+              <select id="dialogDocSelect" name="doctor" class="custom-select">
+                <option value="" disabled selected>Select Specialist</option>
+                <option value="Dr. Rajiv Mehta (Cardiology)">Dr. Rajiv Mehta (Cardiologist)</option>
+                <option value="Dr. Neha Sharma (Neurology)">Dr. Neha Sharma (Neurologist)</option>
+                <option value="Dr. Arjun Singh (Orthopaedics)">Dr. Arjun Singh (Orthopaedic Surgeon)</option>
+                <option value="Dr. Priya Verma (Gynaecology)">Dr. Priya Verma (Gynaecologist)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogDateInput">Date</label>
+            <input type="date" id="dialogDateInput" name="date" class="custom-input" required>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label">Preferred Time Slot</label>
+            <div class="time-chips-container">
+              <button type="button" class="time-slot-chip active" data-time="09:30 AM">09:30 AM</button>
+              <button type="button" class="time-slot-chip" data-time="11:00 AM">11:00 AM</button>
+              <button type="button" class="time-slot-chip" data-time="02:30 PM">02:30 PM</button>
+              <button type="button" class="time-slot-chip" data-time="04:00 PM">04:00 PM</button>
+              <input type="hidden" name="time" id="dialogTimeInput" value="09:30 AM">
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogPatientName">Patient Name</label>
+            <input type="text" id="dialogPatientName" name="patient_name" class="custom-input" placeholder="Full Name" required>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="dialogPatientPhone">Phone Number</label>
+            <input type="tel" id="dialogPatientPhone" name="patient_phone" class="custom-input" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-orange-primary btn-full-width">
+          <span>Confirm &amp; Generate Appointment Pass</span>
+          <span class="btn-arrow">➔</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="appointmentSuccessModal">
+    <div class="modal-card ticket-card">
+      <button type="button" class="modal-close-btn close-modal-trigger" aria-label="Close modal">×</button>
+      <div class="ticket-header">
+        <div class="ticket-check-circle">✓</div>
+        <h3 class="ticket-title">Appointment Confirmed!</h3>
+        <p class="ticket-subtitle">Your appointment ticket pass has been generated.</p>
+      </div>
+
+      <div class="appointment-ticket">
+        <div class="ticket-top">
+          <div class="ticket-brand">
+            <span class="ticket-logo-h">H</span>
+            <span>Hero Hospital Official Pass</span>
+          </div>
+          <div class="ticket-id-tag" id="ticketId">HH-849201</div>
+        </div>
+
+        <div class="ticket-grid">
+          <div class="ticket-item">
+            <span class="ticket-label">Department</span>
+            <span class="ticket-val" id="ticketDept">Cardiology</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Doctor</span>
+            <span class="ticket-val" id="ticketDoc">Dr. Rajiv Mehta</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Date</span>
+            <span class="ticket-val" id="ticketDate">Tomorrow</span>
+          </div>
+          <div class="ticket-item">
+            <span class="ticket-label">Time Slot</span>
+            <span class="ticket-val" id="ticketTime">09:30 AM</span>
+          </div>
+          <div class="ticket-item ticket-item-full">
+            <span class="ticket-label">Patient Name</span>
+            <span class="ticket-val" id="ticketPatient">Guest Patient</span>
+          </div>
+        </div>
+
+        <div class="ticket-perforated-line"></div>
+
+        <div class="ticket-bottom">
+          <div class="ticket-notice">
+            <small>Please present this digital pass at the Reception Desk upon arrival.</small>
+          </div>
+          <button type="button" class="btn-print-ticket" onclick="window.print()">
+            <span>🖨️ Print Pass</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
