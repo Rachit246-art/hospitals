@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Hero Hospital - Excellence in Healthcare</title>
+  <meta name="description" content="Discover the legacy of Hero Hospital - 30+ years of clinical excellence, pioneering medical technology, and patient-first compassionate care.">
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet & Inner Pages Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="inner-pages.css">
+</head>
+<body>
+
+  <!-- Top Reading Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- ========================================================================
+       Top Navigation Bar
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo">
+          <svg class="logo-icon-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#0B3B2C"/>
+            <path d="M14 12V36M34 12V36" stroke="#C5A059" stroke-width="4.2" stroke-linecap="round"/>
+            <path d="M12 24C20 22 28 26 36 24" stroke="#E7CF9B" stroke-width="4.2" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="3.5" fill="#FAF7F2"/>
+            <path d="M24 19V29M19 24H29" stroke="#0B3B2C" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <div class="logo-text-block">
+            <span class="logo-title">Hero Hospital</span>
+            <span class="logo-subtitle">ADVANCED CARE • COMPASSIONATE PEOPLE</span>
+          </div>
+        </a>
+
+        <!-- Desktop & Mobile Navigation Links -->
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About Us</a></li>
+          <li class="nav-dropdown-wrapper">
+            <a href="departments.html" class="nav-link">
+              Departments <span class="dropdown-arrow">▼</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="departments.html#cardiology">❤️ Cardiology &amp; Heart</a></li>
+              <li><a href="departments.html#orthopaedics">🦴 Orthopaedics &amp; Joints</a></li>
+              <li><a href="departments.html#neurology">🧠 Neurosciences</a></li>
+              <li><a href="departments.html#oncology">🎗️ Comprehensive Oncology</a></li>
+              <li><a href="departments.html#maternity">👶 Maternity &amp; Child</a></li>
+              <li><a href="departments.html#gastro">🩺 Gastroenterology</a></li>
+            </ul>
+          </li>
+          <li><a href="doctors.html" class="nav-link">Doctors</a></li>
+          <li><a href="facilities.html" class="nav-link">Facilities</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+
+          <!-- Mobile Drawer Action Items -->
+          <li class="nav-mobile-action nav-mobile-call">
+            <a href="tel:+911204567890" class="mobile-drawer-call-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Call: +91 120 456 7890</span>
+            </a>
+          </li>
+          <li class="nav-mobile-action nav-mobile-book">
+            <button type="button" class="btn-primary book-doctor-btn" style="width: 100%; justify-content: center; padding: 12px 20px;">
+              <span>Book Appointment Now</span>
+              <span class="btn-arrow-icon">➔</span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- Right Action Items -->
+        <div class="nav-actions">
+          <a href="tel:+911204567890" class="phone-contact-pill">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+91 120 456 7890</span>
+          </a>
+
+          <button type="button" class="btn-book-nav magnetic-btn book-doctor-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Book Appointment</span>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="mobile-toggle" aria-label="Toggle navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Page Hero: About Us
+       ======================================================================== -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumbs-nav" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="bc-sep">/</span>
+        <span class="bc-current">About Us</span>
+      </nav>
+
+      <div class="eyebrow-tag" style="color: var(--accent-gold-light);">
+        <span class="pulse-dot"></span>
+        <span>OUR LEGACY &amp; VALUES</span>
+      </div>
+
+      <h1 class="page-hero-title">
+        Three Decades of Healing,<br>
+        <span class="accent-serif">Excellence &amp; Unwavering Hope</span>
+      </h1>
+
+      <p class="page-hero-lead">
+        Founded on the sacred belief that every patient deserves world-class medical innovation delivered with gentle human compassion, Hero Hospital has grown into the region's premier tertiary healthcare sanctuary.
+      </p>
+
+      <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+        <a href="#ourStory" class="btn-primary magnetic-btn">
+          <span>Read Our Story</span>
+          <span class="btn-arrow-icon">➔</span>
+        </a>
+        <a href="#leadership" class="btn-secondary" style="border-color: rgba(197, 160, 89, 0.4); color: #FFFFFF;">
+          <span>Meet Medical Board</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Floating Stats Ribbon
+       ======================================================================== -->
+  <div class="container page-stats-ribbon">
+    <div class="stats-ribbon-card">
+      <div class="ribbon-stat-item">
+        <div class="ribbon-stat-icon">🏛️</div>
+        <div>
+          <div class="ribbon-stat-number counter" data-target="32">0</div>
+          <div class="ribbon-stat-label">Years of Healing</div>
+        </div>
+      </div>
+      <div class="ribbon-stat-item">
+        <div class="ribbon-stat-icon">🩺</div>
+        <div>
+          <div class="ribbon-stat-number"><span class="counter" data-target="120">0</span><span class="gold-plus">k+</span></div>
+          <div class="ribbon-stat-label">Surgeries Performed</div>
+        </div>
+      </div>
+      <div class="ribbon-stat-item">
+        <div class="ribbon-stat-icon">⚕️</div>
+        <div>
+          <div class="ribbon-stat-number"><span class="counter" data-target="180">0</span><span class="gold-plus">+</span></div>
+          <div class="ribbon-stat-label">Senior Specialists</div>
+        </div>
+      </div>
+      <div class="ribbon-stat-item">
+        <div class="ribbon-stat-icon">⭐</div>
+        <div>
+          <div class="ribbon-stat-number">99.4<span class="gold-plus">%</span></div>
+          <div class="ribbon-stat-label">Patient Recovery Rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Section 1: Our Story & Heritage (Split Layout)
+       ======================================================================== -->
+  <section class="inner-section" id="ourStory">
+    <div class="container">
+      <div class="story-split-grid">
+        <!-- Left Column: Narrative -->
+        <div>
+          <div class="eyebrow-tag">
+            <span class="pulse-dot"></span>
+            <span>HUMBLE BEGINNINGS TO GLOBAL STANDARD</span>
+          </div>
+          <h2 class="section-title">Where Clinical Brilliance<br>Meets Deep Empathy</h2>
+
+          <div class="story-lead-quote">
+            "A hospital is not merely brick, steel, and monitors. It is a sanctuary where human vulnerability is met with supreme clinical mastery and heartfelt warmth."
+          </div>
+
+          <p class="story-text-p">
+            Established in 1994 as a modest 50-bed critical care nursing institute, Hero Hospital was envisioned by pioneer clinicians who witnessed the pressing need for integrated, ethical, and super-specialized healthcare in North India.
+          </p>
+
+          <p class="story-text-p">
+            Over three transformative decades, we expanded into a 500-bed state-of-the-art medical institute featuring Asia's most sophisticated robotic surgical systems, comprehensive cancer therapy centers, 24/7 cardiac emergency catheterization suites, and premier organ transplant capabilities.
+          </p>
+
+          <div class="founder-signature-card">
+            <img src="assets/doctor-rajiv.jpg" alt="Dr. H.K. Singhal" class="founder-avatar">
+            <div>
+              <div class="founder-name">Prof. (Dr.) Harish K. Singhal</div>
+              <div class="founder-title">Founder &amp; Chairman Emeritus • FRCS, Padma Bhushan Awardee</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Showcase -->
+        <div class="story-media-stack">
+          <div class="story-main-img-wrap">
+            <img src="assets/hospital-exterior.jpg" alt="Hero Hospital Medical Campus Exterior" loading="lazy">
+          </div>
+          <div class="story-floating-badge">
+            <div class="badge-icon">🏅</div>
+            <div>
+              <div class="badge-text-title">JCI &amp; NABH Gold</div>
+              <div class="badge-text-sub">Accredited for zero-compromise patient safety and clinical audit excellence.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Section 2: 4 Pillars of Excellence
+       ======================================================================== -->
+  <section class="inner-section bg-warm">
+    <div class="container">
+      <div class="inner-section-header">
+        <div class="eyebrow-tag">
+          <span class="pulse-dot"></span>
+          <span>OUR OPERATIONAL ETHOS</span>
+        </div>
+        <h2 class="section-title">The Four Pillars Guiding Every Diagnosis</h2>
+        <p class="inner-section-subtitle">
+          Every decision, protocol, and prescription at Hero Hospital is anchored in four uncompromising clinical standards.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pillar 1 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">🔬</div>
+          <h3 class="pillar-title">Clinical Precision</h3>
+          <p class="pillar-desc">
+            Evidence-based protocols, AI-assisted surgical navigation, and multi-disciplinary tumor and cardiac boards ensure every treatment plan achieves maximum curative efficacy.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">🤝</div>
+          <h3 class="pillar-title">Compassionate Care</h3>
+          <p class="pillar-desc">
+            Patients are family. Our doctors spend dedicated time listening, explaining every step with crystal clarity and calming anxiety for both patients and their loved ones.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">🛡️</div>
+          <h3 class="pillar-title">Ethical Transparency</h3>
+          <p class="pillar-desc">
+            Zero hidden costs, no unnecessary investigations, and published clinical outcome indices. We provide honest second opinions you can always rely on.
+          </p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">🚀</div>
+          <h3 class="pillar-title">Constant Innovation</h3>
+          <p class="pillar-desc">
+            From 4th-Gen da Vinci Xi robotic systems to high-speed digital spectral CT scanners, we continually invest in cutting-edge technology that shortens hospital stays.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Section 3: Interactive Milestone Journey (Timeline)
+       ======================================================================== -->
+  <section class="inner-section">
+    <div class="container">
+      <div class="inner-section-header">
+        <div class="eyebrow-tag">
+          <span class="pulse-dot"></span>
+          <span>OUR JOURNEY OVER TIME</span>
+        </div>
+        <h2 class="section-title">Milestones in Healthcare Leadership</h2>
+        <p class="inner-section-subtitle">
+          Explore key milestones that shaped Hero Hospital into an international healthcare institution.
+        </p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-spine"></div>
+
+        <!-- Milestone 1 -->
+        <div class="timeline-item left">
+          <div class="timeline-node-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">1994</span>
+            <h3 class="timeline-title">Foundation &amp; First Intensive Care Unit</h3>
+            <p class="timeline-desc">
+              Opened our doors with 50 emergency beds and the city's first dedicated trauma resuscitation bay, serving over 10,000 patients in the opening year.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="timeline-item right">
+          <div class="timeline-node-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2005</span>
+            <h3 class="timeline-title">Cardiac Catheterization &amp; Heart Tower</h3>
+            <p class="timeline-desc">
+              Commissioned North India's first fully digital Bi-Plane cardiac cath lab, pioneering primary angioplasty with door-to-balloon time under 45 minutes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="timeline-item left">
+          <div class="timeline-node-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2014</span>
+            <h3 class="timeline-title">JCI Accreditation &amp; Organ Transplant Center</h3>
+            <p class="timeline-desc">
+              Awarded prestigious Joint Commission International (JCI, USA) Gold Seal and launched our comprehensive Liver and Renal transplant program with 98% graft survival.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="timeline-item right">
+          <div class="timeline-node-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2021</span>
+            <h3 class="timeline-title">Robotic Surgery Institute &amp; Cancer Wing</h3>
+            <p class="timeline-desc">
+              Inaugurated dedicated robotic oncology and joint replacement suites, completing over 2,500 minimally invasive procedures with minimal blood loss and rapid recovery.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 5 -->
+        <div class="timeline-item left">
+          <div class="timeline-node-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2026</span>
+            <h3 class="timeline-title">500-Bed Ultra-Luxury Smart Tower</h3>
+            <p class="timeline-desc">
+              Unveiled the new smart hospital wing featuring AI-driven patient monitoring, 3T silent MRI, boutique healing suites, and zero-carbon green architecture.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Section 4: Accreditations & Quality Benchmarks
+       ======================================================================== -->
+  <section class="inner-section bg-dark">
+    <div class="container">
+      <div class="inner-section-header">
+        <div class="eyebrow-tag" style="color: var(--accent-gold-light);">
+          <span class="pulse-dot"></span>
+          <span>GLOBAL CREDENTIALS</span>
+        </div>
+        <h2 class="section-title">Internationally Audited &amp; Certified</h2>
+        <p class="inner-section-subtitle">
+          Our standards are validated by the world's most rigorous medical accrediting authorities.
+        </p>
+      </div>
+
+      <div class="accreditations-grid">
+        <div class="accred-card">
+          <div class="accred-seal-icon">🌐</div>
+          <div class="accred-name">JCI Accredited</div>
+          <div class="accred-body">Joint Commission Int. (USA)</div>
+          <div class="accred-detail">Gold seal of global healthcare excellence for infection safety and medical governance.</div>
+        </div>
+
+        <div class="accred-card">
+          <div class="accred-seal-icon">🇮🇳</div>
+          <div class="accred-name">NABH Certified</div>
+          <div class="accred-body">Quality Council of India</div>
+          <div class="accred-detail">Highest national accreditation adhering strictly to patient-centric healthcare metrics.</div>
+        </div>
+
+        <div class="accred-card">
+          <div class="accred-seal-icon">🧪</div>
+          <div class="accred-name">NABL Diagnostic</div>
+          <div class="accred-body">Testing &amp; Calibration Labs</div>
+          <div class="accred-detail">Automated pathology, genetic sequencing, and biochemical precision certification.</div>
+        </div>
+
+        <div class="accred-card">
+          <div class="accred-seal-icon">🌿</div>
+          <div class="accred-name">Green OT Standard</div>
+          <div class="accred-body">Bureau Veritas Certified</div>
+          <div class="accred-detail">HEPA-14 zero-microbial air flow, sterile anaesthetic scavenging, and eco-friendly sterilization.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Section 5: Leadership & Medical Advisory Board
+       ======================================================================== -->
+  <section class="inner-section" id="leadership">
+    <div class="container">
+      <div class="inner-section-header">
+        <div class="eyebrow-tag">
+          <span class="pulse-dot"></span>
+          <span>EXECUTIVE GOVERNANCE</span>
+        </div>
+        <h2 class="section-title">Led By Nationally Renowned Clinicians</h2>
+        <p class="inner-section-subtitle">
+          Our leadership blends active surgical mastery with visionary administrative stewardship.
+        </p>
+      </div>
+
+      <div class="leadership-grid">
+        <!-- Leader 1 -->
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <img src="assets/doctor-vikram.jpg" alt="Dr. Vikramaditya Rao" loading="lazy">
+          </div>
+          <div class="leader-details">
+            <div class="leader-name">Dr. Vikramaditya Rao</div>
+            <div class="leader-role">Chief Medical Director</div>
+            <div class="leader-creds">MS, MCh (Cardiothoracic Surgery), FRCS (Edinburgh) • 25+ Yrs Experience</div>
+          </div>
+        </div>
+
+        <!-- Leader 2 -->
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <img src="assets/doctor-aanya.jpg" alt="Dr. Aanya Sen" loading="lazy">
+          </div>
+          <div class="leader-details">
+            <div class="leader-name">Dr. Aanya Sen</div>
+            <div class="leader-role">Director of Neurosciences</div>
+            <div class="leader-creds">DM (Neurology, AIIMS), Stroke Fellow (Johns Hopkins) • 18+ Yrs Experience</div>
+          </div>
+        </div>
+
+        <!-- Leader 3 -->
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <img src="assets/doctor-neha.jpg" alt="Dr. Neha Sharma" loading="lazy">
+          </div>
+          <div class="leader-details">
+            <div class="leader-name">Dr. Neha Sharma</div>
+            <div class="leader-role">Head of Comprehensive Oncology</div>
+            <div class="leader-creds">MD, DNB (Medical Oncology), ESMO Certified • 19+ Yrs Experience</div>
+          </div>
+        </div>
+
+        <!-- Leader 4 -->
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <img src="assets/doctor-arjun.jpg" alt="Dr. Arjun Patel" loading="lazy">
+          </div>
+          <div class="leader-details">
+            <div class="leader-name">Dr. Arjun Patel</div>
+            <div class="leader-role">Chief Orthopaedic Surgeon</div>
+            <div class="leader-creds">MS (Ortho), Fellowship in Robotic Joint Replacement (Germany) • 20+ Yrs Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Section 6: Frequently Asked Questions (Accordion)
+       ======================================================================== -->
+  <section class="inner-section bg-warm">
+    <div class="container">
+      <div class="inner-section-header">
+        <div class="eyebrow-tag">
+          <span class="pulse-dot"></span>
+          <span>CLEAR ANSWERS</span>
+        </div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="inner-section-subtitle">
+          Everything you need to know about our admissions, quality guidelines, and care policies.
+        </p>
+      </div>
+
+      <div class="faq-accordion-group">
+        <div class="faq-item active">
+          <button type="button" class="faq-question-btn">
+            <span>What makes Hero Hospital different from other tertiary centers?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Hero Hospital combines top-tier Ivy-league trained clinicians, cutting-edge surgical robotics, and zero-hidden-cost transparency. Furthermore, our 1:1 nurse-to-bed critical care ratio and NABH-audited infection rates (< 0.1%) guarantee unmatched patient safety.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span>Do you accept cashless health insurance and TPA cards?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Yes. Our 24/7 dedicated Insurance &amp; TPA Desk is empanelled with over 45 leading insurance providers and government healthcare schemes, providing seamless cashless hospitalization approvals in under 30 minutes.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span>How do international patients coordinate consultations and visas?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              We operate an International Patient Concierge that handles medical visa invitation letters, airport transfers, multilingual translation, customized dietary care, and remote post-discharge teleconsultations.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span>What are your emergency response protocols?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Our Level-1 Emergency &amp; Trauma Centre functions 24/7 with immediate triage, on-site cardiac catheterization, dedicated CT/MRI, and an in-house blood bank. Emergency patients receive immediate treatment without waiting for administrative formalities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Call-to-Action Strip
+       ======================================================================== -->
+  <section class="inner-section bg-dark" style="text-align: center; border-bottom: none;">
+    <div class="container">
+      <div class="eyebrow-tag" style="color: var(--accent-gold-light); justify-content: center;">
+        <span class="pulse-dot"></span>
+        <span>EXPERIENCE WORLD-CLASS HEALING</span>
+      </div>
+      <h2 class="section-title" style="color: #FFFFFF; font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 20px;">
+        Your Journey to Optimal Health Begins Here
+      </h2>
+      <p style="color: rgba(234, 243, 238, 0.85); max-width: 600px; margin: 0 auto 30px; font-size: 1.05rem;">
+        Schedule an in-person consultation or video appointment with our renowned specialists today.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <button type="button" class="btn-primary magnetic-btn book-doctor-btn" style="padding: 16px 36px; font-size: 1rem;">
+          <span>Book an Appointment</span>
+          <span class="btn-arrow-icon">➔</span>
+        </button>
+        <a href="contact.html" class="btn-secondary" style="border-color: rgba(197, 160, 89, 0.4); color: #FFFFFF; padding: 16px 32px;">
+          <span>Contact Patient Desk</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Site Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-logo">
+            <svg class="logo-icon-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="#0B3B2C"/>
+              <path d="M14 12V36M34 12V36" stroke="#C5A059" stroke-width="4.2" stroke-linecap="round"/>
+              <path d="M12 24C20 22 28 26 36 24" stroke="#E7CF9B" stroke-width="4.2" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="3.5" fill="#FAF7F2"/>
+              <path d="M24 19V29M19 24H29" stroke="#0B3B2C" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+            <div class="logo-text-block">
+              <span class="logo-title">Hero Hospital</span>
+              <span class="logo-subtitle">ADVANCED CARE • COMPASSIONATE PEOPLE</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            A leading multi-speciality hospital committed to delivering world-class, trusted and compassionate healthcare to build a healthier society.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-btn" aria-label="Facebook">f</a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube">▶</a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter">𝕏</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-link-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Departments -->
+        <div>
+          <h4 class="footer-col-title">Departments</h4>
+          <ul class="footer-link-list">
+            <li><a href="departments.html#cardiology">Cardiology</a></li>
+            <li><a href="departments.html#neurology">Neurology</a></li>
+            <li><a href="departments.html#orthopaedics">Orthopaedics</a></li>
+            <li><a href="departments.html#oncology">Oncology</a></li>
+            <li><a href="departments.html#maternity">Gynaecology</a></li>
+            <li><a href="departments.html#gastro">Gastroenterology</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Us -->
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <span class="footer-contact-icon">📍</span>
+              <span>Hero Hospital, Sector 24, City Center, Uttar Pradesh - 201301</span>
+            </li>
+            <li class="footer-contact-item">
+              <span class="footer-contact-icon">📞</span>
+              <span>+91 120 456 7890</span>
+            </li>
+            <li class="footer-contact-item">
+              <span class="footer-contact-icon">✉️</span>
+              <span>info@herohospital.com</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Locate Us Map Card -->
+        <div>
+          <h4 class="footer-col-title">Locate Us</h4>
+          <div class="footer-map-card">
+            <img src="assets/map-location.jpg" alt="Hero Hospital Map Location" class="map-preview-img">
+            <div class="map-pin-overlay">
+              <span class="map-pin-icon">📍</span>
+              <span class="map-pin-text">Hero Hospital</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Copyright Bar -->
+      <div class="footer-bottom-bar">
+        <div>© 2026 Hero Hospital. All Rights Reserved.</div>
+        <div class="footer-credit">
+          <span>Hero Hospital | Made with </span><span class="heart-icon">❤️</span><span> by </span><a href="https://regortz.com/" target="_blank" rel="noopener" class="credit-link">Regortz</a>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <span>|</span>
+          <a href="#">Terms &amp; Conditions</a>
+          <span>|</span>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Back to Top Floating Button
+       ======================================================================== -->
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+    <svg class="progress-ring" width="50" height="50">
+      <circle class="progress-ring-circle" stroke="#C5A059" stroke-width="3" fill="transparent" r="23" cx="25" cy="25"/>
+    </svg>
+    <span class="top-arrow-icon">↑</span>
+  </button>
+
+  <!-- ========================================================================
+       Universal Appointment Booking Modal
+       ======================================================================== -->
+  <div class="modal-overlay" id="quickBookingModal">
+    <div class="modal-box" style="max-width: 540px;">
+      <button type="button" class="modal-close-btn close-modal-trigger" aria-label="Close dialog">✕</button>
+      <div class="eyebrow-tag" style="margin-bottom: 6px;">
+        <span class="pulse-dot"></span>
+        <span>RAPID ONLINE SCHEDULING</span>
+      </div>
+      <h3 class="modal-title" style="margin-bottom: 8px;">Book an Appointment</h3>
+      <p class="modal-desc" style="margin-bottom: 20px;">Choose your desired department and specialist for quick confirmation.</p>
+
+      <form id="quickBookingForm">
+        <div class="form-field">
+          <label>Department</label>
+          <select name="department" id="bookingModalDept" required>
+            <option value="Cardiology">Cardiology &amp; Cardiovascular Surgery</option>
+            <option value="Orthopaedics">Orthopaedics &amp; Joint Replacement</option>
+            <option value="Neurosciences">Neurosciences &amp; Spine Surgery</option>
+            <option value="Oncology">Comprehensive Oncology &amp; Cancer Care</option>
+            <option value="Maternity">Maternity, Gynaecology &amp; Paediatrics</option>
+            <option value="Gastroenterology">Gastroenterology &amp; Hepatology</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label>Preferred Doctor</label>
+          <select name="doctor" id="bookingModalDoctor" required>
+            <option value="Dr. Rajiv Mehta">Dr. Rajiv Mehta (Chief Interventional Cardiologist)</option>
+            <option value="Dr. Vikramaditya Rao">Dr. Vikramaditya Rao (Chief Cardiac Surgeon)</option>
+            <option value="Dr. Aanya Sen">Dr. Aanya Sen (Senior Neurologist &amp; Stroke Specialist)</option>
+            <option value="Dr. Arjun Patel">Dr. Arjun Patel (Director of Orthopaedics)</option>
+            <option value="Dr. Neha Sharma">Dr. Neha Sharma (Head of Oncology)</option>
+            <option value="Dr. Priya Nair">Dr. Priya Nair (Director of Obstetrics &amp; Gynaecology)</option>
+          </select>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-field">
+            <label>Date</label>
+            <input type="date" name="date" required value="2026-11-20">
+          </div>
+          <div class="form-field">
+            <label>Time Slot</label>
+            <select name="time" required>
+              <option value="10:00 AM">10:00 AM (Morning)</option>
+              <option value="11:30 AM">11:30 AM (Morning)</option>
+              <option value="02:30 PM">02:30 PM (Afternoon)</option>
+              <option value="04:30 PM">04:30 PM (Evening)</option>
+              <option value="06:00 PM">06:00 PM (Evening)</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary magnetic-btn" style="width: 100%; justify-content: center; padding: 14px 24px; margin-top: 10px;">
+          <span>Confirm Consultation Request</span>
+          <span class="btn-arrow-icon">➔</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Appointment Confirmation Modal -->
+  <div class="modal-overlay" id="appointmentSuccessModal">
+    <div class="modal-box">
+      <button type="button" class="modal-close-btn close-modal-trigger" aria-label="Close dialog">✕</button>
+      <div class="modal-icon-success">✓</div>
+      <h3 class="modal-title">Appointment Confirmed!</h3>
+      <p class="modal-desc">Your consultation has been scheduled with Hero Hospital. A care coordinator will send SMS &amp; WhatsApp reminders.</p>
+
+      <div class="appointment-ticket-details">
+        <div class="ticket-row">
+          <span class="ticket-label">Appointment ID:</span>
+          <span class="ticket-val" id="ticketId">HH-849201</span>
+        </div>
+        <div class="ticket-row">
+          <span class="ticket-label">Department:</span>
+          <span class="ticket-val" id="ticketDept">Cardiology</span>
+        </div>
+        <div class="ticket-row">
+          <span class="ticket-label">Doctor:</span>
+          <span class="ticket-val" id="ticketDoc">Dr. Rajiv Mehta</span>
+        </div>
+        <div class="ticket-row">
+          <span class="ticket-label">Date:</span>
+          <span class="ticket-val" id="ticketDate">2026-11-20</span>
+        </div>
+        <div class="ticket-row">
+          <span class="ticket-label">Time:</span>
+          <span class="ticket-val" id="ticketTime">10:30 AM</span>
+        </div>
+      </div>
+
+      <button type="button" class="btn-primary close-modal-trigger" style="width: 100%; justify-content: center;">
+        Done &amp; Return
+      </button>
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="script.js"></script>
+  <script src="inner-pages.js"></script>
+</body>
+</html>
