@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Our Medical Doctors & Specialists | Curevo Hospital</title>
+  <meta name="description" content="Meet board-certified physicians and specialists at Curevo Hospital."/>
+  
+  <!-- Google Fonts & Fallbacks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Base Curevo Stylesheet & Custom Enhancements -->
+  <link rel="stylesheet" href="curevo.css">
+  <link rel="stylesheet" href="custom.css">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css">
+</head>
+<body>
+  <header class="navbar-wrapper">
+    <div class="navbar-container">
+      <a href="index.html" class="nav-brand" aria-label="Curevo Hospital Home">
+        <img src="assets/692940df0fb9aba1b34b0910_New_Logo.svg" alt="Curevo Hospital Logo" class="brand-logo" />
+      </a>
+      
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link ">About Us</a>
+        <a href="services.html" class="nav-link ">Treatments</a>
+        <a href="doctors.html" class="nav-link active w--current">Our Doctors</a>
+        <a href="case-studies.html" class="nav-link ">Success Stories</a>
+        <a href="pricing.html" class="nav-link ">Care Plans</a>
+        <a href="contact.html" class="nav-link ">Contact &amp; Emergency</a>
+      </nav>
+
+      <!-- Header Actions (CTA + Mobile Toggle) -->
+      <div class="nav-actions">
+        <a href="#book" data-action="book" class="button-arrow header-cta-btn">
+          <div class="button-text-wrap">
+            <div class="button-text-one">Book an appointment</div>
+            <div class="button-text-two">Book an appointment</div>
+          </div>
+          <div class="button-icon-wrap">
+            <img src="assets/690c7ad5bf0d16a67d6a12d6_button_arrow__2_.svg" alt="Arrow" class="button-icon"/>
+            <img src="assets/690c7ad5bf0d16a67d6a12d6_button_arrow__2_.svg" alt="Arrow" class="button-hover-icon"/>
+          </div>
+        </a>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" type="button">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu Overlay -->
+    <div class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="nav-brand">
+          <img src="assets/692940df0fb9aba1b34b0910_New_Logo.svg" alt="Curevo Logo" class="brand-logo" style="height:32px;"/>
+        </a>
+        <button class="mobile-drawer-close" aria-label="Close menu">&times;</button>
+      </div>
+      
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link ">
+          <span>Home</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="about.html" class="mobile-nav-link ">
+          <span>About Us</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="services.html" class="mobile-nav-link ">
+          <span>Treatments</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="doctors.html" class="mobile-nav-link active w--current">
+          <span>Our Doctors</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="case-studies.html" class="mobile-nav-link ">
+          <span>Success Stories</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="pricing.html" class="mobile-nav-link ">
+          <span>Care Plans</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="contact.html" class="mobile-nav-link ">
+          <span>Contact &amp; Emergency</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </div>
+
+      <div class="mobile-drawer-footer">
+        <a href="#book" data-action="book" class="button-arrow" style="width: 100%; justify-content: center;">
+          <div class="button-text-wrap">
+            <div class="button-text-one">Book an appointment</div>
+            <div class="button-text-two">Book an appointment</div>
+          </div>
+          <div class="button-icon-wrap">
+            <img src="assets/690c7ad5bf0d16a67d6a12d6_button_arrow__2_.svg" alt="Arrow" class="button-icon"/>
+            <img src="assets/690c7ad5bf0d16a67d6a12d6_button_arrow__2_.svg" alt="Arrow" class="button-hover-icon"/>
+          </div>
+        </a>
+        <div class="mobile-emergency-call">
+          <small>24/7 Clinical Emergency Line</small>
+          <a href="tel:+18004567890">+1 (800) 456-7890</a>
+        </div>
+      </div>
+    </div>
+  </header>
+<section class="inner-hero">
+    <div class="container w-container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> <span>/</span> <span>Physician Directory</span>
+      </div>
+      <span class="modal-tag">BOARD-CERTIFIED CLINICIANS</span>
+      <h1 class="inner-hero-title">Meet our <em>distinguished</em> medical specialists.</h1>
+      <p class="inner-hero-description">Our multi-disciplinary team features over 50 fellows and board-certified doctors trained at the world's leading medical institutions.</p>
+    </div>
+  </section>
+
+  <!-- Doctor Directory Grid -->
+  <section style="padding: 70px 0; background: #fff;">
+    <div class="container w-container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 30px;">
+        <span class="modal-tag">OUR PHYSICIANS</span>
+        <div style="font-family: var(--font-mono); font-size: 0.88rem; color: var(--text-muted);">
+          All Doctors Verified by State Medical Board
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        <!-- Doctor 1: Dr. Michael Hayes -->
+        <div class="team-item" style="padding: 24px;">
+          <div style="border-radius: 16px; overflow: hidden; margin-bottom: 20px; height: 320px;">
+            <img src="assets/69006f28ec82f4e7f6f3c949_Team-Image-2_5_.jpg" alt="Dr. Michael Hayes" class="team-image" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; background: var(--sage-light); color: var(--dark-forest); padding: 4px 10px; border-radius: 9999px; font-weight: 600;">CARDIOLOGY</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin: 8px 0 4px 0; color: var(--dark-forest);">Dr. Michael Hayes, MD</h3>
+          <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">Chief of Interventional Cardiology &bull; 18 Yrs Exp</div>
+          <div style="font-size: 0.88rem; color: var(--dark-forest-2); line-height: 1.5; margin-bottom: 16px;">
+            Specializes in complex coronary stenting, TAVR valve procedures, and preventive cardiology protocols.
+          </div>
+          <div style="background: var(--sage-light); border-radius: 10px; padding: 10px 14px; font-size: 0.82rem; margin-bottom: 16px; display: flex; justify-content: space-between;">
+            <span>OPD: Mon, Wed, Fri</span>
+            <strong style="color: var(--dark-forest);">09:00 AM – 02:00 PM</strong>
+          </div>
+          <button type="button" class="doctor-book-btn" data-action="book" data-doctor="Dr. Michael Hayes (Cardiologist)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Book with Dr. Michael Hayes
+          </button>
+        </div>
+
+        <!-- Doctor 2: Dr. Olivia Reynolds -->
+        <div class="team-item" style="padding: 24px;">
+          <div style="border-radius: 16px; overflow: hidden; margin-bottom: 20px; height: 320px;">
+            <img src="assets/69006f29ed6e65b78b58b0e7_Team-Image-2_4_.jpg" alt="Dr. Olivia Reynolds" class="team-image" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; background: var(--sage-light); color: var(--dark-forest); padding: 4px 10px; border-radius: 9999px; font-weight: 600;">DERMATOLOGY</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin: 8px 0 4px 0; color: var(--dark-forest);">Dr. Olivia Reynolds, MD</h3>
+          <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">Lead Dermatologist & Laser Specialist &bull; 14 Yrs Exp</div>
+          <div style="font-size: 0.88rem; color: var(--dark-forest-2); line-height: 1.5; margin-bottom: 16px;">
+            Board-certified in clinical dermatology, laser skin resurfacing, autoimmune skin conditions, and pediatric dermatology.
+          </div>
+          <div style="background: var(--sage-light); border-radius: 10px; padding: 10px 14px; font-size: 0.82rem; margin-bottom: 16px; display: flex; justify-content: space-between;">
+            <span>OPD: Tue, Thu, Sat</span>
+            <strong style="color: var(--dark-forest);">10:00 AM – 04:00 PM</strong>
+          </div>
+          <button type="button" class="doctor-book-btn" data-action="book" data-doctor="Dr. Olivia Reynolds (Dermatologist)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Book with Dr. Olivia Reynolds
+          </button>
+        </div>
+
+        <!-- Doctor 3: Dr. Ava Kim -->
+        <div class="team-item" style="padding: 24px;">
+          <div style="border-radius: 16px; overflow: hidden; margin-bottom: 20px; height: 320px;">
+            <img src="assets/69006f2856de3536bc076846_Team-Image-2_6_.jpg" alt="Dr. Ava Kim" class="team-image" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; background: var(--sage-light); color: var(--dark-forest); padding: 4px 10px; border-radius: 9999px; font-weight: 600;">NEUROLOGY</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin: 8px 0 4px 0; color: var(--dark-forest);">Dr. Ava Kim, MD</h3>
+          <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">Senior Neurologist & Stroke Director &bull; 16 Yrs Exp</div>
+          <div style="font-size: 0.88rem; color: var(--dark-forest-2); line-height: 1.5; margin-bottom: 16px;">
+            Pioneer in neuro-rehabilitation, acute stroke thrombolysis, intractable epilepsy treatment, and cognitive health.
+          </div>
+          <div style="background: var(--sage-light); border-radius: 10px; padding: 10px 14px; font-size: 0.82rem; margin-bottom: 16px; display: flex; justify-content: space-between;">
+            <span>OPD: Mon, Tue, Thu</span>
+            <strong style="color: var(--dark-forest);">08:30 AM – 01:30 PM</strong>
+          </div>
+          <button type="button" class="doctor-book-btn" data-action="book" data-doctor="Dr. Ava Kim (Neurologist)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Book with Dr. Ava Kim
+          </button>
+        </div>
+
+        <!-- Doctor 4: Dr. David Lin -->
+        <div class="team-item" style="padding: 24px;">
+          <div style="border-radius: 16px; overflow: hidden; margin-bottom: 20px; height: 320px;">
+            <img src="assets/69006f29da2dba14405ca9c3_Team-Image-2_1_.jpg" alt="Dr. David Lin" class="team-image" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; background: var(--sage-light); color: var(--dark-forest); padding: 4px 10px; border-radius: 9999px; font-weight: 600;">PEDIATRICS</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin: 8px 0 4px 0; color: var(--dark-forest);">Dr. David Lin, MD</h3>
+          <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">Chief Pediatrician & Adolescent Care &bull; 12 Yrs Exp</div>
+          <div style="font-size: 0.88rem; color: var(--dark-forest-2); line-height: 1.5; margin-bottom: 16px;">
+            Compassionate child specialist focusing on neonatology, pediatric allergies, childhood development, and immunizations.
+          </div>
+          <div style="background: var(--sage-light); border-radius: 10px; padding: 10px 14px; font-size: 0.82rem; margin-bottom: 16px; display: flex; justify-content: space-between;">
+            <span>OPD: Mon through Fri</span>
+            <strong style="color: var(--dark-forest);">09:00 AM – 03:00 PM</strong>
+          </div>
+          <button type="button" class="doctor-book-btn" data-action="book" data-doctor="Dr. David Lin (Pediatrician)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Book with Dr. David Lin
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Medical Staff Banner -->
+  <section style="padding: 80px 0; background: var(--sage-bg);">
+    <div class="container w-container">
+      <div style="background: #fff; border-radius: 24px; padding: 50px; border: 1px solid var(--sage-border); display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; align-items: center;">
+        <div>
+          <span class="modal-tag">CAREERS & CLINICAL FELLOWSHIPS</span>
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--dark-forest); margin: 8px 0 12px 0;">Are you an accomplished physician?</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6; margin: 0;">
+            Join our multidisciplinary healthcare team. We offer competitive faculty appointments, advanced robotic surgical suites, and active clinical research support.
+          </p>
+        </div>
+        <div style="text-align: right;">
+          <a href="contact.html" class="button-arrow" style="display: inline-flex;">
+            <div class="button-text-wrap">
+              <div class="button-text-one">Inquire for Medical Staff</div>
+              <div class="button-text-two">Inquire for Medical Staff</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+  
+  <section class="footer" style="background-color: var(--dark-forest); color: #fff; padding: 80px 0 30px 0;">
+    <div class="container w-container">
+      <div class="footer-form-wrap" style="background: rgba(255,255,255,0.04); border-radius: 20px; padding: 40px; margin-bottom: 60px; border: 1px solid var(--sage-border-dark);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; align-items: center;">
+          <div>
+            <span class="modal-tag" style="background: rgba(133,250,109,0.15); color: var(--primary-accent);">PATIENT HEALTHLETTER</span>
+            <h3 style="font-family: var(--font-serif); font-size: 2rem; color: #fff; margin: 8px 0;">Stay connected with medical wellness tips</h3>
+            <p style="color: var(--sage-border); font-size: 0.95rem;">Receive monthly healthcare advice, preventive wellness guides, and hospital announcements.</p>
+          </div>
+          <form class="footer-form" style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <input type="email" placeholder="Enter your email address" required style="flex: 1; min-width: 240px; padding: 14px 20px; border-radius: 9999px; border: 1px solid var(--sage-border-dark); background: rgba(255,255,255,0.08); color: #fff; outline: none;" />
+            <button type="submit" class="button-arrow">
+              <div class="button-text-wrap">
+                <div class="button-text-one">Subscribe Free</div>
+                <div class="button-text-two">Subscribe Free</div>
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 60px;">
+        <div>
+          <img src="assets/692940df0fb9aba1b34b0910_New_Logo.svg" alt="Curevo Logo" style="height: 36px; filter: brightness(0) invert(1); margin-bottom: 16px;" />
+          <p style="color: var(--sage-border); font-size: 0.92rem; line-height: 1.6;">Curevo Hospital provides world-class compassionate healthcare, combining top clinical specialists with state-of-the-art diagnostic technology.</p>
+          <div style="display: flex; gap: 12px; margin-top: 18px;">
+            <img src="assets/690ef2bfedbee388bc90ac08_social_icon__1_.svg" alt="Facebook" style="width: 22px; cursor: pointer;"/>
+            <img src="assets/690ef2bf6e3426af4f6c7798_social_icon__2_.svg" alt="Twitter" style="width: 22px; cursor: pointer;"/>
+            <img src="assets/690ef2bea41a2ee68f3ffd57_social_icon__3_.svg" alt="LinkedIn" style="width: 22px; cursor: pointer;"/>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: #fff; margin-bottom: 16px;">Medical Departments</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2; font-size: 0.92rem;">
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Cardiology & Heart Care</a></li>
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Neurology & Brain Health</a></li>
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Dermatology & Laser Clinic</a></li>
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Pediatrics & Child Care</a></li>
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Physical Therapy & Rehab</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: #fff; margin-bottom: 16px;">Quick Navigation</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2; font-size: 0.92rem;">
+            <li><a href="about.html" style="color: var(--sage-border); text-decoration: none;">About Curevo Hospital</a></li>
+            <li><a href="doctors.html" style="color: var(--sage-border); text-decoration: none;">Find a Doctor</a></li>
+            <li><a href="case-studies.html" style="color: var(--sage-border); text-decoration: none;">Clinical Success Stories</a></li>
+            <li><a href="pricing.html" style="color: var(--sage-border); text-decoration: none;">Care Plans & Insurance</a></li>
+            <li><a href="contact.html" style="color: var(--sage-border); text-decoration: none;">24/7 Emergency Center</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: #fff; margin-bottom: 16px;">Emergency & Visiting</h4>
+          <p style="color: var(--sage-border); font-size: 0.92rem; line-height: 1.6; margin-bottom: 8px;">
+            <strong>24/7 Trauma Hotline:</strong><br />
+            <span style="color: var(--primary-accent); font-family: var(--font-mono); font-size: 1.15rem; font-weight: 700;">+1 (800) 287-3861</span>
+          </p>
+          <p style="color: var(--sage-border); font-size: 0.9rem; line-height: 1.5;">
+            <strong>Visiting Hours:</strong><br />
+            General Wards: 09:00 AM – 08:00 PM<br />
+            ICU / CCU: 11:00 AM – 01:00 PM
+          </p>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; font-size: 0.85rem; color: var(--text-muted);">
+        <div>&copy; 2026 Curevo | Made with <span class="footer-heart">❤️</span> by <a href="https://www.regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a></div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a>
+          <a href="#" style="color: var(--text-muted); text-decoration: none;">Terms of Clinical Care</a>
+          <a href="#" style="color: var(--text-muted); text-decoration: none;">HIPAA Compliance</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GSAP & Lenis Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+  
+  <!-- Main Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
+

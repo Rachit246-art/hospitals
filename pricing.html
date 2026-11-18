@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Healthcare Plans & Transparent Pricing | Curevo Hospital</title>
+  <meta name="description" content="Affordable outpatient plans, health memberships, and cashless insurance coverage."/>
+  
+  <!-- Google Fonts & Fallbacks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Base Curevo Stylesheet & Custom Enhancements -->
+  <link rel="stylesheet" href="curevo.css">
+  <link rel="stylesheet" href="custom.css">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css">
+</head>
+<body>
+  <header class="navbar-wrapper">
+    <div class="navbar-container">
+      <a href="index.html" class="nav-brand" aria-label="Curevo Hospital Home">
+        <img src="assets/692940df0fb9aba1b34b0910_New_Logo.svg" alt="Curevo Hospital Logo" class="brand-logo" />
+      </a>
+      
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link ">About Us</a>
+        <a href="services.html" class="nav-link ">Treatments</a>
+        <a href="doctors.html" class="nav-link ">Our Doctors</a>
+        <a href="case-studies.html" class="nav-link ">Success Stories</a>
+        <a href="pricing.html" class="nav-link active w--current">Care Plans</a>
+        <a href="contact.html" class="nav-link ">Contact &amp; Emergency</a>
+      </nav>
+
+      <!-- Header Actions (CTA + Mobile Toggle) -->
+      <div class="nav-actions">
+        <a href="#book" data-action="book" class="button-arrow header-cta-btn">
+          <div class="button-text-wrap">
+            <div class="button-text-one">Book an appointment</div>
+            <div class="button-text-two">Book an appointment</div>
+          </div>
+          <div class="button-icon-wrap">
+            <img src="assets/690c7ad5bf0d16a67d6a12d6_button_arrow__2_.svg" alt="Arrow" class="button-icon"/>
+            <img src="assets/690c7ad5bf0d16a67d6a12d6_button_arrow__2_.svg" alt="Arrow" class="button-hover-icon"/>
+          </div>
+        </a>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" type="button">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu Overlay -->
+    <div class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="nav-brand">
+          <img src="assets/692940df0fb9aba1b34b0910_New_Logo.svg" alt="Curevo Logo" class="brand-logo" style="height:32px;"/>
+        </a>
+        <button class="mobile-drawer-close" aria-label="Close menu">&times;</button>
+      </div>
+      
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link ">
+          <span>Home</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="about.html" class="mobile-nav-link ">
+          <span>About Us</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="services.html" class="mobile-nav-link ">
+          <span>Treatments</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="doctors.html" class="mobile-nav-link ">
+          <span>Our Doctors</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="case-studies.html" class="mobile-nav-link ">
+          <span>Success Stories</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="pricing.html" class="mobile-nav-link active w--current">
+          <span>Care Plans</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="contact.html" class="mobile-nav-link ">
+          <span>Contact &amp; Emergency</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </div>
+
+      <div class="mobile-drawer-footer">
+        <a href="#book" data-action="book" class="button-arrow" style="width: 100%; justify-content: center;">
+          <div class="button-text-wrap">
+            <div class="button-text-one">Book an appointment</div>
+            <div class="button-text-two">Book an appointment</div>
+          </div>
+          <div class="button-icon-wrap">
+            <img src="assets/690c7ad5bf0d16a67d6a12d6_button_arrow__2_.svg" alt="Arrow" class="button-icon"/>
+            <img src="assets/690c7ad5bf0d16a67d6a12d6_button_arrow__2_.svg" alt="Arrow" class="button-hover-icon"/>
+          </div>
+        </a>
+        <div class="mobile-emergency-call">
+          <small>24/7 Clinical Emergency Line</small>
+          <a href="tel:+18004567890">+1 (800) 456-7890</a>
+        </div>
+      </div>
+    </div>
+  </header>
+<section class="inner-hero">
+    <div class="container w-container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> <span>/</span> <span>Care Plans & Pricing</span>
+      </div>
+      <span class="modal-tag">TRANSPARENT HEALTHCARE</span>
+      <h1 class="inner-hero-title">The right healthcare plan for <em>every patient</em>.</h1>
+      <p class="inner-hero-description">Transparent outpatient packages, membership wellness plans, and comprehensive cashless insurance coverage with zero hidden costs.</p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards with Interactive Monthly/Annual Switch -->
+  <section style="padding: 70px 0; background: #fff;">
+    <div class="container w-container">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <div class="pricing-billing-switch">
+          <button type="button" class="pricing-switch-btn active" data-billing="monthly">Monthly Billing</button>
+          <button type="button" class="pricing-switch-btn" data-billing="annual">Annual Billing <span class="save-badge">Save 20%</span></button>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+        <!-- Plan 1 -->
+        <div class="pricing-item team-item" style="padding: 36px;">
+          <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin: 0 0 10px 0;">Basic Care Plan</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Essential primary care for individuals seeking routine health maintenance.</p>
+          <div style="font-family: var(--font-serif); font-size: 2.8rem; color: var(--dark-forest); margin-bottom: 24px;">
+            $49 <span style="font-size: 1rem; font-weight: normal; color: var(--text-muted);">/month</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0 0 30px 0; line-height: 2.2; font-size: 0.92rem; color: var(--dark-forest-2);">
+            <li>&check; 2 Annual Comprehensive Check-ups</li>
+            <li>&check; Routine Diagnostic Blood Panel</li>
+            <li>&check; 24/7 Tele-Health Nurse Helpline</li>
+            <li>&check; 15% Discount on Inpatient Pharmacy</li>
+          </ul>
+          <a href="#book" data-action="book" class="button-arrow" style="width: 100%; justify-content: center;">
+            <div class="button-text-wrap">
+              <div class="button-text-one">Select Basic Plan</div>
+              <div class="button-text-two">Select Basic Plan</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Plan 2 (Highlighted) -->
+        <div class="pricing-item team-item" style="padding: 36px; border: 2px solid var(--primary-accent); background: #fbfefb; position: relative;">
+          <div style="position: absolute; top: -14px; right: 24px; background: var(--dark-forest); color: var(--primary-accent); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; padding: 4px 14px; border-radius: 9999px;">
+            MOST POPULAR
+          </div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin: 0 0 10px 0;">Standard Care Plan</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Ideal for families requiring frequent access to medical specialists.</p>
+          <div style="font-family: var(--font-serif); font-size: 2.8rem; color: var(--dark-forest); margin-bottom: 24px;">
+            $89 <span style="font-size: 1rem; font-weight: normal; color: var(--text-muted);">/month</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0 0 30px 0; line-height: 2.2; font-size: 0.92rem; color: var(--dark-forest-2);">
+            <li>&check; Unlimited General Physician Visits</li>
+            <li>&check; 4 Specialist Consultations (Cardio/Neuro/Ortho)</li>
+            <li>&check; Advanced Lipid & Cardiac Stress Testing</li>
+            <li>&check; Priority Diagnostic Imaging Access (MRI/CT)</li>
+            <li>&check; Full Family Emergency Coverage (Up to 4)</li>
+          </ul>
+          <a href="#book" data-action="book" class="button-arrow" style="width: 100%; justify-content: center;">
+            <div class="button-text-wrap">
+              <div class="button-text-one">Select Standard Plan</div>
+              <div class="button-text-two">Select Standard Plan</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="pricing-item team-item" style="padding: 36px;">
+          <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin: 0 0 10px 0;">Premium Care Plan</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Executive healthcare with dedicated doctor concierge and priority services.</p>
+          <div style="font-family: var(--font-serif); font-size: 2.8rem; color: var(--dark-forest); margin-bottom: 24px;">
+            $149 <span style="font-size: 1rem; font-weight: normal; color: var(--text-muted);">/month</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0 0 30px 0; line-height: 2.2; font-size: 0.92rem; color: var(--dark-forest-2);">
+            <li>&check; Everything in Standard Plan</li>
+            <li>&check; Same-Day VIP Doctor Appointments</li>
+            <li>&check; Dedicated Personal Medical Concierge</li>
+            <li>&check; Free Annual 3.0T MRI Screening</li>
+            <li>&check; Private Executive Inpatient Room Upgrade</li>
+          </ul>
+          <a href="#book" data-action="book" class="button-arrow" style="width: 100%; justify-content: center;">
+            <div class="button-text-wrap">
+              <div class="button-text-one">Select Premium Plan</div>
+              <div class="button-text-two">Select Premium Plan</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+  
+  <section class="footer" style="background-color: var(--dark-forest); color: #fff; padding: 80px 0 30px 0;">
+    <div class="container w-container">
+      <div class="footer-form-wrap" style="background: rgba(255,255,255,0.04); border-radius: 20px; padding: 40px; margin-bottom: 60px; border: 1px solid var(--sage-border-dark);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; align-items: center;">
+          <div>
+            <span class="modal-tag" style="background: rgba(133,250,109,0.15); color: var(--primary-accent);">PATIENT HEALTHLETTER</span>
+            <h3 style="font-family: var(--font-serif); font-size: 2rem; color: #fff; margin: 8px 0;">Stay connected with medical wellness tips</h3>
+            <p style="color: var(--sage-border); font-size: 0.95rem;">Receive monthly healthcare advice, preventive wellness guides, and hospital announcements.</p>
+          </div>
+          <form class="footer-form" style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <input type="email" placeholder="Enter your email address" required style="flex: 1; min-width: 240px; padding: 14px 20px; border-radius: 9999px; border: 1px solid var(--sage-border-dark); background: rgba(255,255,255,0.08); color: #fff; outline: none;" />
+            <button type="submit" class="button-arrow">
+              <div class="button-text-wrap">
+                <div class="button-text-one">Subscribe Free</div>
+                <div class="button-text-two">Subscribe Free</div>
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 60px;">
+        <div>
+          <img src="assets/692940df0fb9aba1b34b0910_New_Logo.svg" alt="Curevo Logo" style="height: 36px; filter: brightness(0) invert(1); margin-bottom: 16px;" />
+          <p style="color: var(--sage-border); font-size: 0.92rem; line-height: 1.6;">Curevo Hospital provides world-class compassionate healthcare, combining top clinical specialists with state-of-the-art diagnostic technology.</p>
+          <div style="display: flex; gap: 12px; margin-top: 18px;">
+            <img src="assets/690ef2bfedbee388bc90ac08_social_icon__1_.svg" alt="Facebook" style="width: 22px; cursor: pointer;"/>
+            <img src="assets/690ef2bf6e3426af4f6c7798_social_icon__2_.svg" alt="Twitter" style="width: 22px; cursor: pointer;"/>
+            <img src="assets/690ef2bea41a2ee68f3ffd57_social_icon__3_.svg" alt="LinkedIn" style="width: 22px; cursor: pointer;"/>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: #fff; margin-bottom: 16px;">Medical Departments</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2; font-size: 0.92rem;">
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Cardiology & Heart Care</a></li>
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Neurology & Brain Health</a></li>
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Dermatology & Laser Clinic</a></li>
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Pediatrics & Child Care</a></li>
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Physical Therapy & Rehab</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: #fff; margin-bottom: 16px;">Quick Navigation</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2; font-size: 0.92rem;">
+            <li><a href="about.html" style="color: var(--sage-border); text-decoration: none;">About Curevo Hospital</a></li>
+            <li><a href="doctors.html" style="color: var(--sage-border); text-decoration: none;">Find a Doctor</a></li>
+            <li><a href="case-studies.html" style="color: var(--sage-border); text-decoration: none;">Clinical Success Stories</a></li>
+            <li><a href="pricing.html" style="color: var(--sage-border); text-decoration: none;">Care Plans & Insurance</a></li>
+            <li><a href="contact.html" style="color: var(--sage-border); text-decoration: none;">24/7 Emergency Center</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: #fff; margin-bottom: 16px;">Emergency & Visiting</h4>
+          <p style="color: var(--sage-border); font-size: 0.92rem; line-height: 1.6; margin-bottom: 8px;">
+            <strong>24/7 Trauma Hotline:</strong><br />
+            <span style="color: var(--primary-accent); font-family: var(--font-mono); font-size: 1.15rem; font-weight: 700;">+1 (800) 287-3861</span>
+          </p>
+          <p style="color: var(--sage-border); font-size: 0.9rem; line-height: 1.5;">
+            <strong>Visiting Hours:</strong><br />
+            General Wards: 09:00 AM – 08:00 PM<br />
+            ICU / CCU: 11:00 AM – 01:00 PM
+          </p>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; font-size: 0.85rem; color: var(--text-muted);">
+        <div>&copy; 2026 Curevo | Made with <span class="footer-heart">❤️</span> by <a href="https://www.regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a></div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a>
+          <a href="#" style="color: var(--text-muted); text-decoration: none;">Terms of Clinical Care</a>
+          <a href="#" style="color: var(--text-muted); text-decoration: none;">HIPAA Compliance</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GSAP & Lenis Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+  
+  <!-- Main Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
+

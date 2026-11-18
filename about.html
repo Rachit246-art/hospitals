@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About Our Hospital | Curevo Hospital</title>
+  <meta name="description" content="Learn about Curevo Hospital's 28 years of clinical leadership, our Chief Medical Officer's vision, and modern facilities."/>
+  
+  <!-- Google Fonts & Fallbacks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Base Curevo Stylesheet & Custom Enhancements -->
+  <link rel="stylesheet" href="curevo.css">
+  <link rel="stylesheet" href="custom.css">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css">
+</head>
+<body>
+  <header class="navbar-wrapper">
+    <div class="navbar-container">
+      <a href="index.html" class="nav-brand" aria-label="Curevo Hospital Home">
+        <img src="assets/692940df0fb9aba1b34b0910_New_Logo.svg" alt="Curevo Hospital Logo" class="brand-logo" />
+      </a>
+      
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link active w--current">About Us</a>
+        <a href="services.html" class="nav-link ">Treatments</a>
+        <a href="doctors.html" class="nav-link ">Our Doctors</a>
+        <a href="case-studies.html" class="nav-link ">Success Stories</a>
+        <a href="pricing.html" class="nav-link ">Care Plans</a>
+        <a href="contact.html" class="nav-link ">Contact &amp; Emergency</a>
+      </nav>
+
+      <!-- Header Actions (CTA + Mobile Toggle) -->
+      <div class="nav-actions">
+        <a href="#book" data-action="book" class="button-arrow header-cta-btn">
+          <div class="button-text-wrap">
+            <div class="button-text-one">Book an appointment</div>
+            <div class="button-text-two">Book an appointment</div>
+          </div>
+          <div class="button-icon-wrap">
+            <img src="assets/690c7ad5bf0d16a67d6a12d6_button_arrow__2_.svg" alt="Arrow" class="button-icon"/>
+            <img src="assets/690c7ad5bf0d16a67d6a12d6_button_arrow__2_.svg" alt="Arrow" class="button-hover-icon"/>
+          </div>
+        </a>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" type="button">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu Overlay -->
+    <div class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="nav-brand">
+          <img src="assets/692940df0fb9aba1b34b0910_New_Logo.svg" alt="Curevo Logo" class="brand-logo" style="height:32px;"/>
+        </a>
+        <button class="mobile-drawer-close" aria-label="Close menu">&times;</button>
+      </div>
+      
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link ">
+          <span>Home</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="about.html" class="mobile-nav-link active w--current">
+          <span>About Us</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="services.html" class="mobile-nav-link ">
+          <span>Treatments</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="doctors.html" class="mobile-nav-link ">
+          <span>Our Doctors</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="case-studies.html" class="mobile-nav-link ">
+          <span>Success Stories</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="pricing.html" class="mobile-nav-link ">
+          <span>Care Plans</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="contact.html" class="mobile-nav-link ">
+          <span>Contact &amp; Emergency</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </div>
+
+      <div class="mobile-drawer-footer">
+        <a href="#book" data-action="book" class="button-arrow" style="width: 100%; justify-content: center;">
+          <div class="button-text-wrap">
+            <div class="button-text-one">Book an appointment</div>
+            <div class="button-text-two">Book an appointment</div>
+          </div>
+          <div class="button-icon-wrap">
+            <img src="assets/690c7ad5bf0d16a67d6a12d6_button_arrow__2_.svg" alt="Arrow" class="button-icon"/>
+            <img src="assets/690c7ad5bf0d16a67d6a12d6_button_arrow__2_.svg" alt="Arrow" class="button-hover-icon"/>
+          </div>
+        </a>
+        <div class="mobile-emergency-call">
+          <small>24/7 Clinical Emergency Line</small>
+          <a href="tel:+18004567890">+1 (800) 456-7890</a>
+        </div>
+      </div>
+    </div>
+  </header>
+<section class="inner-hero">
+    <div class="container w-container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> <span>/</span> <span>About Curevo</span>
+      </div>
+      <span class="modal-tag">ABOUT OUR MEDICAL CENTER</span>
+      <h1 class="inner-hero-title">Dedicated to advancing <em>patient health</em> and clinical excellence.</h1>
+      <p class="inner-hero-description">Since 1998, Curevo Hospital has combined compassionate bedside care with pioneering diagnostic technology to protect and improve community health.</p>
+      
+      <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 30px;">
+        <div style="background: #fff; padding: 14px 24px; border-radius: 9999px; border: 1px solid var(--sage-border); display: flex; align-items: center; gap: 10px;">
+          <img src="assets/69003c0447aa79e819d57fb5_certificate_icon__1_.svg" alt="JCI" style="width: 24px; height: 24px;"/>
+          <span style="font-weight: 600; font-size: 0.9rem;">JCI Gold Seal of Approval</span>
+        </div>
+        <div style="background: #fff; padding: 14px 24px; border-radius: 9999px; border: 1px solid var(--sage-border); display: flex; align-items: center; gap: 10px;">
+          <img src="assets/69003c04c4568785b349347e_certificate_icon__3_.svg" alt="NABH" style="width: 24px; height: 24px;"/>
+          <span style="font-weight: 600; font-size: 0.9rem;">Top 10 National Healthcare Center</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CMO Message & Vision Split Section -->
+  <section style="padding: 90px 0; background: #fff;">
+    <div class="container w-container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 60px; align-items: center;">
+        <div style="position: relative;">
+          <img src="assets/69006f2856de3536bc076846_Team-Image-2_6_.jpg" alt="Chief Medical Officer" style="width: 100%; border-radius: 24px; box-shadow: 0 20px 45px rgba(38,51,45,0.12); object-fit: cover; max-height: 520px;" />
+          <div style="position: absolute; bottom: -20px; right: 20px; background: var(--dark-forest); color: #fff; padding: 20px 28px; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            <div style="font-family: var(--font-mono); color: var(--primary-accent); font-size: 0.85rem; font-weight: 600;">CHIEF MEDICAL OFFICER</div>
+            <div style="font-family: var(--font-serif); font-size: 1.3rem; margin-top: 4px;">Dr. Julian Vance, MD</div>
+          </div>
+        </div>
+
+        <div>
+          <span class="modal-tag">A MESSAGE FROM LEADERSHIP</span>
+          <h2 style="font-family: var(--font-serif); font-size: 2.8rem; line-height: 1.2; margin: 12px 0 20px 0; color: var(--dark-forest);">Healthcare designed around <em>human dignity</em> and precision medicine.</h2>
+          <p style="color: var(--dark-forest-2); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
+            "At Curevo, we view every patient interaction as a sacred trust. Our physicians do not merely treat isolated symptoms; we look at the whole individual—their lifestyle, emotional well-being, and preventive longevity."
+          </p>
+          <p style="color: var(--dark-forest-2); font-size: 1.05rem; line-height: 1.7; margin-bottom: 30px;">
+            With over 50 board-certified specialists, 12 specialized departments, and 24/7 acute trauma capability, we provide our patients with the confidence that they are in the safest hands in modern medicine.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div style="background: var(--sage-light); padding: 20px; border-radius: 16px; border: 1px solid var(--sage-border);">
+              <div style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 700; color: var(--dark-forest);">99.4%</div>
+              <div style="color: var(--text-muted); font-size: 0.88rem; margin-top: 4px;">Patient Care Safety Rating</div>
+            </div>
+            <div style="background: var(--sage-light); padding: 20px; border-radius: 16px; border: 1px solid var(--sage-border);">
+              <div style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 700; color: var(--dark-forest);">250+</div>
+              <div style="color: var(--text-muted); font-size: 0.88rem; margin-top: 4px;">Advanced Hospital Beds</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hospital Heritage & Timeline Section -->
+  <section style="padding: 90px 0; background: var(--sage-bg);">
+    <div class="container w-container">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto 50px auto;">
+        <span class="modal-tag">OUR JOURNEY</span>
+        <h2 style="font-family: var(--font-serif); font-size: 2.8rem; color: var(--dark-forest); margin-top: 8px;">28 Years of clinical <em>milestones</em></h2>
+        <p style="color: var(--text-muted); font-size: 1rem;">Tracking our evolution from a neighborhood diagnostic clinic to a nationally recognized tertiary care hospital.</p>
+      </div>
+
+      <div class="timeline-track">
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">1998</div>
+            <h4>Foundation of Curevo Clinic</h4>
+            <p>Started as a dedicated outpatient diagnostic center with 12 physicians, focused on preventive cardiology and primary family medicine.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">2008</div>
+            <h4>JCI Accreditation & 150-Bed Expansion</h4>
+            <p>Achieved international Joint Commission accreditation and opened dedicated intensive care, surgical wings, and women's health suites.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">2016</div>
+            <h4>Center for Robotic Surgery</h4>
+            <p>Inaugurated minimal-access da Vinci surgical suites for cardiology, urology, and gynecological interventions, minimizing recovery times by 60%.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">2024 - PRESENT</div>
+            <h4>AI Diagnostics & Digital Campus</h4>
+            <p>Integrated high-speed digital radiology, real-time telemetry patient monitoring, and smart clinical consultation portals for 24/7 care.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hospital Facilities Gallery -->
+  <section style="padding: 90px 0; background: #fff;">
+    <div class="container w-container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; margin-bottom: 40px;">
+        <div>
+          <span class="modal-tag">MODERN FACILITIES</span>
+          <h2 style="font-family: var(--font-serif); font-size: 2.8rem; color: var(--dark-forest); margin-top: 8px;">Designed for healing & comfort</h2>
+        </div>
+        <a href="#book" data-action="book" class="button-arrow">
+          <div class="button-text-wrap">
+            <div class="button-text-one">Schedule Hospital Tour</div>
+            <div class="button-text-two">Schedule Hospital Tour</div>
+          </div>
+        </a>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        <div style="border-radius: 20px; overflow: hidden; position: relative;">
+          <img src="assets/69550269f4024c82897617a9_access-image.jpg" alt="Inpatient Ward" style="width: 100%; height: 280px; object-fit: cover;" />
+          <div style="padding: 16px; background: #fff; border: 1px solid var(--sage-border); border-top: none; border-radius: 0 0 20px 20px;">
+            <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin: 0 0 4px 0;">Private Recovery Suites</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Comfort-first patient rooms with HEPA air filtration and family lounge.</p>
+          </div>
+        </div>
+        <div style="border-radius: 20px; overflow: hidden; position: relative;">
+          <img src="assets/69004d03ff9ea51843e91306_Service_Image.webp" alt="Advanced Diagnostics" style="width: 100%; height: 280px; object-fit: cover;" />
+          <div style="padding: 16px; background: #fff; border: 1px solid var(--sage-border); border-top: none; border-radius: 0 0 20px 20px;">
+            <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin: 0 0 4px 0;">3.0T High-Field MRI Lab</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Ultra-quiet high-resolution imaging for neuro and cardiac diagnosis.</p>
+          </div>
+        </div>
+        <div style="border-radius: 20px; overflow: hidden; position: relative;">
+          <img src="assets/690c24ac7f5a232582194bc1_Service-Image-3.webp" alt="Physical Rehab" style="width: 100%; height: 280px; object-fit: cover;" />
+          <div style="padding: 16px; background: #fff; border: 1px solid var(--sage-border); border-top: none; border-radius: 0 0 20px 20px;">
+            <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin: 0 0 4px 0;">Rehabilitation Gymnasium</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Hydrotherapy and physical motion suites supervised by physiotherapists.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+  
+  <section class="footer" style="background-color: var(--dark-forest); color: #fff; padding: 80px 0 30px 0;">
+    <div class="container w-container">
+      <div class="footer-form-wrap" style="background: rgba(255,255,255,0.04); border-radius: 20px; padding: 40px; margin-bottom: 60px; border: 1px solid var(--sage-border-dark);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; align-items: center;">
+          <div>
+            <span class="modal-tag" style="background: rgba(133,250,109,0.15); color: var(--primary-accent);">PATIENT HEALTHLETTER</span>
+            <h3 style="font-family: var(--font-serif); font-size: 2rem; color: #fff; margin: 8px 0;">Stay connected with medical wellness tips</h3>
+            <p style="color: var(--sage-border); font-size: 0.95rem;">Receive monthly healthcare advice, preventive wellness guides, and hospital announcements.</p>
+          </div>
+          <form class="footer-form" style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <input type="email" placeholder="Enter your email address" required style="flex: 1; min-width: 240px; padding: 14px 20px; border-radius: 9999px; border: 1px solid var(--sage-border-dark); background: rgba(255,255,255,0.08); color: #fff; outline: none;" />
+            <button type="submit" class="button-arrow">
+              <div class="button-text-wrap">
+                <div class="button-text-one">Subscribe Free</div>
+                <div class="button-text-two">Subscribe Free</div>
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 60px;">
+        <div>
+          <img src="assets/692940df0fb9aba1b34b0910_New_Logo.svg" alt="Curevo Logo" style="height: 36px; filter: brightness(0) invert(1); margin-bottom: 16px;" />
+          <p style="color: var(--sage-border); font-size: 0.92rem; line-height: 1.6;">Curevo Hospital provides world-class compassionate healthcare, combining top clinical specialists with state-of-the-art diagnostic technology.</p>
+          <div style="display: flex; gap: 12px; margin-top: 18px;">
+            <img src="assets/690ef2bfedbee388bc90ac08_social_icon__1_.svg" alt="Facebook" style="width: 22px; cursor: pointer;"/>
+            <img src="assets/690ef2bf6e3426af4f6c7798_social_icon__2_.svg" alt="Twitter" style="width: 22px; cursor: pointer;"/>
+            <img src="assets/690ef2bea41a2ee68f3ffd57_social_icon__3_.svg" alt="LinkedIn" style="width: 22px; cursor: pointer;"/>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: #fff; margin-bottom: 16px;">Medical Departments</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2; font-size: 0.92rem;">
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Cardiology & Heart Care</a></li>
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Neurology & Brain Health</a></li>
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Dermatology & Laser Clinic</a></li>
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Pediatrics & Child Care</a></li>
+            <li><a href="services.html" style="color: var(--sage-border); text-decoration: none;">Physical Therapy & Rehab</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: #fff; margin-bottom: 16px;">Quick Navigation</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2; font-size: 0.92rem;">
+            <li><a href="about.html" style="color: var(--sage-border); text-decoration: none;">About Curevo Hospital</a></li>
+            <li><a href="doctors.html" style="color: var(--sage-border); text-decoration: none;">Find a Doctor</a></li>
+            <li><a href="case-studies.html" style="color: var(--sage-border); text-decoration: none;">Clinical Success Stories</a></li>
+            <li><a href="pricing.html" style="color: var(--sage-border); text-decoration: none;">Care Plans & Insurance</a></li>
+            <li><a href="contact.html" style="color: var(--sage-border); text-decoration: none;">24/7 Emergency Center</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: #fff; margin-bottom: 16px;">Emergency & Visiting</h4>
+          <p style="color: var(--sage-border); font-size: 0.92rem; line-height: 1.6; margin-bottom: 8px;">
+            <strong>24/7 Trauma Hotline:</strong><br />
+            <span style="color: var(--primary-accent); font-family: var(--font-mono); font-size: 1.15rem; font-weight: 700;">+1 (800) 287-3861</span>
+          </p>
+          <p style="color: var(--sage-border); font-size: 0.9rem; line-height: 1.5;">
+            <strong>Visiting Hours:</strong><br />
+            General Wards: 09:00 AM – 08:00 PM<br />
+            ICU / CCU: 11:00 AM – 01:00 PM
+          </p>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; font-size: 0.85rem; color: var(--text-muted);">
+        <div>&copy; 2026 Curevo | Made with <span class="footer-heart">❤️</span> by <a href="https://www.regortz.com/" target="_blank" rel="noopener noreferrer" class="regortz-link">Regortz</a></div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a>
+          <a href="#" style="color: var(--text-muted); text-decoration: none;">Terms of Clinical Care</a>
+          <a href="#" style="color: var(--text-muted); text-decoration: none;">HIPAA Compliance</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GSAP & Lenis Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+  
+  <!-- Main Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
+
